@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IDC 行业情报周报 · 2026.03.28 — 03.30</title>
 <meta name="description" content="IDC数据中心行业情报周报，覆盖重大信号、项目市场、技术趋势、政策法规、供应链动态、招投标及行业观点。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <style>
+  /* ═══ 默认浅色 ═══ */
   :root {
-    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
-    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
-    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
-    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
-    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
-  }
-  [data-theme="light"] {
     --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
     --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
     --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+    --topbar-bg: rgba(248,249,252,.9);
+    --nav-bg: rgba(248,249,252,.92);
+  }
+  /* ═══ 深色覆盖 ═══ */
+  [data-theme="dark"] {
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --topbar-bg: rgba(15,17,23,.88);
+    --nav-bg: rgba(15,17,23,.92);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -36,12 +43,11 @@
   /* ── Top bar ── */
   .topbar {
     position:sticky; top:0; z-index:100;
-    background:rgba(15,17,23,.88); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
     border-bottom:1px solid var(--border); padding:0 24px; height:56px;
     display:flex; align-items:center; justify-content:space-between;
     transition:background .3s;
   }
-  [data-theme="light"] .topbar { background:rgba(248,249,252,.9); }
   .topbar-left { display:flex; align-items:center; gap:16px; }
   .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; transition:color .2s; }
   .back-link:hover { color:var(--blue); }
@@ -72,13 +78,12 @@
   /* ── Section nav (pills) ── */
   .section-nav {
     position:sticky; top:56px; z-index:90;
-    background:rgba(15,17,23,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    background:var(--nav-bg); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
     border-bottom:1px solid var(--border); padding:10px 24px;
     overflow-x:auto; white-space:nowrap; scrollbar-width:none;
     transition:background .3s;
   }
   .section-nav::-webkit-scrollbar { display:none; }
-  [data-theme="light"] .section-nav { background:rgba(248,249,252,.92); }
   .nav-pill {
     display:inline-block; font-size:13px; font-weight:600; padding:6px 14px;
     border-radius:8px; color:var(--text2); cursor:pointer; transition:all .2s;
@@ -107,11 +112,9 @@
   }
   .hero h1 {
     font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px;
-    background:linear-gradient(135deg,#fff 0%,#a0aec0 100%);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
-  [data-theme="light"] .hero h1 {
-    background:linear-gradient(135deg,#1a1d2e 0%,#4a5568 100%);
+  [data-theme="dark"] .hero h1 {
+    background:linear-gradient(135deg,#fff 0%,#a0aec0 100%);
     -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
   .hero-meta { color:var(--text2); font-size:15px; }
@@ -304,8 +307,8 @@
     <button class="topbar-btn" onclick="shareLink()" title="复制链接">🔗</button>
     <button class="topbar-btn" onclick="window.print()" title="打印/导出PDF">🖨️</button>
     <div class="theme-switcher" id="themeSwitcher">
-      <button class="theme-opt" data-theme="dark" onclick="setTheme('dark')">🌙 深色</button>
       <button class="theme-opt" data-theme="light" onclick="setTheme('light')">☀️ 浅色</button>
+      <button class="theme-opt" data-theme="dark" onclick="setTheme('dark')">🌙 深色</button>
     </div>
   </div>
 </nav>
@@ -625,7 +628,11 @@ function scrollTo(id) {
 
 // ── Theme ──
 function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
   localStorage.setItem('idc-theme', theme);
   updateThemeSwitcher(theme);
 }
@@ -636,7 +643,9 @@ function updateThemeSwitcher(theme) {
 }
 (function() {
   const saved = localStorage.getItem('idc-theme') || 'light';
-  document.documentElement.setAttribute('data-theme', saved);
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
   updateThemeSwitcher(saved);
 })();
 
