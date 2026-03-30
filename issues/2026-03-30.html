@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -635,7 +635,7 @@ function updateThemeSwitcher(theme) {
   });
 }
 (function() {
-  const saved = localStorage.getItem('idc-theme') || 'dark';
+  const saved = localStorage.getItem('idc-theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
   updateThemeSwitcher(saved);
 })();

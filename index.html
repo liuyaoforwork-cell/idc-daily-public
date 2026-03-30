@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,8 +127,60 @@
   .search-tab:hover { border-color:var(--blue); color:var(--text); }
   .search-tab.active { background:rgba(77,159,255,.1); border-color:rgba(77,159,255,.3); color:var(--blue); }
 
+  /* ── Highlights section (本期要闻) ── */
+  .highlights {
+    max-width:960px; margin:32px auto 0; padding:0 24px;
+  }
+  .highlights-header {
+    display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;
+  }
+  .highlights-title { font-size:18px; font-weight:700; }
+  .highlights-more {
+    font-size:13px; color:var(--text3); text-decoration:none; transition:color .2s;
+  }
+  .highlights-more:hover { color:var(--blue); }
+  .highlights-grid {
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px;
+  }
+  .hl-card {
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:18px 20px; transition:all .25s; cursor:pointer; text-decoration:none; color:inherit;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .hl-card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.3); transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,.08); }
+  [data-theme="dark"] .hl-card:hover { box-shadow:0 6px 20px rgba(0,0,0,.25); }
+  .hl-card-top { display:flex; align-items:center; gap:8px; }
+  .hl-badge {
+    font-size:11px; font-weight:700; padding:2px 8px; border-radius:5px;
+    letter-spacing:.3px; white-space:nowrap; flex-shrink:0;
+  }
+  .hl-title { font-size:15px; font-weight:700; line-height:1.5; }
+  .hl-body {
+    font-size:13px; color:var(--text2); line-height:1.65;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .hl-insight {
+    font-size:12px; color:var(--blue); font-weight:500; line-height:1.5;
+    padding:8px 12px; background:rgba(77,159,255,.06); border-radius:8px;
+    border-left:3px solid var(--blue);
+  }
+  .hl-footer { display:flex; align-items:center; justify-content:space-between; }
+  .hl-source { font-size:12px; color:var(--text3); }
+  .hl-source a { color:var(--blue); border-bottom:1px dashed rgba(77,159,255,.3); }
+  .hl-tags { display:flex; gap:4px; flex-wrap:wrap; }
+  .hl-tag {
+    font-size:10px; padding:1px 6px; border-radius:4px;
+    background:rgba(77,159,255,.08); color:var(--text3); font-weight:500;
+  }
+
+  /* ── Section divider ── */
+  .section-divider {
+    max-width:960px; margin:32px auto 0; padding:0 24px;
+    border-top:1px solid var(--border);
+  }
+
   /* ── Content area ── */
-  .content { max-width:960px; margin:40px auto 0; padding:0 24px 80px; }
+  .content { max-width:960px; margin:24px auto 0; padding:0 24px 80px; }
   .content-header {
     display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;
   }
@@ -274,6 +326,17 @@
   </div>
   <div class="search-count" id="searchCount"></div>
 </div>
+
+<!-- Highlights 本期要闻 -->
+<section class="highlights" id="highlightsSection">
+  <div class="highlights-header">
+    <h2 class="highlights-title">📢 本期要闻</h2>
+    <span class="highlights-more" id="highlightsDate"></span>
+  </div>
+  <div class="highlights-grid" id="highlightsGrid"></div>
+</section>
+
+<div class="section-divider"></div>
 
 <!-- Content -->
 <section class="content">
@@ -583,6 +646,8 @@ function renderIntelResults(items, query) {
 function onSearch() {
   const q = document.getElementById('searchInput').value.trim();
   currentQuery = q;
+  const hlSection = document.getElementById('highlightsSection');
+  const divider = document.querySelector('.section-divider');
 
   // Show/hide clear button and tabs
   searchClear.style.display = q ? 'flex' : 'none';
@@ -591,9 +656,15 @@ function onSearch() {
   if (!q) {
     contentTitle.textContent = '📚 所有期刊';
     searchCount.textContent = '';
+    hlSection.style.display = '';
+    divider.style.display = '';
     renderIssues(ISSUES);
     return;
   }
+
+  // 搜索时隐藏要闻
+  hlSection.style.display = 'none';
+  divider.style.display = 'none';
 
   if (searchMode === 'intel') {
     searchIntel(q);
@@ -650,6 +721,8 @@ function clearSearch() {
   searchTabs.style.display = 'none';
   contentTitle.textContent = '📚 所有期刊';
   searchCount.textContent = '';
+  document.getElementById('highlightsSection').style.display = '';
+  document.querySelector('.section-divider').style.display = '';
   renderIssues(ISSUES);
 }
 
@@ -659,6 +732,52 @@ function clearSearch() {
 document.getElementById('totalIssues').textContent = ISSUES.length;
 document.getElementById('totalIntel').textContent = INTEL_ITEMS.length;
 renderIssues(ISSUES);
+
+// ── Render Highlights (本期要闻) ──
+(function renderHighlights() {
+  const highlightsGrid = document.getElementById('highlightsGrid');
+  const highlightsDate = document.getElementById('highlightsDate');
+  const highlightsSection = document.getElementById('highlightsSection');
+  
+  if (ISSUES.length === 0 || INTEL_ITEMS.length === 0) {
+    highlightsSection.style.display = 'none';
+    return;
+  }
+
+  // 取最新一期
+  const latestIssue = ISSUES[0];
+  highlightsDate.textContent = latestIssue.dateRange;
+
+  // 从情报中选取有 insight 的条目优先，再补充其他重要条目，最多展示6条
+  const withInsight = INTEL_ITEMS.filter(i => i.issueId === latestIssue.id && i.insight);
+  const withoutInsight = INTEL_ITEMS.filter(i => i.issueId === latestIssue.id && !i.insight);
+  const selected = [...withInsight, ...withoutInsight].slice(0, 6);
+
+  highlightsGrid.innerHTML = selected.map(item => {
+    const linkUrl = item.issueFile + '#' + item.sectionAnchor;
+    const insightHtml = item.insight
+      ? `<div class="hl-insight">💡 ${item.insight}</div>` : '';
+    const sourceHtml = item.sourceUrl
+      ? `<span class="hl-source">📎 <a href="${item.sourceUrl}" target="_blank">${item.sourceLabel}</a></span>`
+      : (item.sourceLabel ? `<span class="hl-source">📎 ${item.sourceLabel}</span>` : '');
+    const tagsHtml = item.tags.slice(0, 3).map(t => `<span class="hl-tag">${t}</span>`).join('');
+    
+    return `
+      <a class="hl-card" href="${linkUrl}">
+        <div class="hl-card-top">
+          <span class="hl-badge badge-${item.section}">${item.section}</span>
+          <div class="hl-tags">${tagsHtml}</div>
+        </div>
+        <div class="hl-title">${item.title}</div>
+        <div class="hl-body">${item.body}</div>
+        ${insightHtml}
+        <div class="hl-footer">
+          ${sourceHtml}
+        </div>
+      </a>
+    `;
+  }).join('');
+})();
 
 // ══════════════════════════════════════════════
 // THEME: 用户可自主选择深色/浅色
@@ -676,7 +795,7 @@ function updateThemeSwitcher(theme) {
 }
 
 (function initTheme() {
-  const saved = localStorage.getItem('idc-theme') || 'dark';
+  const saved = localStorage.getItem('idc-theme') || 'light';
   document.documentElement.setAttribute('data-theme', saved);
   updateThemeSwitcher(saved);
 })();
