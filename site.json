@@ -1,0 +1,16 @@
+{
+  "name": "idc-daily-public",
+  "description": "IDC 行业情报周报归档站",
+  "repository": "https://github.com/liuyaoforwork-cell/idc-daily-public",
+  "pages_url": "https://liuyaoforwork-cell.github.io/idc-daily-public/",
+  "structure": {
+    "index.html": "归档站首页（期刊列表 + 搜索）",
+    "issues/": "各期详情页，文件名格式: YYYY-MM-DD.html",
+    "site.json": "本配置文件"
+  },
+  "how_to_add_new_issue": [
+    "1. 在 issues/ 目录下创建新的 HTML 文件（复制模板并修改内容）",
+    "2. 在 index.html 的 ISSUES 数组中添加新条目",
+    "3. git add + commit + push 即可自动部署"
+  ]
+}

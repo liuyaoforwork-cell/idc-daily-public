@@ -3,680 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IDC 行业情报周报 · 2026.03.28 — 03.30</title>
-<meta name="description" content="IDC数据中心行业情报周报，覆盖重大信号、项目市场、技术趋势、政策法规、供应链动态、招投标及行业观点。">
+<title>IDC 行业情报周报 · 归档站</title>
+<meta name="description" content="IDC数据中心行业情报周报归档站，覆盖重大信号、项目市场、技术趋势、政策法规、供应链动态。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
 <style>
   :root {
-    --bg: #0f1117;
-    --card: #1a1d2e;
-    --card-hover: #222640;
-    --border: #2a2e45;
-    --text: #e2e4ed;
-    --text-secondary: #8b8fa3;
-    --accent-red: #ff4d6a;
-    --accent-orange: #ff8c42;
-    --accent-blue: #4d9fff;
-    --accent-green: #34d399;
-    --accent-purple: #a78bfa;
-    --accent-yellow: #fbbf24;
-    --accent-cyan: #22d3ee;
-    --accent-pink: #f472b6;
-    --gradient-hero: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  [data-theme="light"] {
+    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
+    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
+    background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    transition: background .3s, color .3s;
   }
+  a { color: var(--blue); text-decoration: none; }
 
-  /* Hero */
+  /* ── Top bar ── */
+  .topbar {
+    position: sticky; top:0; z-index:100;
+    background: rgba(15,17,23,.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding:0 24px; height:56px;
+    display:flex; align-items:center; justify-content:space-between;
+    transition: background .3s;
+  }
+  [data-theme="light"] .topbar { background: rgba(248,249,252,.88); }
+  .topbar-brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:15px; }
+  .topbar-brand span { font-size:20px; }
+  .topbar-actions { display:flex; align-items:center; gap:12px; }
+  .theme-toggle {
+    width:36px; height:36px; border-radius:10px; border:1px solid var(--border);
+    background:transparent; color:var(--text); cursor:pointer; font-size:16px;
+    display:flex; align-items:center; justify-content:center; transition:all .2s;
+  }
+  .theme-toggle:hover { background:var(--card-hover); border-color:var(--blue); }
+
+  /* ── Hero ── */
   .hero {
-    background: var(--gradient-hero);
-    border-bottom: 1px solid var(--border);
-    padding: 60px 20px 48px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    background: var(--grad); border-bottom:1px solid var(--border);
+    padding:72px 24px 56px; text-align:center; position:relative; overflow:hidden;
   }
   .hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 40%, rgba(77,159,255,0.06) 0%, transparent 60%),
-                radial-gradient(circle at 70% 60%, rgba(167,139,250,0.05) 0%, transparent 60%);
-    animation: drift 20s linear infinite;
+    content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+    background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%),
+                radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%);
+    animation: drift 25s linear infinite;
   }
-  @keyframes drift {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  .hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  .hero-inner { position:relative; z-index:1; max-width:720px; margin:0 auto; }
   .hero-badge {
-    display: inline-block;
-    background: rgba(77,159,255,0.12);
-    color: var(--accent-blue);
-    font-size: 13px;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(77,159,255,0.2);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+    display:inline-block; background:rgba(77,159,255,.12); color:var(--blue);
+    font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px;
+    border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:20px;
   }
   .hero h1 {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 12px;
-    background: linear-gradient(135deg, #fff 0%, #a0aec0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size:clamp(28px,5vw,42px); font-weight:800; letter-spacing:-1px; margin-bottom:14px;
+    background:linear-gradient(135deg,#fff 0%,#a0aec0 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
-  .hero-meta {
-    color: var(--text-secondary);
-    font-size: 15px;
+  [data-theme="light"] .hero h1 {
+    background:linear-gradient(135deg,#1a1d2e 0%,#4a5568 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
-  .hero-meta span {
-    display: inline-block;
-    margin: 0 8px;
-  }
+  .hero-desc { color:var(--text2); font-size:16px; max-width:520px; margin:0 auto 28px; }
   .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 28px;
-    flex-wrap: wrap;
+    display:flex; justify-content:center; gap:40px; flex-wrap:wrap;
   }
-  .stat-item {
-    text-align: center;
-  }
-  .stat-num {
-    font-size: 28px;
-    font-weight: 700;
-    color: #fff;
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--text-secondary);
-    margin-top: 2px;
-  }
+  .stat-item { text-align:center; }
+  .stat-num { font-size:32px; font-weight:800; color:var(--text); }
+  .stat-num small { font-size:14px; color:var(--text2); font-weight:500; }
+  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
 
-  /* Container */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 20px 60px;
+  /* ── Search ── */
+  .search-section { max-width:640px; margin:-28px auto 0; position:relative; z-index:10; padding:0 24px; }
+  .search-box {
+    display:flex; align-items:center; gap:10px;
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:12px 18px; box-shadow:0 8px 32px rgba(0,0,0,.15); transition:all .2s;
   }
+  .search-box:focus-within { border-color:var(--blue); box-shadow:0 8px 32px rgba(77,159,255,.12); }
+  .search-box svg { flex-shrink:0; color:var(--text3); }
+  .search-box input {
+    flex:1; border:none; background:transparent; color:var(--text);
+    font-size:15px; outline:none; font-family:inherit;
+  }
+  .search-box input::placeholder { color:var(--text3); }
+  .search-count { text-align:center; margin-top:12px; font-size:13px; color:var(--text3); }
 
-  /* Section */
-  .section {
-    margin-bottom: 40px;
+  /* ── Issues grid ── */
+  .issues { max-width:960px; margin:40px auto 0; padding:0 24px 80px; }
+  .issues-header {
+    display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;
   }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
+  .issues-title { font-size:18px; font-weight:700; }
+  .issues-sort {
+    font-size:13px; color:var(--text2); background:transparent; border:1px solid var(--border);
+    padding:5px 12px; border-radius:8px; cursor:pointer; color:var(--text); font-family:inherit;
   }
-  .section-icon {
-    font-size: 22px;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-  }
+  .issues-grid { display:grid; grid-template-columns:1fr; gap:16px; }
 
-  .icon-red { background: rgba(255,77,106,0.12); }
-  .icon-blue { background: rgba(77,159,255,0.12); }
-  .icon-cyan { background: rgba(34,211,238,0.12); }
-  .icon-green { background: rgba(52,211,153,0.12); }
-  .icon-purple { background: rgba(167,139,250,0.12); }
-  .icon-orange { background: rgba(255,140,66,0.12); }
-  .icon-yellow { background: rgba(251,191,36,0.12); }
-  .icon-pink { background: rgba(244,114,182,0.12); }
+  .issue-card {
+    display:grid; grid-template-columns:100px 1fr auto; align-items:start; gap:20px;
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:24px; transition:all .25s; cursor:pointer; text-decoration:none; color:inherit;
+  }
+  .issue-card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.3); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
 
-  /* Card */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px;
-    margin-bottom: 16px;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .card:hover {
-    background: var(--card-hover);
-    border-color: rgba(77,159,255,0.25);
-  }
-  .card-title {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.5;
-  }
-  .card-body {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-  .card-body strong { color: var(--text); }
-  .card-insight {
-    margin-top: 14px;
-    padding: 12px 16px;
-    background: rgba(77,159,255,0.06);
-    border-left: 3px solid var(--accent-blue);
-    border-radius: 0 8px 8px 0;
-    font-size: 14px;
-    color: var(--text-secondary);
-  }
-  .card-insight b { color: var(--accent-blue); }
-  .card-source {
-    margin-top: 12px;
-    font-size: 13px;
-  }
-  .card-source a {
-    color: var(--accent-blue);
-    text-decoration: none;
-    border-bottom: 1px dashed rgba(77,159,255,0.3);
-    transition: border-color 0.2s;
-  }
-  .card-source a:hover { border-bottom-color: var(--accent-blue); }
+  .issue-date-col { text-align:center; }
+  .issue-month { font-size:13px; color:var(--blue); font-weight:600; text-transform:uppercase; }
+  .issue-day { font-size:32px; font-weight:800; line-height:1.1; }
+  .issue-year { font-size:12px; color:var(--text3); }
 
-  /* Signal badge */
-  .signal-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+  .issue-info { min-width:0; }
+  .issue-title { font-size:17px; font-weight:700; margin-bottom:6px; line-height:1.4; }
+  .issue-meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:8px; }
+  .issue-tag {
+    font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px;
+    letter-spacing:.3px;
   }
-  .badge-critical { background: rgba(255,77,106,0.15); color: var(--accent-red); }
-  .badge-project { background: rgba(77,159,255,0.15); color: var(--accent-blue); }
-  .badge-tech { background: rgba(34,211,238,0.15); color: var(--accent-cyan); }
-  .badge-policy { background: rgba(52,211,153,0.15); color: var(--accent-green); }
-  .badge-supply { background: rgba(255,140,66,0.15); color: var(--accent-orange); }
-  .badge-bid { background: rgba(167,139,250,0.15); color: var(--accent-purple); }
+  .tag-intel { background:rgba(77,159,255,.12); color:var(--blue); }
+  .tag-amount { background:rgba(52,211,153,.12); color:var(--green); }
+  .tag-sections { background:rgba(167,139,250,.12); color:var(--purple); }
+  .issue-summary { font-size:14px; color:var(--text2); line-height:1.6; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 
-  /* Table */
-  .table-wrap {
-    overflow-x: auto;
-    margin-top: 4px;
+  .issue-arrow {
+    color:var(--text3); font-size:20px; padding-top:8px; transition:color .2s;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-  }
-  thead th {
-    background: rgba(77,159,255,0.08);
-    color: var(--text-secondary);
-    font-weight: 600;
-    text-align: left;
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-  }
-  tbody td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-  }
-  tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: rgba(77,159,255,0.04); }
+  .issue-card:hover .issue-arrow { color:var(--blue); }
 
-  /* Data cards */
-  .data-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-    margin-top: 4px;
+  .no-results {
+    text-align:center; padding:60px 20px; color:var(--text3); font-size:15px;
   }
-  .data-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-  }
-  .data-card .num {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
-  }
-  .data-card .label {
-    font-size: 12px;
-    color: var(--text-secondary);
-  }
-  .data-card .src {
-    font-size: 11px;
-    color: rgba(139,143,163,0.6);
-    margin-top: 6px;
-  }
+  .no-results span { font-size:48px; display:block; margin-bottom:12px; }
 
-  /* Quote */
-  .quote-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px;
-    margin-bottom: 16px;
-    position: relative;
-  }
-  .quote-card::before {
-    content: '\201C';
-    position: absolute;
-    top: 12px;
-    left: 20px;
-    font-size: 48px;
-    color: rgba(167,139,250,0.2);
-    font-family: Georgia, serif;
-    line-height: 1;
-  }
-  .quote-text {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    padding-left: 28px;
-    font-style: italic;
-  }
-  .quote-text strong { color: var(--text); font-style: normal; }
-  .quote-attr {
-    margin-top: 12px;
-    padding-left: 28px;
-    font-size: 13px;
-    color: var(--accent-purple);
-    font-weight: 600;
-  }
-
-  /* Specs list in card */
-  .spec-list {
-    list-style: none;
-    margin-top: 10px;
-  }
-  .spec-list li {
-    padding: 4px 0;
-    font-size: 14px;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-  .spec-list li::before {
-    content: '▸';
-    color: var(--accent-blue);
-    flex-shrink: 0;
-  }
-  .spec-list li strong { color: var(--text); }
-
-  /* Footer */
+  /* ── Footer ── */
   .footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid var(--border);
-    color: var(--text-secondary);
-    font-size: 13px;
-    line-height: 1.8;
+    text-align:center; padding:32px 24px; border-top:1px solid var(--border);
+    color:var(--text3); font-size:13px; line-height:1.8;
   }
 
-  /* Responsive */
-  @media (max-width: 640px) {
-    .hero { padding: 40px 16px 32px; }
-    .hero h1 { font-size: 26px; }
-    .hero-stats { gap: 20px; }
-    .stat-num { font-size: 22px; }
-    .container { padding: 20px 16px 40px; }
-    .card { padding: 18px; }
-    .section-title { font-size: 17px; }
-    .data-grid { grid-template-columns: repeat(2, 1fr); }
+  /* ── Responsive ── */
+  @media (max-width:640px) {
+    .hero { padding:56px 16px 44px; }
+    .hero-stats { gap:24px; }
+    .stat-num { font-size:24px; }
+    .search-section { margin-top:-22px; padding:0 16px; }
+    .issues { padding:32px 16px 60px; }
+    .issue-card { grid-template-columns:1fr; gap:12px; }
+    .issue-date-col { text-align:left; display:flex; align-items:center; gap:8px; }
+    .issue-day { font-size:20px; }
+    .issue-arrow { display:none; }
   }
 </style>
 </head>
 <body>
 
+<!-- Top Bar -->
+<nav class="topbar">
+  <div class="topbar-brand">
+    <span>🏢</span> IDC Intel Archive
+  </div>
+  <div class="topbar-actions">
+    <a href="https://github.com/liuyaoforwork-cell/idc-daily-public" target="_blank" style="color:var(--text2);font-size:13px;">GitHub</a>
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换主题" id="themeBtn">🌙</button>
+  </div>
+</nav>
+
 <!-- Hero -->
 <header class="hero">
-  <div class="hero-content">
-    <div class="hero-badge">IDC INDUSTRY INTEL</div>
-    <h1>🏢 IDC 行业情报周报</h1>
-    <div class="hero-meta">
-      <span>2026.03.28 — 03.30</span>
-      <span>·</span>
-      <span>覆盖过去 72 小时行业动态</span>
-    </div>
+  <div class="hero-inner">
+    <div class="hero-badge">IDC INDUSTRY INTEL · ARCHIVE</div>
+    <h1>IDC 行业情报周报</h1>
+    <p class="hero-desc">持续追踪数据中心行业动态，覆盖重大信号、项目市场、技术趋势、政策法规、供应链与招投标。</p>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">12</div>
-        <div class="stat-label">核心情报</div>
+        <div class="stat-num" id="totalIssues">1</div>
+        <div class="stat-label">已发布期刊</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">60.99<span style="font-size:16px;color:var(--text-secondary)">亿</span></div>
-        <div class="stat-label">招投标总金额</div>
+        <div class="stat-num" id="totalIntel">12</div>
+        <div class="stat-label">累计情报条数</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">8</div>
-        <div class="stat-label">覆盖板块</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">72h</div>
-        <div class="stat-label">时间窗口</div>
+        <div class="stat-num">8<small> 大板块</small></div>
+        <div class="stat-label">覆盖领域</div>
       </div>
     </div>
   </div>
 </header>
 
-<main class="container">
+<!-- Search -->
+<div class="search-section">
+  <div class="search-box">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInput" placeholder="搜索关键词… 如「液冷」「招投标」「英伟达」" oninput="filterIssues()">
+  </div>
+  <div class="search-count" id="searchCount"></div>
+</div>
 
-  <!-- 重大信号 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-red">🔥</div>
-      <h2 class="section-title">重大信号</h2>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-critical">重大</div>
-      <div class="card-title">豫能控股 11 亿跨界数据中心，"算电协同"模式规模化落地</div>
-      <div class="card-body">
-        3月20日，河南豫能控股（001896.SZ）公告拟以自有资金 <strong>11 亿元</strong>增资先天算力（河南）科技有限公司，与控股股东河南投资集团共同布局"算电协同"战略，间接参股郑州合盈数据中心项目，整体投资规模达 <strong>94.1 亿元</strong>。
-      </div>
-      <div class="card-insight">
-        <b>行业启示：</b> 火电国企跨界 IDC 已成新趋势。传统能源企业凭借电力资源优势切入算力赛道，"算电协同"从概念走向规模化落地，将加速 IDC 行业格局重塑。
-      </div>
-      <div class="card-source">📎 <a href="https://finance.sina.com.cn/jjxw/2026-03-21/doc-inhrtpvz6058702.shtml" target="_blank">财联社报道</a></div>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-critical">重大</div>
-      <div class="card-title">英伟达 GTC 2026：Vera Rubin 全液冷标配，800VDC 数据中心加速落地</div>
-      <div class="card-body">
-        3月16-19日 GTC 2026 大会上，黄仁勋宣布推出下一代 <strong>Vera Rubin 芯片平台</strong>，首次全面标配液冷架构，Manifold / MQD / Coldplate 三大液冷核心模块同步亮相。同时披露正积极推动 3 个 <strong>800VDC 数据中心</strong>落地，伟创力联合英伟达发布 800VDC 供电机架。
-      </div>
-      <div class="card-insight">
-        <b>行业启示：</b> 液冷从"选配"变为"强制标配"，标志 AI 算力基础设施正式迈入全液冷规模化时代。800VDC 供电路径将深刻改变数据中心电力架构设计。
-      </div>
-      <div class="card-source">📎 <a href="https://www.eet-china.com/mp/a483126.html" target="_blank">电子工程专辑</a></div>
-    </div>
-  </section>
-
-  <!-- 项目与市场 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-blue">🏗️</div>
-      <h2 class="section-title">项目与市场</h2>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-project">项目</div>
-      <div class="card-title">中国移动呼和浩特数据中心 52.44 亿 EPC 定标</div>
-      <div class="card-body">
-        中国移动呼和浩特数据中心 B25-B28 四栋机房楼 EPC 总承包项目中标公示。计划工期 698 天，首批交付 <strong>120MW IT 总功率</strong>。项目位于"东数西算"枢纽呼和浩特，享受绿电低价（~0.36元/度）和冷凉气候优势。
-      </div>
-      <div class="table-wrap" style="margin-top:14px">
-        <table>
-          <thead><tr><th>标段</th><th>中标方</th><th>金额</th></tr></thead>
-          <tbody>
-            <tr><td>第一标段（B25/B27）</td><td>华信咨询 + 中建三局 + 中邮建</td><td>~27.02 亿元</td></tr>
-            <tr><td>第二标段（B26/B28）</td><td>中移设计院 + 中建科工 + 中电四建</td><td>~24.90 亿元</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-project">项目</div>
-      <div class="card-title">浙江移动嘉善数据中心二期 EPC 中标 4.05 亿</div>
-      <div class="card-body">
-        3月17日公示，香江系统工程有限公司（联合体：中通服咨询设计研究院）以 <strong>4.05 亿元</strong>中标浙江移动嘉善数据中心二期机电工程 EPC 总承包。建设内容包括 D01 机房楼电源、空调、工艺及 C01 动力中心。长三角算力需求持续旺盛。
-      </div>
-      <div class="card-source">📎 <a href="https://news.idcquan.com/news/206607.shtml" target="_blank">IDC圈报道</a></div>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-project">项目</div>
-      <div class="card-title">国能伊吾智算中心一期 EPC 公示 4.5 亿</div>
-      <div class="card-body">
-        3月26日中标候选人公示，项目位于新疆哈密。能源央企在西部算力枢纽布局国产芯片智算中心，"东数西算 + 国产替代"双轮驱动。
-      </div>
-      <ul class="spec-list">
-        <li>总建筑面积 <strong>6,762 ㎡</strong></li>
-        <li>规划总算力 <strong>3,500 PFlops</strong>（FP16）</li>
-        <li>昆仑芯 P800 服务器 <strong>700 台</strong> + CPU 服务器 200 台</li>
-        <li>配套存储 <strong>20PB</strong>，PUE 设计 <strong>&lt; 1.2</strong></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 技术趋势 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-cyan">⚡</div>
-      <h2 class="section-title">技术趋势</h2>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-tech">技术</div>
-      <div class="card-title">2MW 级 CDU 成液冷竞争新焦点</div>
-      <div class="card-body">
-        随着英伟达 GB200 / B300 / Rubin 平台功率密度攀升，单机柜热负荷突破 120kW 成为常态，<strong>2MW 级 CDU</strong> 成为衡量液冷厂商技术实力的新标杆。
-      </div>
-      <ul class="spec-list">
-        <li><strong>开利（Carrier）</strong>：推出 1.3MW-5MW 全覆盖 CDU 产品线</li>
-        <li><strong>维谛技术（Vertiv）</strong>：同步推出新品</li>
-        <li><strong>国内厂商</strong>：曙光数创、英维克等加速追赶</li>
-      </ul>
-      <div class="card-insight">
-        <b>成熟度判断：</b> 从试点迈向规模化部署。2MW CDU 将是未来 2 年液冷市场的核心竞争品类。
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-tech">技术</div>
-      <div class="card-title">800VDC 四层供电架构亮相 GTC</div>
-      <div class="card-body">
-        GTC 2026 展示的 800VDC 技术路径涵盖完整四层架构：<strong>电网/设施侧 → 电力分配 → 机架级电源 → 芯片级供电</strong>。伟创力 3月16日发布专为 Vera Rubin 设计的 800VDC 供电机架，采用分离式架构（供电模块独立于 IT 机柜）。
-      </div>
-      <div class="card-insight">
-        <b>成熟度判断：</b> 早期商用阶段，预计将大幅提升数据中心电力转换效率。
-      </div>
-    </div>
-  </section>
-
-  <!-- 政策法规 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-green">📜</div>
-      <h2 class="section-title">政策法规</h2>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-policy">政策</div>
-      <div class="card-title">深圳发布 AI 服务器产业链三年行动计划（2026-2028）</div>
-      <div class="card-body">
-        3月23日，深圳市工信局正式印发《AI 服务器产业链高质量发展行动计划（2026-2028年）》，提出到 2028 年在<strong>八大领域</strong>全面突破：核心芯片、存储、PCB、电源储能、光模块、散热、被动元器件、AI 服务器整机。
-      </div>
-      <div class="card-insight">
-        <b>行业启示：</b> 国内首个城市级 AI 服务器全产业链专项政策，将推动深圳成为超大规模智算集群研发制造枢纽。
-      </div>
-      <div class="card-source">📎 <a href="https://gxj.sz.gov.cn/xxgk/xxgkml/qt/tzgg/content/post_12697099.html" target="_blank">深圳市工信局官网</a></div>
-    </div>
-  </section>
-
-  <!-- 供应链动态 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-orange">🔗</div>
-      <h2 class="section-title">供应链动态</h2>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-supply">供应链</div>
-      <div class="card-title">科华数据订单爆发，高端 UPS 国内第一</div>
-      <div class="card-body">
-        3月28日报道，科华数据（002335）数据中心业务表现亮眼。高端 UPS 市场国内第一，与华为、维谛"三足鼎立"，已打造 240V-800V 全系列 HVDC 电源方案。
-      </div>
-      <ul class="spec-list">
-        <li>2024 年营收 <strong>19.21 亿元</strong>（同比 +30.32%）</li>
-        <li>2025 年上半年再增超 <strong>30%</strong></li>
-        <li>合同负债 <strong>4.34 亿元</strong>（同比 +32%），接近 2024 年末 2 倍</li>
-      </ul>
-      <div class="card-source">📎 <a href="https://finance.sina.com.cn/wm/2026-03-28/doc-inhspwhu5724241.shtml" target="_blank">新浪财经</a></div>
-    </div>
-
-    <div class="card">
-      <div class="signal-badge badge-supply">供应链</div>
-      <div class="card-title">高盛：全球数据中心供需紧张延续至 2026 年</div>
-      <div class="card-body">高盛最新研报核心观点：</div>
-      <ul class="spec-list">
-        <li>2030 年全球数据中心容量将达 <strong>150GW</strong></li>
-        <li>AI 将消耗数据中心 <strong>39%</strong> 电力需求</li>
-        <li>供需拐点从 2025 年<strong>推迟至 2026 年末</strong></li>
-        <li>核心约束已从 GPU 转变为<strong>电力</strong></li>
-        <li>北美市场供应最为紧张</li>
-      </ul>
-      <div class="card-insight">
-        <b>供需判断：</b> 全球紧张持续，电力约束 &gt; 设备约束，基础设施进入"可靠性超级周期"。
-      </div>
-    </div>
-  </section>
-
-  <!-- 招投标 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-purple">📋</div>
-      <h2 class="section-title">本周重大招投标汇总</h2>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden;">
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>项目</th><th>类型</th><th>金额</th><th>来源</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>中国移动呼和浩特数据中心 B25-B28 EPC</td>
-              <td><span style="color:var(--accent-green);font-weight:600;">中标</span></td>
-              <td><strong>~52.44 亿</strong></td>
-              <td>内蒙古公共资源交易中心</td>
-            </tr>
-            <tr>
-              <td>浙江移动嘉善数据中心二期 EPC</td>
-              <td><span style="color:var(--accent-green);font-weight:600;">中标</span></td>
-              <td><strong>~4.05 亿</strong></td>
-              <td>中国移动采购与招标网</td>
-            </tr>
-            <tr>
-              <td>国能伊吾智算中心一期 EPC</td>
-              <td><span style="color:var(--accent-yellow);font-weight:600;">候选人公示</span></td>
-              <td><strong>~4.5 亿</strong></td>
-              <td>中国招标投标公共服务平台</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 人物与观点 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-pink">👀</div>
-      <h2 class="section-title">人物与观点</h2>
-    </div>
-
-    <div class="quote-card">
-      <div class="quote-text">
-        2026 年 AI 工作负载增长将集中在支持高密度部署的少数大型企业手中，电力需求将给老化电网带来压力。到 2030 年全球数据中心电力需求将增长 <strong>75-125GW</strong>。碳捕获技术将成为降低排放的实用方案。数据中心 AI 自动化将从试点走向量产。
-      </div>
-      <div class="quote-attr">— Uptime Institute，2026 年 1 月《五大数据中心预测报告》</div>
-    </div>
-
-    <div class="quote-card">
-      <div class="quote-text">
-        数据中心的核心约束已从"GPU 何时到货"转变为"电力何时接通"。到 2030 年 AI 将消耗全球数据中心 <strong>39%</strong> 的电力。供需紧张态势可能延续至 2026 年末。
-      </div>
-      <div class="quote-attr">— 高盛全球科技研究团队，2026 年 2 月研报</div>
-    </div>
-  </section>
-
-  <!-- 关键数字 -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-icon icon-yellow">📊</div>
-      <h2 class="section-title">本期关键数字</h2>
-    </div>
-
-    <div class="data-grid">
-      <div class="data-card">
-        <div class="num">11<span style="font-size:14px;color:var(--text-secondary)">亿</span></div>
-        <div class="label">豫能控股增资先天算力</div>
-        <div class="src">cninfo</div>
-      </div>
-      <div class="data-card">
-        <div class="num">52.44<span style="font-size:14px;color:var(--text-secondary)">亿</span></div>
-        <div class="label">呼和浩特 EPC 总金额</div>
-        <div class="src">内蒙古公共资源交易中心</div>
-      </div>
-      <div class="data-card">
-        <div class="num">3,500<span style="font-size:14px;color:var(--text-secondary)">PFlops</span></div>
-        <div class="label">国能伊吾智算算力</div>
-        <div class="src">中国招标投标公共服务平台</div>
-      </div>
-      <div class="data-card">
-        <div class="num">8<span style="font-size:14px;color:var(--text-secondary)">个</span></div>
-        <div class="label">深圳 AI 服务器重点领域</div>
-        <div class="src">深圳市工信局</div>
-      </div>
-      <div class="data-card">
-        <div class="num">&gt;30<span style="font-size:14px;color:var(--text-secondary)">%</span></div>
-        <div class="label">科华数据 DC 营收增速</div>
-        <div class="src">公司公告</div>
-      </div>
-      <div class="data-card">
-        <div class="num">150<span style="font-size:14px;color:var(--text-secondary)">GW</span></div>
-        <div class="label">2030 全球 DC 容量预测</div>
-        <div class="src">高盛</div>
-      </div>
-      <div class="data-card">
-        <div class="num">75-125<span style="font-size:14px;color:var(--text-secondary)">GW</span></div>
-        <div class="label">2030 DC 电力增量预测</div>
-        <div class="src">Uptime Institute</div>
-      </div>
-      <div class="data-card">
-        <div class="num">39<span style="font-size:14px;color:var(--text-secondary)">%</span></div>
-        <div class="label">AI 占 DC 电力比例 (2030)</div>
-        <div class="src">高盛</div>
-      </div>
-    </div>
-  </section>
-
-</main>
+<!-- Issues List -->
+<section class="issues">
+  <div class="issues-header">
+    <h2 class="issues-title">📚 所有期刊</h2>
+  </div>
+  <div class="issues-grid" id="issuesGrid"></div>
+  <div class="no-results" id="noResults" style="display:none;">
+    <span>🔍</span>
+    没有找到匹配的期刊
+  </div>
+</section>
 
 <footer class="footer">
-  <p>本报告基于公开信息整理，不构成投资建议。转载请注明出处。</p>
-  <p style="margin-top:4px;">发布日期：2026年3月30日</p>
+  <p>本站基于公开信息整理，不构成投资建议。转载请注明出处。</p>
+  <p style="margin-top:4px;">Powered by IDC Industry Intel · <a href="https://github.com/liuyaoforwork-cell/idc-daily-public">Open Source</a></p>
 </footer>
 
+<script>
+// ── Issues Data ──
+// Each new report appends an entry here. The build script auto-updates this array.
+const ISSUES = [
+  {
+    id: "2026-03-30",
+    date: "2026-03-30",
+    dateRange: "2026.03.28 — 03.30",
+    title: "豫能控股94亿算电协同 · GTC Vera Rubin全液冷 · 呼和浩特52亿EPC",
+    intelCount: 12,
+    totalAmount: "60.99亿",
+    sections: 8,
+    tags: ["液冷", "800VDC", "算电协同", "东数西算", "招投标", "深圳AI政策", "CDU", "国产替代"],
+    summary: "豫能控股11亿跨界数据中心、英伟达GTC 2026 Vera Rubin全液冷标配、中国移动呼和浩特52.44亿EPC定标、深圳AI服务器三年行动计划、2MW CDU竞争焦点、高盛供需研报。",
+    file: "issues/2026-03-30.html"
+  }
+];
+
+// ── Render ──
+const grid = document.getElementById('issuesGrid');
+const noResults = document.getElementById('noResults');
+const searchCount = document.getElementById('searchCount');
+
+function renderIssues(list) {
+  if (list.length === 0) {
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    searchCount.textContent = '无匹配结果';
+    return;
+  }
+  noResults.style.display = 'none';
+  const q = document.getElementById('searchInput').value.trim();
+  searchCount.textContent = q ? `找到 ${list.length} 期相关结果` : '';
+
+  grid.innerHTML = list.map(issue => {
+    const d = new Date(issue.date + 'T00:00:00');
+    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    return `
+      <a class="issue-card" href="${issue.file}">
+        <div class="issue-date-col">
+          <div class="issue-month">${months[d.getMonth()]}</div>
+          <div class="issue-day">${d.getDate()}</div>
+          <div class="issue-year">${d.getFullYear()}</div>
+        </div>
+        <div class="issue-info">
+          <div class="issue-title">${issue.title}</div>
+          <div class="issue-meta">
+            <span class="issue-tag tag-intel">${issue.intelCount} 条情报</span>
+            <span class="issue-tag tag-amount">¥ ${issue.totalAmount}</span>
+            <span class="issue-tag tag-sections">${issue.sections} 板块</span>
+          </div>
+          <div class="issue-summary">${issue.summary}</div>
+        </div>
+        <div class="issue-arrow">→</div>
+      </a>
+    `;
+  }).join('');
+}
+
+function filterIssues() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (!q) { renderIssues(ISSUES); return; }
+  const filtered = ISSUES.filter(i =>
+    i.title.toLowerCase().includes(q) ||
+    i.summary.toLowerCase().includes(q) ||
+    i.tags.some(t => t.toLowerCase().includes(q)) ||
+    i.dateRange.includes(q)
+  );
+  renderIssues(filtered);
+}
+
+// Init
+document.getElementById('totalIssues').textContent = ISSUES.length;
+document.getElementById('totalIntel').textContent = ISSUES.reduce((s,i) => s + i.intelCount, 0);
+renderIssues(ISSUES);
+
+// ── Theme ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') !== 'light';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('idc-theme', isDark ? 'light' : 'dark');
+}
+(function initTheme() {
+  const saved = localStorage.getItem('idc-theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeBtn').textContent = '☀️';
+  }
+})();
+</script>
 </body>
 </html>
