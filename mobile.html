@@ -315,22 +315,156 @@
 // ══════════════════════════════════════════════
 var ISSUES = [
   {
-    id: "2026-03-30",
+    id: "2026-03-30-pm",
     date: "2026-03-30",
-    dateRange: "2026.03.28 — 03.30",
+    dateRange: "2026.03.28 — 03.30（晚间版）",
+    title: "算电协同80%绿电硬指标 · 华为800V+AI液冷全栈AIDC · 京蒙26亿液冷智算 · 联通韶关5.66亿EPC",
+    intelCount: 14,
+    totalAmount: "31.66亿",
+    sections: 8,
+    tags: ["算电协同", "800V", "液冷", "AIDC", "HVDC", "绿电", "东数西算", "国产替代", "招投标"],
+    summary: "刘烈宏明确算电协同80%绿电硬指标、华为发布800V+AI液冷全栈AIDC方案、京蒙零碳智算26亿/63MW液冷、中恒电气800V HVDC效率78%→95%、联通韶关EPC 5.66亿华为入局、仲量联行2030全球DC翻倍至200GW。",
+    file: "issues/2026-03-30-pm.html"
+  },
+  {
+    id: "2026-03-30-am",
+    date: "2026-03-30",
+    dateRange: "2026.03.28 — 03.30（上午版）",
     title: "豫能控股94亿算电协同 · GTC Vera Rubin全液冷 · 呼和浩特52亿EPC",
     intelCount: 12,
     totalAmount: "60.99亿",
     sections: 8,
     tags: ["液冷", "800VDC", "算电协同", "东数西算", "招投标", "深圳AI政策", "CDU", "国产替代"],
     summary: "豫能控股11亿跨界数据中心、英伟达GTC 2026 Vera Rubin全液冷标配、中国移动呼和浩特52.44亿EPC定标、深圳AI服务器三年行动计划、2MW CDU竞争焦点、高盛供需研报。",
-    file: "issues/2026-03-30.html"
+    file: "issues/2026-03-30-am.html"
   }
 ];
 
 var INTEL_ITEMS = [
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "国家数据局刘烈宏：算电协同升级为国家战略，枢纽节点绿电占比须达 80%",
+    body: "3月23日中国发展高层论坛上，国家数据局局长刘烈宏明确提出「算电协同」升级为国家战略级部署，要求全国一体化算力网络枢纽节点绿电使用比例达到 80%，并写入政府工作报告成为「十五五」开局硬约束。",
+    insight: "算电协同从行业倡议正式上升为国家硬指标，对数据中心选址、能源采购、PUE 设计带来系统性约束。",
+    sourceLabel: "中国发展高层论坛", sourceUrl: "",
+    tags: ["算电协同", "绿电", "国家数据局", "刘烈宏", "十五五"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "华为数字能源伙伴大会：发布 800V 直流 + AI 液冷全栈 AIDC 方案",
+    body: "3月25日华为中国数字能源伙伴大会数据中心产业论坛，数据中心能源领域总裁何波发布全栈 AIDC 基础设施方案：800V 直流供电 + AI 液冷散热 + SmartLi 第四代智能锂电。提出「算力的尽头是电力，AIDC 底座是能源基础设施」。",
+    insight: "华为以能源基础设施切入 AIDC 赛道，800V 直流 + AI 液冷将成为下一代数据中心标准架构。",
+    sourceLabel: "Doit.com.cn", sourceUrl: "https://www.doit.com.cn/p/555561.html",
+    tags: ["华为", "800V", "液冷", "AIDC", "数字能源", "SmartLi"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "京蒙零碳智慧算力产业园：26 亿投资、63MW/43MW 液冷，国内最大液冷智算项目之一",
+    body: "位于内蒙古的京蒙零碳智慧算力产业园总投资 26 亿元，一期 IT 负载 63MW 全液冷架构，二期 43MW 液冷为主，PUE 设计 <1.15，100% 绿电供应。",
+    insight: "超百兆瓦级液冷智算从示范迈向量产，是「东数西算 + 绿色算力」融合落地的标杆案例。",
+    sourceLabel: "腾讯新闻", sourceUrl: "https://news.qq.com/rain/a/20260327A05CAC00",
+    tags: ["京蒙", "零碳", "液冷", "绿电", "东数西算", "26亿"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "仲量联行报告：2030 年全球数据中心容量将从 103GW 翻倍至 200GW",
+    body: "仲量联行《2026 全球数据中心展望》报告预测：全球数据中心总容量将从当前 103GW 在 2030 年达到 200GW，近乎翻倍。AI 超级投资周期驱动下未来 5 年累计投资规模预计达 3 万亿美元。",
+    insight: "全球数据中心进入超级投资周期，容量翻倍意味着基建、供电、冷却全产业链将持续景气至 2030 年。",
+    sourceLabel: "仲量联行", sourceUrl: "",
+    tags: ["仲量联行", "200GW", "全球", "投资", "3万亿美元"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "中恒电气 800V HVDC 落地 AIDC，端到端效率从 78% 提升至 95%",
+    body: "中恒电气（002364）800V HVDC 全链路高压直流供电方案已成功落地 AIDC 项目。端到端供电效率从 78% 提升至 95%，字节跳动率先导入 800V 方案进入规模化部署。产品线覆盖 240V/336V/400V/800V 全电压等级。",
+    insight: "已有头部客户规模化落地，800V 从实验阶段进入商用拐点。",
+    sourceLabel: "搜狐财经", sourceUrl: "https://www.sohu.com/a/1000586978_504366",
+    tags: ["中恒电气", "800V", "HVDC", "字节跳动", "AIDC", "效率"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "维谛技术 Sidecar 液冷双场景验证：华北 + 印尼，1 个月快速部署",
+    body: "维谛技术（Vertiv）Sidecar 列间液冷方案在中国华北某 AIDC 和印尼数据中心两个场景完成验证部署，均在 1 个月内完成从设计到运行，无需改造机房即可实现液冷升级。",
+    insight: "Sidecar 方案适合风冷存量机房快速液冷改造，降低了液冷部署的时间和技术门槛。",
+    sourceLabel: "", sourceUrl: "",
+    tags: ["维谛", "Vertiv", "Sidecar", "液冷", "改造", "印尼"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "赛迪：国内品牌加速卡市占率已超 50%",
+    body: "赛迪研究院报告显示，在政策推动和供应链自主可控趋势下，国内品牌 AI 加速卡的市场占有率已经突破 50%。昆仑芯、华为昇腾、海光等厂商持续放量，国产替代进入实质加速阶段。",
+    insight: "国产加速卡占比过半是里程碑信号，将直接影响 AIDC 硬件选型和供应链格局。",
+    sourceLabel: "赛迪研究院", sourceUrl: "",
+    tags: ["赛迪", "加速卡", "国产替代", "昆仑芯", "昇腾", "海光"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "算电协同写入政府工作报告，成为「十五五」开局硬指标",
+    body: "「算电协同」从概念倡议正式升级为政策硬约束。2026 年政府工作报告明确要求枢纽节点绿电占比须达 80%。PUE <1.25 叠加绿电 80%，双重硬指标将推动西部绿电枢纽成为 AIDC 主战场。",
+    insight: "东部非绿电项目面临合规压力，西部绿电枢纽迎来新一轮投建高峰。",
+    sourceLabel: "政府工作报告", sourceUrl: "",
+    tags: ["算电协同", "政策", "绿电", "十五五", "PUE"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "ODCC 算力经济焕新行动浙江平湖站启动",
+    body: "3月25日 ODCC「算力经济焕新行动」在浙江平湖举办，聚焦长三角算力需求与供给匹配，推动数据中心标准化、绿色化、智能化升级。",
+    insight: "", sourceLabel: "ODCC", sourceUrl: "",
+    tags: ["ODCC", "算力经济", "平湖", "长三角", "标准化"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "丹佛斯发布《绿色低碳数据中心》报告，提出余热回收转型路径",
+    body: "3月23日丹佛斯发布行业报告，系统阐述数据中心余热回收的技术路径和商业模式。核心观点：数据中心排出的废热通过热泵技术可回收用于城市供暖，实现「变废为宝」。",
+    insight: "余热回收是数据中心绿色化的最后一公里。随着液冷渗透率提升，高品位废热回收可行性在改善。",
+    sourceLabel: "丹佛斯", sourceUrl: "",
+    tags: ["丹佛斯", "余热回收", "绿色", "低碳", "热泵"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "全球数据中心超级投资周期：5 年 3 万亿美元",
+    body: "多家机构数据指向一致判断：全球数据中心已进入超级投资周期，2025-2030 年累计投资规模预计达 3 万亿美元。供应链各环节（土建、供电、冷却、网络、IT设备）均处于高景气度。",
+    insight: "", sourceLabel: "多家机构", sourceUrl: "",
+    tags: ["投资周期", "3万亿", "供应链", "高景气"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标",
+    title: "联通韶关数据中心 EPC 5.66 亿中标，华为入局",
+    body: "中国联通韶关数据中心 EPC 总承包项目中标结果公示，中标金额 5.66 亿元，华为作为联合体成员参与。项目位于东数西算韶关枢纽节点，是华为在运营商数据中心 EPC 市场的重要落子。",
+    insight: "华为持续加大在运营商 IDC 基建领域的渗透力度，韶关枢纽战略价值进一步凸显。",
+    sourceLabel: "中国联通采购与招标网", sourceUrl: "",
+    tags: ["联通", "韶关", "EPC", "华为", "东数西算", "招投标"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标",
+    title: "张北云联数据中心 110KV 输变电工程 EPC 中标公示",
+    body: "张北云联数据中心 110KV 输变电工程 EPC 中标公示，为张北数据中心集群提供电力保障，进一步完善京津冀枢纽电力基础设施。",
+    insight: "", sourceLabel: "中国招标投标公共服务平台", sourceUrl: "",
+    tags: ["张北", "输变电", "110KV", "EPC", "京津冀"]
+  },
+  {
+    issueId: "2026-03-30-pm", issueDate: "2026.03.28 — 03.30（晚间版）", issueFile: "issues/2026-03-30-pm.html",
+    section: "观点", sectionAnchor: "sec-quote", sectionName: "💬 观点与研判",
+    title: "何波（华为）：算力的尽头是电力，AIDC 底座是能源基础设施",
+    body: "华为数据中心能源领域总裁何波在华为中国数字能源伙伴大会上提出：算力的尽头是电力。AIDC 的底座不是 IT 设备，而是能源基础设施。未来的数据中心竞争，本质上是能源效率和能源获取能力的竞争。",
+    insight: "", sourceLabel: "华为中国数字能源伙伴大会", sourceUrl: "https://www.doit.com.cn/p/555561.html",
+    tags: ["华为", "何波", "算力", "电力", "能源", "AIDC"]
+  },
+  {
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
     title: "豫能控股 11 亿跨界数据中心，「算电协同」模式规模化落地",
     body: "河南豫能控股（001896.SZ）公告拟以自有资金 11 亿元增资先天算力（河南）科技有限公司，与控股股东河南投资集团共同布局「算电协同」战略，间接参股郑州合盈数据中心项目，整体投资规模达 94.1 亿元。",
@@ -339,7 +473,7 @@ var INTEL_ITEMS = [
     tags: ["算电协同", "豫能控股", "郑州", "火电", "IDC"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
     title: "英伟达 GTC 2026：Vera Rubin 全液冷标配，800VDC 数据中心加速落地",
     body: "GTC 2026 大会上，黄仁勋宣布推出下一代 Vera Rubin 芯片平台，首次全面标配液冷架构，Manifold / MQD / Coldplate 三大液冷核心模块同步亮相。同时披露正积极推动 3 个 800VDC 数据中心落地，伟创力联合英伟达发布 800VDC 供电机架。",
@@ -348,7 +482,7 @@ var INTEL_ITEMS = [
     tags: ["英伟达", "GTC", "Vera Rubin", "液冷", "800VDC", "伟创力"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
     title: "中国移动呼和浩特数据中心 52.44 亿 EPC 定标",
     body: "中国移动呼和浩特数据中心 B25-B28 四栋机房楼 EPC 总承包项目中标公示。计划工期 698 天，首批交付 120MW IT 总功率。项目位于「东数西算」枢纽呼和浩特，享受绿电低价和冷凉气候优势。第一标段华信咨询+中建三局+中邮建约27.02亿元，第二标段中移设计院+中建科工+中电四建约24.90亿元。",
@@ -356,7 +490,7 @@ var INTEL_ITEMS = [
     tags: ["中国移动", "呼和浩特", "EPC", "东数西算", "招投标", "52亿"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
     title: "浙江移动嘉善数据中心二期 EPC 中标 4.05 亿",
     body: "香江系统工程有限公司（联合体：中通服咨询设计研究院）以 4.05 亿元中标浙江移动嘉善数据中心二期机电工程 EPC 总承包。建设内容包括 D01 机房楼电源、空调、工艺及 C01 动力中心。长三角算力需求持续旺盛。",
@@ -364,7 +498,7 @@ var INTEL_ITEMS = [
     tags: ["浙江移动", "嘉善", "EPC", "长三角", "招投标"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
     title: "国能伊吾智算中心一期 EPC 公示 4.5 亿",
     body: "3月26日中标候选人公示，项目位于新疆哈密。能源央企在西部算力枢纽布局国产芯片智算中心，「东数西算 + 国产替代」双轮驱动。总建筑面积 6,762 ㎡，规划总算力 3,500 PFlops（FP16），昆仑芯 P800 服务器 700 台 + CPU 服务器 200 台，配套存储 20PB，PUE 设计 < 1.2。",
@@ -372,7 +506,7 @@ var INTEL_ITEMS = [
     tags: ["国能", "伊吾", "智算", "昆仑芯", "国产替代", "新疆", "EPC"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
     title: "2MW 级 CDU 成液冷竞争新焦点",
     body: "随着英伟达 GB200 / B300 / Rubin 平台功率密度攀升，单机柜热负荷突破 120kW 成为常态，2MW 级 CDU 成为衡量液冷厂商技术实力的新标杆。开利（Carrier）推出 1.3MW-5MW 全覆盖 CDU 产品线，维谛技术（Vertiv）同步推出新品，国内厂商曙光数创、英维克等加速追赶。",
@@ -381,7 +515,7 @@ var INTEL_ITEMS = [
     tags: ["CDU", "液冷", "开利", "维谛", "曙光数创", "英维克", "2MW"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
     title: "800VDC 四层供电架构亮相 GTC",
     body: "GTC 2026 展示的 800VDC 技术路径涵盖完整四层架构：电网/设施侧 → 电力分配 → 机架级电源 → 芯片级供电。伟创力 3月16日发布专为 Vera Rubin 设计的 800VDC 供电机架，采用分离式架构（供电模块独立于 IT 机柜）。",
@@ -390,7 +524,7 @@ var INTEL_ITEMS = [
     tags: ["800VDC", "供电", "伟创力", "GTC", "Vera Rubin"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
     title: "深圳发布 AI 服务器产业链三年行动计划（2026-2028）",
     body: "3月23日，深圳市工信局正式印发《AI 服务器产业链高质量发展行动计划（2026-2028年）》，提出到 2028 年在八大领域全面突破：核心芯片、存储、PCB、电源储能、光模块、散热、被动元器件、AI 服务器整机。",
@@ -399,7 +533,7 @@ var INTEL_ITEMS = [
     tags: ["深圳", "AI服务器", "政策", "产业链", "芯片", "光模块"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
     title: "科华数据订单爆发，高端 UPS 国内第一",
     body: "3月28日报道，科华数据（002335）数据中心业务表现亮眼。高端 UPS 市场国内第一，与华为、维谛「三足鼎立」，已打造 240V-800V 全系列 HVDC 电源方案。2024 年营收 19.21 亿元（同比 +30.32%），2025 年上半年再增超 30%，合同负债 4.34 亿元（同比 +32%）。",
@@ -407,7 +541,7 @@ var INTEL_ITEMS = [
     tags: ["科华数据", "UPS", "HVDC", "供应链", "华为", "维谛"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
     title: "高盛：全球数据中心供需紧张延续至 2026 年",
     body: "高盛最新研报核心观点：2030 年全球数据中心容量将达 150GW，AI 将消耗数据中心 39% 电力需求，供需拐点从 2025 年推迟至 2026 年末，核心约束已从 GPU 转变为电力，北美市场供应最为紧张。",
@@ -416,7 +550,7 @@ var INTEL_ITEMS = [
     tags: ["高盛", "供需", "150GW", "电力", "AI", "研报"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "观点", sectionAnchor: "sec-quote", sectionName: "💬 观点与研判",
     title: "Uptime Institute：2026 年五大数据中心预测",
     body: "2026 年 AI 工作负载增长将集中在支持高密度部署的少数大型企业手中，电力需求将给老化电网带来压力。到 2030 年全球数据中心电力需求将增长 75-125GW。碳捕获技术将成为降低排放的实用方案。数据中心 AI 自动化将从试点走向量产。",
@@ -424,7 +558,7 @@ var INTEL_ITEMS = [
     tags: ["Uptime Institute", "预测", "电力", "AI", "碳捕获"]
   },
   {
-    issueId: "2026-03-30", issueDate: "2026.03.28 — 03.30", issueFile: "issues/2026-03-30.html",
+    issueId: "2026-03-30-am", issueDate: "2026.03.28 — 03.30（上午版）", issueFile: "issues/2026-03-30-am.html",
     section: "观点", sectionAnchor: "sec-quote", sectionName: "💬 观点与研判",
     title: "高盛科技团队：核心约束从 GPU 转向电力",
     body: "数据中心的核心约束已从「GPU 何时到货」转变为「电力何时接通」。到 2030 年 AI 将消耗全球数据中心 39% 的电力。供需紧张态势可能延续至 2026 年末。",
