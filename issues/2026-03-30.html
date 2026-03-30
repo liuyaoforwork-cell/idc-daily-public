@@ -54,6 +54,21 @@
   }
   .topbar-btn:hover { background:var(--card-hover); border-color:var(--blue); }
 
+  /* ── Theme Switcher ── */
+  .theme-switcher {
+    display:flex; align-items:center; background:var(--card); border:1px solid var(--border);
+    border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600;
+  }
+  .theme-opt {
+    padding:0 12px; height:100%; display:flex; align-items:center; gap:4px;
+    cursor:pointer; color:var(--text3); transition:all .2s; border:none; background:transparent;
+    font-family:inherit; font-size:13px; font-weight:600; white-space:nowrap;
+  }
+  .theme-opt:hover { color:var(--text2); }
+  .theme-opt.active {
+    background:var(--blue); color:#fff; box-shadow:0 1px 6px rgba(77,159,255,.3);
+  }
+
   /* ── Section nav (pills) ── */
   .section-nav {
     position:sticky; top:56px; z-index:90;
@@ -288,7 +303,10 @@
   <div class="topbar-actions">
     <button class="topbar-btn" onclick="shareLink()" title="复制链接">🔗</button>
     <button class="topbar-btn" onclick="window.print()" title="打印/导出PDF">🖨️</button>
-    <button class="topbar-btn" onclick="toggleTheme()" title="切换主题" id="themeBtn">🌙</button>
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-opt" data-theme="dark" onclick="setTheme('dark')">🌙 深色</button>
+      <button class="theme-opt" data-theme="light" onclick="setTheme('light')">☀️ 浅色</button>
+    </div>
   </div>
 </nav>
 
@@ -606,17 +624,20 @@ function scrollTo(id) {
 }
 
 // ── Theme ──
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-  document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
-  localStorage.setItem('idc-theme', isDark ? 'light' : 'dark');
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('idc-theme', theme);
+  updateThemeSwitcher(theme);
+}
+function updateThemeSwitcher(theme) {
+  document.querySelectorAll('.theme-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.theme === theme);
+  });
 }
 (function() {
-  if (localStorage.getItem('idc-theme') === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.getElementById('themeBtn').textContent = '☀️';
-  }
+  const saved = localStorage.getItem('idc-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeSwitcher(saved);
 })();
 
 // ── Share ──
