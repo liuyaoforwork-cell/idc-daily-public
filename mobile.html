@@ -315,6 +315,18 @@
 // ══════════════════════════════════════════════
 var ISSUES = [
   {
+    id: "2026-04-01",
+    date: "2026-04-01",
+    dateRange: "2026-04-01",
+    title: "仲量联行全球DC展望200GW/3万亿美元 · 潍柴动力全面入局DC电力 · 1.6T光模块量产元年 · 液冷放量+CDU紧缺",
+    intelCount: 11,
+    totalAmount: "44.7亿",
+    sections: 8,
+    tags: ["仲量联行", "200GW", "潍柴动力", "1.6T光模块", "液冷", "CDU", "Rubin", "招投标"],
+    summary: "仲量联行发布全球DC展望：2030年总容量翻倍至200GW、五年投资3万亿美元；潍柴动力DC发动机销量增259%全面入局；OFC 2026确认1.6T光模块量产元年；液冷放量CDU紧缺；呼和浩特30亿EPC招标。",
+    file: "issues/2026-04-01.html"
+  },
+  {
     id: "2026-03-31",
     date: "2026-03-31",
     dateRange: "2026-03-31",
@@ -353,6 +365,105 @@ var ISSUES = [
 ];
 
 var INTEL_ITEMS = [
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "仲量联行发布《2026年全球数据中心展望》：行业迈入历史性超级投资周期",
+    body: "报告指出全球数据中心总容量预计到2030年从103GW翻倍至200GW；截至2025年底全球使用率高达97%，在建项目77%已获预租；未来五年全球投资总额将达3万亿美元。",
+    insight: "数据中心正式进入与交通、公用事业同级的全球基础设施资产时代，资本配置逻辑发生根本性转变。",
+    sourceLabel: "仲量联行(JLL) 官方报告", sourceUrl: "https://www.joneslanglasalle.com.cn/zh-cn/insights/2026-data-center-outlook",
+    tags: ["仲量联行", "200GW", "3万亿美元", "全球"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "潍柴动力宣布2026年全面进军数据中心电力市场",
+    body: "潍柴动力在机构调研中表示，数据中心电力产品规划、开发、客户拓展进展顺畅，产品已覆盖全场景电力市场需求；2025年数据中心用发动机销售1401台，同比增长259%。",
+    insight: "传统重工巨头大举入局DC电力赛道，折射AI算力爆发下数据中心供电已成新增长极。",
+    sourceLabel: "东方财富网/证券日报", sourceUrl: "https://wap.eastmoney.com/a/202603313690099931.html",
+    tags: ["潍柴动力", "DC电力", "259%", "发动机"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "中国移动呼和浩特数据中心B11-B16机房楼机电配套EPC招标，预算约30亿元",
+    body: "项目划分为6个标段，要求年内交付。这是中国移动在呼和浩特算力枢纽的又一重大扩容投入。投标截止时间2026年4月13日。",
+    insight: "运营商持续加码东数西算核心节点，呼和浩特作为国家枢纽地位进一步强化。",
+    sourceLabel: "中国移动采购与招标网", sourceUrl: "https://finance.sina.com.cn/stock/relnews/hk/2026-03-24/doc-inhrzysx7319811.shtml",
+    tags: ["中国移动", "呼和浩特", "EPC", "30亿", "东数西算"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "云南巧家县绿色智能数据中心项目EPC招标，总投资6.86亿元",
+    body: "项目规划算力规模约2000PFLOPS(FP16)，机房总功率约1942kW，招标人为云南金泰大数据科技有限公司。",
+    insight: "西南地区绿色算力项目持续落地，依托水电资源优势发展AIDC成为趋势。",
+    sourceLabel: "云南省公共资源交易平台", sourceUrl: "https://www.dtdata.cn/news/show/4295.html",
+    tags: ["巧家", "6.86亿", "绿色智算", "水电", "云南"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "OFC 2026大会释放明确信号：1.6T光模块规模化商用元年开启",
+    body: "本届OFC汇聚超1.6万名参会者和700家展商。1.6T光模块预计2026全年出货量达1000-2000万只；Arista发起的XPO方案端口密度为传统OSFP的4倍；Lumentum预计2026H2 OCS收入达4亿美元。",
+    insight: "",
+    sourceLabel: "光纤在线/中金研究", sourceUrl: "https://www.c-fol.net/news/7_202603/20260325154930.html",
+    tags: ["OFC", "1.6T", "光模块", "XPO", "CPO"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "AIDC液冷深度报告：2026年为液冷放量元年，Rubin架构全液冷路线确认",
+    body: "GB200芯片TPU功耗达2700W，NVL72机柜总功耗超120kW，传统风冷完全无法应对；冷板式液冷可将PUE从1.4+降至1.25以下，浸没式可降至1.1。",
+    insight: "冷板式液冷已成产业化主流，浸没式为100kW+超高密场景的未来方向。",
+    sourceLabel: "券商研报/产业专家分享", sourceUrl: "https://www.sohu.com/a/1003608494_121123901",
+    tags: ["液冷", "Rubin", "CDU", "冷板", "PUE"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "英伟达Rubin Ultra设计传闻引发市场关注：封装形式调整而非规格缩减",
+    body: "3月30日投资圈传闻Rubin Ultra从4-die改为2-die，多家产业分析澄清这是封装形式变化而非降配。英伟达官方从未发布过单封装4-die的Rubin Ultra规格。",
+    insight: "Rubin架构全液冷路线不变，液冷产业链确定性进一步增强，短期传闻不改长期趋势。",
+    sourceLabel: "东方财富/英维克澄清", sourceUrl: "https://caifuhao.eastmoney.com/news/20260331113924725048610",
+    tags: ["英伟达", "Rubin Ultra", "封装", "液冷"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "丹佛斯联合丹麦大使馆发布《绿色低碳数据中心》报告",
+    body: "报告提出四大路径：能效提升（冷却能耗降低10-20%）、余热回收（2030年可满足欧洲约10%供暖需求）、电网协同（减排高达40%）、AI赋能。天津武清案例年减排1659吨CO2，增量投资回收期不到3年。",
+    insight: "报告为政策制定者和运营商提供了可量化的绿色转型路线图。",
+    sourceLabel: "丹佛斯官方/IT168", sourceUrl: "https://datacenter.it168.com/a2026/0325/6921/000006921297.shtml",
+    tags: ["丹佛斯", "绿色低碳", "余热回收", "政策"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "液冷CDU市场持续紧缺：全球市场预计2031年达251.7亿元，CAGR 18.5%",
+    body: "2026年下半年随着英伟达Rubin量产及ASIC服务器放量，AIDC液冷配置率将持续提升，CDU紧缺趋势或贯穿全年。英维克、维谛、科华数据等企业竞相布局全产品线。",
+    insight: "紧缺，价格坚挺，头部厂商产能竞速。",
+    sourceLabel: "产业研报/GWS", sourceUrl: "http://www.globalwatersolutions.cn/2026/251-7%e4%ba%bf%e5%85%83%ef%bc%81%e5%85%a8%e7%90%83%e6%95%b0%e6%8d%ae%e4%b8%ad%e5%bf%83%e6%b6%b2%e5%86%b7cdu%e5%b8%82%e5%9c%ba%e5%89%8d%e6%99%af%e5%b9%bf%e9%98%94/",
+    tags: ["CDU", "液冷", "251.7亿", "供应链"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标",
+    title: "青海海南州云锐智算中心项目EPC询比采购",
+    body: "采购编号QHXY-2026-02，按A级数据中心标准建设，包含机房、电力室、UPS间等，建设4组微模块（每组14个机柜）。项目位于青海海南州。",
+    insight: "青海作为东数西算西部枢纽之一，算力项目持续落地，绿电优势吸引持续投资。",
+    sourceLabel: "青海省限额以下招标采购平台", sourceUrl: "http://www.qhei.net.cn/html/zbgg/2026_3/220777.html",
+    tags: ["青海", "海南州", "智算中心", "EPC"]
+  },
+  {
+    issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标",
+    title: "中国电信芜湖集群经开区大数据中心项目设计招标",
+    body: "项目包含A1A2数据机楼、B1运维楼设计，位于芜湖市经开区。此前3月17日该项目A6、B1、C4楼已启动设计招标，总投资约7.8亿元。",
+    insight: "运营商持续加码长三角算力枢纽集群，芜湖集群建设进入加速期。",
+    sourceLabel: "芜湖公共资源交易中心", sourceUrl: "https://whsggzy.wuhu.gov.cn/whggzyjy/005/005001/005001001/20260330/7784712a-b2db-49c7-a75b-f8cc16421de1.html",
+    tags: ["中国电信", "芜湖", "长三角", "设计招标"]
+  },
   {
     issueId: "2026-03-31", issueDate: "2026-03-31", issueFile: "issues/2026-03-31.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
