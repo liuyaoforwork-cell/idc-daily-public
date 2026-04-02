@@ -315,6 +315,18 @@
 // ══════════════════════════════════════════════
 var ISSUES = [
   {
+    id: "2026-04-02",
+    date: "2026-04-02",
+    dateRange: "2026-04-02",
+    title: "Mistral AI 8.3亿美元自建IDC · 字节1.5GW+阿里2GW算力规划 · 加速计算2029万亿美元 · 液冷放量元年 · 鲁北70亿调试",
+    intelCount: 20,
+    totalAmount: "78.8亿",
+    sections: 8,
+    tags: ["Mistral AI", "GB300", "字节跳动", "阿里巴巴", "液冷", "CDU", "鲁北", "ODCC", "Equinix"],
+    summary: "Mistral AI完成8.3亿美元融资自建AI数据中心部署GB300；字节1.5GW+阿里2GW算力规划浮出水面；IDC Research预测加速计算2029年超万亿美元；华创证券判定2026为液冷放量元年；鲁北70亿大数据中心最终调试；CDU交期延至8-12周。",
+    file: "issues/2026-04-02.html"
+  },
+  {
     id: "2026-04-01",
     date: "2026-04-01",
     dateRange: "2026-04-01",
@@ -365,6 +377,186 @@ var ISSUES = [
 ];
 
 var INTEL_ITEMS = [
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "Mistral AI 完成 8.3 亿美元融资，计划自建 AI 数据中心",
+    body: "法国AI独角兽Mistral AI完成约8.3亿美元融资，估值超60亿美元。资金将部分用于在巴黎近郊自建数据中心，计划部署NVIDIA GB300超级芯片集群。标志着欧洲头部AI厂商从租赁算力转向自建IDC。",
+    insight: "欧洲自主算力基建加速，对全球GPU供应链形成新的需求压力；验证了GB300在训练场景的商业部署趋势。",
+    sourceLabel: "IDC圈/多家财经媒体", sourceUrl: "https://www.idcquan.com",
+    tags: ["Mistral AI", "8.3亿美元", "GB300", "欧洲", "自建IDC"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "字节跳动、阿里巴巴 2026 年算力规划浮出水面",
+    body: "字节跳动2026年IDC算力规划目标约1.5GW，阿里巴巴约2GW，两家合计占国内互联网大厂新增算力需求的显著份额。AIDC需求远超传统IDC增长速率。",
+    insight: "头部云厂+AI厂的超大规模需求将带动国内IDC产业链全面扩张，加剧核心城市电力资源竞争。",
+    sourceLabel: "IDC圈", sourceUrl: "https://www.idcquan.com",
+    tags: ["字节跳动", "阿里巴巴", "1.5GW", "2GW", "算力规划"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "IDC Research 预测：加速计算服务器市场 2029 年将超万亿美元",
+    body: "IDC发布最新预测，全球加速计算服务器市场到2029年将突破1万亿美元，CAGR超50%。AI训练和推理需求是核心驱动力。",
+    insight: "万亿美元级算力硬件市场意味着上游芯片、电力、散热、IDC基建将持续处于高景气周期。",
+    sourceLabel: "IDC Research/GTC 2026", sourceUrl: "https://www.idc.com",
+    tags: ["IDC Research", "万亿美元", "加速计算", "CAGR 50%"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "山东德州鲁北大数据中心进入最终调试阶段",
+    body: "总投资约70亿元的鲁北大数据中心进入最终调试阶段，预计近期投入运营。配套源网荷储一体化清洁能源系统，招标规模约8.84亿元。",
+    insight: "将显著提升山东枢纽节点算力供给能力，源网荷储一体化模式为绿色数据中心建设范本。",
+    sourceLabel: "IDC圈/地方媒体", sourceUrl: "https://www.idcquan.com",
+    tags: ["鲁北", "70亿", "东数西算", "源网荷储", "山东"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "Equinix 加大非洲市场投入，布局南非数据中心",
+    body: "全球最大数据中心运营商Equinix宣布扩大在南非投资布局，计划在约翰内斯堡和开普敦新建/扩建数据中心园区。",
+    insight: "非洲成为全球IDC巨头新增长极，反映新兴市场数字化转型对基础设施的拉动效应。",
+    sourceLabel: "Equinix官方公告", sourceUrl: "https://www.equinix.com",
+    tags: ["Equinix", "南非", "非洲", "新兴市场"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "海南州云锐智算中心 EPC 询比采购启动",
+    body: "青海海南州云锐智算中心项目发布EPC总承包询比采购公告，定位东数西算西部算力节点，将部署高密度AI算力集群。",
+    insight: "西部算力枢纽建设持续推进，EPC模式有利于加速项目落地。",
+    sourceLabel: "招标信息平台", sourceUrl: "http://www.qhei.net.cn",
+    tags: ["海南州", "云锐", "东数西算", "EPC", "青海"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "中国电信辽宁沈阳智算中心 EPC 总承包招标",
+    body: "中国电信辽宁分公司发布沈阳智算中心EPC总承包招标公告，定位东北区域智算枢纽，支撑政企智算和AI推理需求。",
+    insight: "运营商加码智算中心建设，东北区域算力布局补齐短板。",
+    sourceLabel: "运营商招采平台", sourceUrl: "https://www.chinatelecom.com.cn",
+    tags: ["中国电信", "沈阳", "智算中心", "EPC", "东北"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "华创证券发布深度报告：2026年为AIDC液冷放量元年",
+    body: "GPU单卡功耗突破1000W（GB200/GB300），风冷已达物理极限；液冷渗透率将从<10%提升至20-30%；重点关注英维克、申菱环境、高澜股份等。",
+    insight: "液冷产业链进入规模商用阶段，CDU、冷板、冷却液等细分领域将迎来爆发式增长。",
+    sourceLabel: "华创证券研究所", sourceUrl: "https://www.hcyjs.com",
+    tags: ["液冷", "华创证券", "放量元年", "CDU", "1000W"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "天加环境发布风液融合CDU新方案",
+    body: "天加环境发布风液融合CDU方案，兼容传统风冷机房改造和新建液冷机房，支持单柜30-50kW散热密度，PUE可降至1.15以下。",
+    insight: "风液融合方案解决了存量数据中心液冷改造的痛点，有望加速液冷在非新建场景的渗透。",
+    sourceLabel: "天加环境/行业交流", sourceUrl: "https://www.tica.com",
+    tags: ["天加环境", "风液融合", "CDU", "PUE 1.15", "改造"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "中科曙光发布scaleX40超节点平台",
+    body: "中科曙光推出scaleX40超节点平台（Token工厂），单节点支持40块GPU互联，采用高密液冷散热，支持NVLink全互联拓扑，对标NVIDIA DGX SuperPOD。",
+    insight: "国产AI算力基础设施持续追赶国际水平，超节点架构有助于提升训练效率。",
+    sourceLabel: "中科曙光/行业媒体", sourceUrl: "https://www.sugon.com",
+    tags: ["中科曙光", "scaleX40", "Token工厂", "40GPU", "国产"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策与法规",
+    title: "ODCC 2026春季全会在舟山召开",
+    body: "ODCC 2026年春季全会在浙江舟山举行，议题涵盖液冷标准化、算力网络架构、绿色数据中心评估等方向，推动多项行业标准草案。",
+    insight: "ODCC标准对国内数据中心建设具有重要指导作用，液冷标准化将降低产业链对接成本。",
+    sourceLabel: "ODCC/行业媒体", sourceUrl: "https://www.odcc.org.cn",
+    tags: ["ODCC", "液冷标准", "舟山", "算力网络"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策与法规",
+    title: "太空算力产业大会即将召开（4月3日）",
+    body: "首届太空算力产业大会将于4月3日举行，探讨卫星与地面算力协同、天地一体化数据中心等前沿议题，由ODCC参与指导。",
+    insight: "太空算力虽处于早期阶段，但代表了行业对未来算力部署形态的前瞻性探索。",
+    sourceLabel: "ODCC/行业媒体", sourceUrl: "https://www.odcc.org.cn",
+    tags: ["太空算力", "天地一体化", "ODCC", "前沿"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "GPU供应链：GB300需求猛增，交付周期延长",
+    body: "NVIDIA GB300进入规模供货阶段，全球主要云厂和AI厂争相采购，交付排期已延至2026 Q3-Q4。CoWoS先进封装产能仍为核心瓶颈。",
+    insight: "GPU供不应求格局延续，下游IDC建设进度可能受限于服务器到货节奏。",
+    sourceLabel: "综合行业信息", sourceUrl: "",
+    tags: ["GB300", "CoWoS", "台积电", "供不应求", "Q3-Q4"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "CDU产能持续紧张，液冷设备交期拉长",
+    body: "CDU头部供应商产能吃紧，部分型号交期从4-6周延长至8-12周。英维克、申菱环境、飞荣达等企业正加快产能扩建。",
+    insight: "液冷设备供应瓶颈可能影响AIDC项目交付进度，提前锁定供应商成为项目方必修课。",
+    sourceLabel: "行业调研/液冷企业", sourceUrl: "",
+    tags: ["CDU", "8-12周", "英维克", "申菱环境", "产能紧张"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
+    title: "各大IDC厂商持续高薪招聘液冷和AI基础设施人才",
+    body: "万国数据、世纪互联、秦淮数据等头部IDC企业招聘需求集中在液冷系统工程师、AI基础设施架构师、电力工程师，薪资上浮30-50%。",
+    insight: "液冷和AI相关人才持续紧缺，反映行业技术升级带来的人才结构变化。",
+    sourceLabel: "企业招聘官网/猎聘", sourceUrl: "",
+    tags: ["液冷工程师", "AI架构师", "薪资上浮", "人才紧缺"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "中国电信辽宁沈阳智算中心EPC总承包（招标中）",
+    body: "中国电信辽宁公司发布沈阳智算中心EPC总承包招标，涵盖土建、供配电、暖通制冷（含液冷）、IT基础设施等全部工程内容。",
+    insight: "",
+    sourceLabel: "运营商采购平台", sourceUrl: "https://www.chinatelecom.com.cn",
+    tags: ["中国电信", "沈阳", "EPC", "智算中心"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "海南州云锐智算中心EPC询比采购（进行中）",
+    body: "青海海南州云锐智算中心启动EPC询比采购，定位东数西算西部节点，涉及高密度算力机房建设。",
+    insight: "",
+    sourceLabel: "招标信息平台", sourceUrl: "http://www.qhei.net.cn",
+    tags: ["海南州", "云锐", "EPC", "东数西算"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "鲁北大数据中心源网荷储一体化配套工程（已招标，约8.84亿元）",
+    body: "为鲁北大数据中心配建的清洁能源项目（风电+储能），总招标规模约8.84亿元，已完成招标。",
+    insight: "",
+    sourceLabel: "地方招投标平台", sourceUrl: "",
+    tags: ["鲁北", "8.84亿", "源网荷储", "风电", "储能"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "观点", sectionAnchor: "sec-quote", sectionName: "👀 人物与观点",
+    title: "黄仁勋：加速计算是不可逆转的趋势",
+    body: "黄仁勋在GTC 2026上表示，加速计算已成为不可逆转的行业趋势，未来五年全球数据中心将从传统CPU架构全面转向GPU加速架构。公布了Blackwell Ultra和Vera Rubin芯片路线图。",
+    insight: "NVIDIA持续引领算力硬件节奏，IDC建设和改造需匹配其产品迭代周期。",
+    sourceLabel: "GTC 2026主题演讲", sourceUrl: "https://www.nvidia.com/gtc/",
+    tags: ["黄仁勋", "加速计算", "Vera Rubin", "GPU架构"]
+  },
+  {
+    issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
+    section: "观点", sectionAnchor: "sec-quote", sectionName: "👀 人物与观点",
+    title: "华创证券分析师：液冷渗透拐点已至，关注三条投资主线",
+    body: "华创证券分析师建议关注三条投资主线：CDU/冷板核心设备商、冷却液/管路材料商、液冷整体解决方案集成商。预计2026年国内液冷市场规模将达150-200亿元。",
+    insight: "资本市场对液冷赛道关注度持续升温，相关上市公司估值有望重塑。",
+    sourceLabel: "华创证券研报", sourceUrl: "https://www.hcyjs.com",
+    tags: ["华创证券", "液冷", "投资主线", "150-200亿"]
+  },
   {
     issueId: "2026-04-01", issueDate: "2026-04-01", issueFile: "issues/2026-04-01.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",

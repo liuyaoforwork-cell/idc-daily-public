@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDC 行业情报日报 · 2026-04-02</title>
+<meta name="description" content="IDC数据中心行业情报日报，覆盖重大信号、项目市场、技术趋势、政策法规、供应链动态、招投标及行业观点。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<style>
+  /* ═══ 默认浅色 ═══ */
+  :root {
+    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
+    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
+    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+    --topbar-bg: rgba(248,249,252,.9);
+    --nav-bg: rgba(248,249,252,.92);
+  }
+  /* ═══ 深色覆盖 ═══ */
+  [data-theme="dark"] {
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --topbar-bg: rgba(15,17,23,.88);
+    --nav-bg: rgba(15,17,23,.92);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    transition: background .3s, color .3s;
+  }
+  a { color: var(--blue); text-decoration: none; }
+
+  /* ── Progress bar ── */
+  .progress-bar {
+    position:fixed; top:0; left:0; height:3px; background:var(--blue);
+    z-index:200; width:0; transition:width .1s linear; border-radius:0 2px 2px 0;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    position:sticky; top:0; z-index:100;
+    background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border); padding:0 24px; height:56px;
+    display:flex; align-items:center; justify-content:space-between;
+    transition:background .3s;
+  }
+  .topbar-left { display:flex; align-items:center; gap:16px; }
+  .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; transition:color .2s; }
+  .back-link:hover { color:var(--blue); }
+  .topbar-date { font-size:13px; color:var(--text3); }
+  .topbar-actions { display:flex; align-items:center; gap:8px; }
+  .topbar-btn {
+    width:36px; height:36px; border-radius:10px; border:1px solid var(--border);
+    background:transparent; color:var(--text); cursor:pointer; font-size:15px;
+    display:flex; align-items:center; justify-content:center; transition:all .2s;
+  }
+  .topbar-btn:hover { background:var(--card-hover); border-color:var(--blue); }
+
+  /* ── Theme Switcher ── */
+  .theme-switcher {
+    display:flex; align-items:center; background:var(--card); border:1px solid var(--border);
+    border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600;
+  }
+  .theme-opt {
+    padding:0 12px; height:100%; display:flex; align-items:center; gap:4px;
+    cursor:pointer; color:var(--text3); transition:all .2s; border:none; background:transparent;
+    font-family:inherit; font-size:13px; font-weight:600; white-space:nowrap;
+  }
+  .theme-opt:hover { color:var(--text2); }
+  .theme-opt.active {
+    background:var(--blue); color:#fff; box-shadow:0 1px 6px rgba(77,159,255,.3);
+  }
+
+  /* ── Section nav (pills) ── */
+  .section-nav {
+    position:sticky; top:56px; z-index:90;
+    background:var(--nav-bg); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); padding:10px 24px;
+    overflow-x:auto; white-space:nowrap; scrollbar-width:none;
+    transition:background .3s;
+  }
+  .section-nav::-webkit-scrollbar { display:none; }
+  .nav-pill {
+    display:inline-block; font-size:13px; font-weight:600; padding:6px 14px;
+    border-radius:8px; color:var(--text2); cursor:pointer; transition:all .2s;
+    border:1px solid transparent; margin-right:6px;
+  }
+  .nav-pill:hover { color:var(--text); background:var(--card); }
+  .nav-pill.active { color:var(--blue); background:rgba(77,159,255,.1); border-color:rgba(77,159,255,.2); }
+
+  /* ── Hero ── */
+  .hero {
+    background:var(--grad); border-bottom:1px solid var(--border);
+    padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+    background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%),
+                radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%);
+    animation: drift 25s linear infinite;
+  }
+  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  .hero-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+  .hero-badge {
+    display:inline-block; background:rgba(77,159,255,.12); color:var(--blue);
+    font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px;
+    border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:18px;
+  }
+  .hero h1 {
+    font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px;
+  }
+  [data-theme="dark"] .hero h1 {
+    background:linear-gradient(135deg,#fff 0%,#a0aec0 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  .hero-meta { color:var(--text2); font-size:15px; }
+  .hero-meta span { display:inline-block; margin:0 8px; }
+  .hero-stats { display:flex; justify-content:center; gap:36px; margin-top:24px; flex-wrap:wrap; }
+  .stat-item { text-align:center; }
+  .stat-num { font-size:28px; font-weight:800; }
+  .stat-num small { font-size:14px; color:var(--text2); font-weight:400; }
+  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
+
+  /* ── Container ── */
+  .container { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
+
+  /* ── Section ── */
+  .section { margin-bottom:44px; scroll-margin-top:130px; }
+  .section-header {
+    display:flex; align-items:center; gap:12px; margin-bottom:20px;
+    padding-bottom:12px; border-bottom:1px solid var(--border);
+  }
+  .section-icon {
+    font-size:20px; width:42px; height:42px; display:flex; align-items:center;
+    justify-content:center; border-radius:12px; flex-shrink:0;
+  }
+  .section-title { font-size:20px; font-weight:700; letter-spacing:-.3px; }
+
+  .icon-red { background:rgba(255,77,106,.12); }
+  .icon-blue { background:rgba(77,159,255,.12); }
+  .icon-cyan { background:rgba(34,211,238,.12); }
+  .icon-green { background:rgba(52,211,153,.12); }
+  .icon-purple { background:rgba(167,139,250,.12); }
+  .icon-orange { background:rgba(255,140,66,.12); }
+  .icon-yellow { background:rgba(251,191,36,.12); }
+  .icon-pink { background:rgba(244,114,182,.12); }
+
+  /* ── Card ── */
+  .card {
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:24px; margin-bottom:16px; transition:background .2s, border-color .2s;
+  }
+  .card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.2); }
+  .card-title { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+  .card-body { font-size:15px; color:var(--text2); line-height:1.8; }
+  .card-body strong { color:var(--text); }
+  .card-insight {
+    margin-top:14px; padding:12px 16px; background:rgba(77,159,255,.06);
+    border-left:3px solid var(--blue); border-radius:0 8px 8px 0;
+    font-size:14px; color:var(--text2);
+  }
+  .card-insight b { color:var(--blue); }
+  .card-source { margin-top:12px; font-size:13px; }
+  .card-source a { border-bottom:1px dashed rgba(77,159,255,.3); transition:border-color .2s; }
+  .card-source a:hover { border-bottom-color:var(--blue); }
+
+  /* ── Badge ── */
+  .signal-badge {
+    display:inline-block; font-size:11px; font-weight:700; padding:3px 10px;
+    border-radius:6px; margin-bottom:10px; letter-spacing:.5px;
+  }
+  .badge-critical { background:rgba(255,77,106,.15); color:var(--red); }
+  .badge-project { background:rgba(77,159,255,.15); color:var(--blue); }
+  .badge-tech { background:rgba(34,211,238,.15); color:var(--cyan); }
+  .badge-policy { background:rgba(52,211,153,.15); color:var(--green); }
+  .badge-supply { background:rgba(255,140,66,.15); color:var(--orange); }
+  .badge-recruit { background:rgba(167,139,250,.15); color:var(--purple); }
+  .badge-bid { background:rgba(244,114,182,.15); color:var(--pink); }
+
+  /* ── Spec list ── */
+  .spec-list { list-style:none; margin-top:10px; }
+  .spec-list li {
+    padding:4px 0; font-size:14px; color:var(--text2);
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .spec-list li::before { content:'\25B8'; color:var(--blue); flex-shrink:0; }
+  .spec-list li strong { color:var(--text); }
+
+  /* ── Chart ── */
+  .chart-section { margin-top:4px; }
+  .bar-chart { display:flex; flex-direction:column; gap:12px; }
+  .bar-row { display:flex; align-items:center; gap:12px; }
+  .bar-label { flex-shrink:0; width:180px; font-size:13px; color:var(--text2); text-align:right; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .bar-track { flex:1; height:28px; background:rgba(77,159,255,.06); border-radius:8px; overflow:hidden; position:relative; }
+  .bar-fill {
+    height:100%; border-radius:8px; display:flex; align-items:center; justify-content:flex-end;
+    padding-right:10px; font-size:12px; font-weight:700; color:#fff;
+    transition:width 1s cubic-bezier(.4,0,.2,1);
+  }
+  .bar-fill.green { background:linear-gradient(90deg, rgba(52,211,153,.7), var(--green)); }
+  .bar-fill.yellow { background:linear-gradient(90deg, rgba(251,191,36,.7), var(--yellow)); }
+  .bar-fill.blue { background:linear-gradient(90deg, rgba(77,159,255,.7), var(--blue)); }
+  .bar-fill.orange { background:linear-gradient(90deg, rgba(255,140,66,.7), var(--orange)); }
+
+  /* ── Data grid ── */
+  .data-grid {
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr));
+    gap:12px; margin-top:4px;
+  }
+  .data-card {
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:16px; text-align:center; transition:all .2s;
+  }
+  .data-card:hover { border-color:rgba(77,159,255,.25); transform:translateY(-1px); }
+  .data-card .num { font-size:24px; font-weight:800; margin-bottom:4px; }
+  .data-card .num small { font-size:13px; color:var(--text2); font-weight:400; }
+  .data-card .label { font-size:12px; color:var(--text2); }
+  .data-card .src { font-size:11px; color:var(--text3); margin-top:6px; opacity:.6; }
+
+  /* ── Quote ── */
+  .quote-card {
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:24px; margin-bottom:16px; position:relative;
+  }
+  .quote-card::before {
+    content:'\201C'; position:absolute; top:10px; left:18px; font-size:48px;
+    color:rgba(167,139,250,.2); font-family:Georgia,serif; line-height:1;
+  }
+  .quote-text { font-size:15px; color:var(--text2); line-height:1.8; padding-left:28px; font-style:italic; }
+  .quote-text strong { color:var(--text); font-style:normal; }
+  .quote-attr { margin-top:12px; padding-left:28px; font-size:13px; color:var(--purple); font-weight:600; }
+
+  /* ── Back to top ── */
+  .back-top {
+    position:fixed; bottom:32px; right:32px; width:44px; height:44px;
+    border-radius:12px; background:var(--card); border:1px solid var(--border);
+    color:var(--text); cursor:pointer; font-size:18px;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; transform:translateY(10px); transition:all .3s; z-index:80;
+    box-shadow:0 4px 16px rgba(0,0,0,.15);
+  }
+  .back-top.visible { opacity:1; transform:translateY(0); }
+  .back-top:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+
+  /* ── Share tooltip ── */
+  .share-toast {
+    position:fixed; bottom:88px; right:32px; background:var(--green); color:#fff;
+    font-size:13px; font-weight:600; padding:8px 16px; border-radius:10px;
+    opacity:0; transform:translateY(8px); transition:all .3s; z-index:80; pointer-events:none;
+  }
+  .share-toast.show { opacity:1; transform:translateY(0); }
+
+  /* ── Footer ── */
+  .footer {
+    text-align:center; padding:36px 24px; border-top:1px solid var(--border);
+    color:var(--text3); font-size:13px; line-height:1.8;
+  }
+
+  /* ── Print ── */
+  @media print {
+    .topbar, .section-nav, .progress-bar, .back-top, .share-toast, .topbar-actions { display:none !important; }
+    body { background:#fff; color:#000; }
+    .hero { background:#f5f5f5 !important; padding:24px !important; }
+    .hero h1 { -webkit-text-fill-color:#000 !important; font-size:24px !important; }
+    .card { break-inside:avoid; border:1px solid #ddd; }
+    .section { break-inside:avoid; }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width:640px) {
+    .hero { padding:44px 16px 36px; }
+    .hero-stats { gap:20px; }
+    .stat-num { font-size:22px; }
+    .container { padding:20px 16px 40px; }
+    .card { padding:18px; }
+    .section-title { font-size:17px; }
+    .section-nav { padding:8px 16px; }
+    .data-grid { grid-template-columns:repeat(2, 1fr); }
+    .bar-label { width:100px; font-size:11px; }
+    .back-top { bottom:20px; right:20px; width:40px; height:40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Top Bar -->
+<nav class="topbar">
+  <div class="topbar-left">
+    <a href="../index.html" class="back-link">&larr; 所有期刊</a>
+    <span class="topbar-date">2026-04-02</span>
+  </div>
+  <div class="topbar-actions">
+    <button class="topbar-btn" onclick="shareLink()" title="复制链接">&#x1F517;</button>
+    <button class="topbar-btn" onclick="window.print()" title="打印/导出PDF">&#x1F5A8;&#xFE0F;</button>
+    <div class="theme-switcher" id="themeSwitcher">
+      <button class="theme-opt" data-theme="light" onclick="setTheme('light')">&#x2600;&#xFE0F; 浅色</button>
+      <button class="theme-opt" data-theme="dark" onclick="setTheme('dark')">&#x1F319; 深色</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Section Nav -->
+<div class="section-nav" id="sectionNav">
+  <span class="nav-pill active" onclick="scrollTo('sec-signal')">&#x1F525; 重大信号</span>
+  <span class="nav-pill" onclick="scrollTo('sec-project')">&#x1F3D7;&#xFE0F; 项目市场</span>
+  <span class="nav-pill" onclick="scrollTo('sec-tech')">&#x26A1; 技术趋势</span>
+  <span class="nav-pill" onclick="scrollTo('sec-policy')">&#x1F4DC; 政策法规</span>
+  <span class="nav-pill" onclick="scrollTo('sec-supply')">&#x1F517; 供应链</span>
+  <span class="nav-pill" onclick="scrollTo('sec-recruit')">&#x1F4CC; 招聘</span>
+  <span class="nav-pill" onclick="scrollTo('sec-bid')">&#x1F4CB; 招投标</span>
+  <span class="nav-pill" onclick="scrollTo('sec-quote')">&#x1F440; 观点</span>
+  <span class="nav-pill" onclick="scrollTo('sec-data')">&#x1F4CA; 关键数字</span>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">IDC INDUSTRY INTEL</div>
+    <h1>🏢 IDC 行业情报日报</h1>
+    <div class="hero-meta">
+      <span>2026-04-02</span><span>&middot;</span><span>覆盖过去 24 小时行业动态</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">20</div><div class="stat-label">核心情报</div></div>
+      <div class="stat-item"><div class="stat-num">78.8<small>亿</small></div><div class="stat-label">涉及金额</div></div>
+      <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">覆盖板块</div></div>
+      <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">时间窗口</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ═══ 重大信号 ═══ -->
+  <section class="section" id="sec-signal">
+    <div class="section-header">
+      <div class="section-icon icon-red">🔥</div>
+      <h2 class="section-title">重大信号</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-critical">重大</div>
+      <div class="card-title">Mistral AI 完成 8.3 亿美元融资，计划自建 AI 数据中心</div>
+      <div class="card-body">
+        法国 AI 独角兽 Mistral AI 完成新一轮约 <strong>8.3 亿美元（约合人民币 57 亿元）</strong>融资，估值超 60 亿美元。资金将部分用于在巴黎近郊自建数据中心，计划部署 <strong>NVIDIA GB300 超级芯片集群</strong>，为其大语言模型训练提供算力基座。此举标志着欧洲头部 AI 厂商开始从"租赁算力"转向"自建 IDC"模式。
+      </div>
+      <div class="card-insight"><b>影响分析：</b> 欧洲自主算力基建加速，对全球 GPU 供应链形成新的需求压力；同时验证了 GB300 在训练场景的商业部署趋势。</div>
+      <div class="card-source">📎 <a href="https://www.idcquan.com" target="_blank">IDC圈 / 多家财经媒体 · 4月1日</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-critical">重大</div>
+      <div class="card-title">字节跳动、阿里巴巴 2026 年算力规划浮出水面</div>
+      <div class="card-body">
+        据行业信息，字节跳动 2026 年 IDC 算力规划目标约 <strong>1.5GW</strong>，阿里巴巴约 <strong>2GW</strong>，两家合计占国内互联网大厂新增算力需求的显著份额。相关 IDC 租赁及自建招标已在推进中。这一规模显示 <strong>AIDC 需求远超传统 IDC 增长速率</strong>。
+      </div>
+      <div class="card-insight"><b>影响分析：</b> 头部云厂+AI 厂的超大规模需求将带动国内 IDC 产业链（土建、电力、制冷、网络）全面扩张，也将加剧核心城市电力资源的竞争。</div>
+      <div class="card-source">📎 <a href="https://www.idcquan.com" target="_blank">IDC圈 · 4月1日</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-critical">重大</div>
+      <div class="card-title">IDC Research 预测：加速计算服务器市场 2029 年将超万亿美元</div>
+      <div class="card-body">
+        在 GTC 2026 大会期间，IDC 发布最新预测——全球加速计算服务器市场（含 GPU/TPU/ASIC）到 <strong>2029 年将突破 1 万亿美元</strong>大关，复合年增长率（CAGR）超 <strong>50%</strong>。AI 训练和推理需求是核心驱动力。
+      </div>
+      <div class="card-insight"><b>影响分析：</b> 万亿美元级别的算力硬件市场意味着上游芯片、电力、散热、IDC 基建将持续处于高景气周期。</div>
+      <div class="card-source">📎 <a href="https://www.idc.com" target="_blank">IDC Research / GTC 2026 大会报道 · 3月底</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 项目与市场 ═══ -->
+  <section class="section" id="sec-project">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🏗️</div>
+      <h2 class="section-title">项目与市场</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-project">项目</div>
+      <div class="card-title">山东德州鲁北大数据中心进入最终调试阶段</div>
+      <div class="card-body">
+        总投资约 <strong>70 亿元</strong>的山东德州鲁北大数据中心项目进入最终调试阶段，预计近期投入运营。该项目是国家"东数西算"工程在山东的重点节点之一，配套建设了"<strong>源网荷储一体化</strong>"清洁能源系统（风电+储能），招标规模约 8.84 亿元。
+      </div>
+      <div class="card-insight"><b>市场解读：</b> 该项目将显著提升山东枢纽节点的算力供给能力，同时"源网荷储一体化"模式为行业提供了绿色数据中心建设范本。</div>
+      <div class="card-source">📎 <a href="https://www.idcquan.com" target="_blank">IDC圈 / 地方媒体 · 4月1日</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-project">项目</div>
+      <div class="card-title">Equinix 加大非洲市场投入，布局南非数据中心</div>
+      <div class="card-body">
+        全球最大数据中心运营商 Equinix 宣布扩大在南非的投资布局，计划在<strong>约翰内斯堡和开普敦</strong>新建/扩建数据中心园区，服务非洲大陆快速增长的企业 IT 和云计算需求。
+      </div>
+      <div class="card-insight"><b>市场解读：</b> 非洲成为全球 IDC 巨头新增长极，反映了新兴市场数字化转型对基础设施的拉动效应。</div>
+      <div class="card-source">📎 <a href="https://www.equinix.com" target="_blank">Equinix 官方公告 · 4月1日</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-project">项目</div>
+      <div class="card-title">海南州云锐智算中心 EPC 询比采购启动</div>
+      <div class="card-body">
+        青海海南州云锐智算中心项目发布 EPC 总承包询比采购公告，项目定位为"<strong>东数西算</strong>"工程西部算力节点，将部署高密度 AI 算力集群。
+      </div>
+      <div class="card-insight"><b>市场解读：</b> 西部算力枢纽建设持续推进，EPC 模式有利于加速项目落地。</div>
+      <div class="card-source">📎 <a href="http://www.qhei.net.cn" target="_blank">招标信息平台 · 3月底</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-project">项目</div>
+      <div class="card-title">中国电信辽宁沈阳智算中心 EPC 总承包招标</div>
+      <div class="card-body">
+        中国电信辽宁分公司发布沈阳智算中心 <strong>EPC 总承包</strong>招标公告，项目定位为东北区域智算枢纽，支撑政企智算和 AI 推理需求。
+      </div>
+      <div class="card-insight"><b>市场解读：</b> 运营商加码智算中心建设，东北区域算力布局补齐短板。</div>
+      <div class="card-source">📎 <a href="https://www.chinatelecom.com.cn" target="_blank">运营商招采平台 · 3月底~4月初</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 技术趋势 ═══ -->
+  <section class="section" id="sec-tech">
+    <div class="section-header">
+      <div class="section-icon icon-cyan">⚡</div>
+      <h2 class="section-title">技术趋势</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-tech">技术</div>
+      <div class="card-title">华创证券发布深度报告：2026 年为"AIDC 液冷放量元年"</div>
+      <div class="card-body">
+        华创证券发布 AIDC 液冷专题报告，核心判断——<strong>2026 年将成为数据中心液冷技术"放量元年"</strong>。报告指出：（1）GPU 单卡功耗突破 <strong>1000W</strong>（GB200/GB300），风冷散热已达物理极限；（2）直接液冷（DLC）和浸没式液冷渗透率将从 2025 年的 &lt;10% 提升至 2026 年的 <strong>20-30%</strong>；（3）重点关注标的包括英维克、申菱环境、高澜股份等液冷设备商。
+      </div>
+      <div class="card-insight"><b>技术解读：</b> 液冷产业链进入规模商用阶段，CDU（冷却液分配单元）、冷板、冷却液等细分领域将迎来爆发式增长。</div>
+      <div class="card-source">📎 <a href="https://www.hcyjs.com" target="_blank">华创证券研究所 · 3月31日</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-tech">技术</div>
+      <div class="card-title">天加环境发布"风液融合"CDU 新方案</div>
+      <div class="card-body">
+        暖通制冷厂商天加环境发布面向数据中心的"<strong>风液融合</strong>"CDU 解决方案，特点是兼容传统风冷机房改造和新建液冷机房两种场景，降低用户迁移成本。方案支持单柜 <strong>30-50kW</strong> 散热密度，PUE 可降至 <strong>1.15 以下</strong>。
+      </div>
+      <div class="card-insight"><b>技术解读：</b> 风液融合方案解决了存量数据中心液冷改造的痛点，有望加速液冷技术在非新建场景的渗透。</div>
+      <div class="card-source">📎 <a href="https://www.tica.com" target="_blank">天加环境 / 行业技术交流 · 3月底</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-tech">技术</div>
+      <div class="card-title">中科曙光发布 scaleX40"超节点"平台</div>
+      <div class="card-body">
+        中科曙光推出 <strong>scaleX40 超节点平台</strong>（品牌名"Token 工厂"），单节点支持 <strong>40 块 GPU 互联</strong>，面向大模型训练场景。该平台采用高密液冷散热，支持 NVLink 全互联拓扑，对标 NVIDIA DGX SuperPOD。
+      </div>
+      <div class="card-insight"><b>技术解读：</b> 国产 AI 算力基础设施持续追赶国际水平，超节点架构有助于提升训练效率和降低通信开销。</div>
+      <div class="card-source">📎 <a href="https://www.sugon.com" target="_blank">中科曙光 / 行业媒体 · 3月底</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 政策法规 ═══ -->
+  <section class="section" id="sec-policy">
+    <div class="section-header">
+      <div class="section-icon icon-green">📜</div>
+      <h2 class="section-title">政策与法规</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-policy">政策</div>
+      <div class="card-title">ODCC 2026 春季全会在舟山召开</div>
+      <div class="card-body">
+        开放数据中心委员会（ODCC）2026 年春季全会在浙江舟山举行，议题涵盖<strong>液冷标准化、算力网络架构、绿色数据中心评估</strong>等方向。会议推动了多项行业标准草案的讨论和推进。
+      </div>
+      <div class="card-insight"><b>政策解读：</b> ODCC 标准对国内数据中心建设具有重要指导作用，液冷标准化将降低产业链对接成本，加速规模化落地。</div>
+      <div class="card-source">📎 <a href="https://www.odcc.org.cn" target="_blank">ODCC / 行业媒体 · 4月初</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-policy">政策</div>
+      <div class="card-title">太空算力产业大会即将召开（4月3日）</div>
+      <div class="card-body">
+        首届太空算力产业大会将于 <strong>4 月 3 日</strong>举行，探讨卫星与地面算力协同、天地一体化数据中心等前沿议题。由 ODCC 参与指导。
+      </div>
+      <div class="card-insight"><b>前瞻解读：</b> 太空算力虽处于早期阶段，但代表了行业对未来算力部署形态的前瞻性探索。</div>
+      <div class="card-source">📎 <a href="https://www.odcc.org.cn" target="_blank">ODCC / 行业媒体 · 4月2日预告</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 供应链动态 ═══ -->
+  <section class="section" id="sec-supply">
+    <div class="section-header">
+      <div class="section-icon icon-orange">🔗</div>
+      <h2 class="section-title">供应链动态</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-supply">供应链</div>
+      <div class="card-title">GPU 供应链：GB300 需求猛增，交付周期延长</div>
+      <div class="card-body">
+        随着 NVIDIA <strong>GB300</strong> 进入规模供货阶段，全球主要云厂和 AI 厂（微软、Google、Meta、字节等）争相采购，导致 GB300 交付排期已延至 <strong>2026 Q3-Q4</strong>。<strong>CoWoS 先进封装产能（台积电）</strong>仍为核心瓶颈。
+      </div>
+      <div class="card-insight"><b>供需趋势：</b> GPU 供不应求格局延续，下游 IDC 建设进度可能受限于服务器到货节奏。</div>
+      <div class="card-source">📎 综合行业信息 · 持续跟踪</div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-supply">供应链</div>
+      <div class="card-title">CDU 产能持续紧张，液冷设备交期拉长</div>
+      <div class="card-body">
+        受液冷渗透率快速提升影响，CDU（冷却液分配单元）头部供应商产能吃紧，部分型号交期从原来的 <strong>4-6 周延长至 8-12 周</strong>。英维克、申菱环境、飞荣达等企业正加快产能扩建。
+      </div>
+      <div class="card-insight"><b>供需趋势：</b> 液冷设备供应瓶颈可能影响 AIDC 项目的交付进度，提前锁定供应商成为项目方的必修课。</div>
+      <div class="card-source">📎 行业调研 / 液冷企业反馈 · 3~4月</div>
+    </div>
+  </section>
+
+  <!-- ═══ 招聘动向 ═══ -->
+  <section class="section" id="sec-recruit">
+    <div class="section-header">
+      <div class="section-icon icon-purple">📌</div>
+      <h2 class="section-title">招聘动向</h2>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-recruit">招聘</div>
+      <div class="card-title">各大 IDC 厂商持续高薪招聘液冷和 AI 基础设施人才</div>
+      <div class="card-body">
+        万国数据、世纪互联、秦淮数据、润泽科技、数据港等头部 IDC 企业近期招聘需求集中在：（1）<strong>液冷系统工程师</strong>——负责 CDU/冷板/浸没式液冷方案设计与运维；（2）<strong>AI 基础设施架构师</strong>——负责 GPU 集群网络规划和部署；（3）<strong>电力工程师</strong>——高压直流/储能系统设计。薪资水平较传统 IDC 岗位<strong>上浮 30-50%</strong>。
+      </div>
+      <div class="card-insight"><b>趋势解读：</b> 液冷和 AI 相关人才持续紧缺，反映行业技术升级带来的人才结构变化。</div>
+      <div class="card-source">📎 企业招聘官网 / 猎聘等平台 · 持续跟踪</div>
+    </div>
+  </section>
+
+  <!-- ═══ 招投标 ═══ -->
+  <section class="section" id="sec-bid">
+    <div class="section-header">
+      <div class="section-icon icon-pink">📋</div>
+      <h2 class="section-title">招投标公告</h2>
+    </div>
+
+    <!-- 柱状图 -->
+    <div class="card">
+      <div style="font-size:14px;font-weight:600;margin-bottom:16px;color:var(--text2);">本期 IDC 招投标项目金额对比</div>
+      <div class="bar-chart" id="bidChart">
+        <div class="bar-row">
+          <div class="bar-label">鲁北大数据中心（总投资）</div>
+          <div class="bar-track"><div class="bar-fill green" style="width:0%" data-width="100%">~70亿</div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">鲁北源网荷储配套</div>
+          <div class="bar-track"><div class="bar-fill blue" style="width:0%" data-width="13%">~8.84亿</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="signal-badge badge-bid">招投标</div>
+      <div class="card-title">中国电信辽宁沈阳智算中心 EPC 总承包（招标中）</div>
+      <div class="card-body">
+        中国电信辽宁公司发布沈阳智算中心 EPC 总承包招标，涵盖<strong>土建、供配电、暖通制冷（含液冷）、IT 基础设施</strong>等全部工程内容。
+      </div>
+      <div class="card-source">📎 <a href="https://www.chinatelecom.com.cn" target="_blank">运营商采购平台 · 近期</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-bid">招投标</div>
+      <div class="card-title">海南州云锐智算中心 EPC 询比采购（进行中）</div>
+      <div class="card-body">
+        青海海南州云锐智算中心启动 EPC 询比采购，定位"<strong>东数西算</strong>"西部节点，涉及高密度算力机房建设。
+      </div>
+      <div class="card-source">📎 <a href="http://www.qhei.net.cn" target="_blank">招标信息平台 · 近期</a></div>
+    </div>
+    <div class="card">
+      <div class="signal-badge badge-bid">招投标</div>
+      <div class="card-title">山东德州鲁北大数据中心"源网荷储一体化"配套工程（已招标，约 8.84 亿元）</div>
+      <div class="card-body">
+        为鲁北大数据中心配建的清洁能源项目（风电+储能），总招标规模约 <strong>8.84 亿元</strong>，目前已完成招标。
+      </div>
+      <div class="card-source">📎 <a href="https://www.bidding.com" target="_blank">地方招投标平台 · 近期</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 人物与观点 ═══ -->
+  <section class="section" id="sec-quote">
+    <div class="section-header">
+      <div class="section-icon icon-pink">👀</div>
+      <h2 class="section-title">人物与观点</h2>
+    </div>
+    <div class="quote-card">
+      <div class="quote-text">
+        加速计算已成为不可逆转的行业趋势，未来五年全球数据中心将从传统 CPU 架构<strong>全面转向 GPU 加速架构</strong>。
+      </div>
+      <div class="quote-attr">— 黄仁勋，NVIDIA CEO · <a href="https://www.nvidia.com/gtc/" target="_blank">GTC 2026 主题演讲 · 3月底</a></div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-text">
+        液冷渗透拐点已至，建议关注三条投资主线：（1）<strong>CDU/冷板</strong>等核心设备商（英维克、高澜股份）；（2）冷却液/管路等<strong>材料商</strong>；（3）液冷<strong>整体解决方案集成商</strong>（天加环境等）。预计 2026 年国内液冷市场规模将达 <strong>150-200 亿元</strong>。
+      </div>
+      <div class="quote-attr">— 华创证券分析师 · <a href="https://www.hcyjs.com" target="_blank">华创证券研报 · 3月31日</a></div>
+    </div>
+  </section>
+
+  <!-- ═══ 关键数字 ═══ -->
+  <section class="section" id="sec-data">
+    <div class="section-header">
+      <div class="section-icon icon-yellow">📊</div>
+      <h2 class="section-title">本期关键数字</h2>
+    </div>
+    <div class="data-grid">
+      <div class="data-card"><div class="num">8.3<small>亿美元</small></div><div class="label">Mistral AI 新一轮融资</div><div class="src">IDC圈</div></div>
+      <div class="data-card"><div class="num">3.5<small>GW</small></div><div class="label">字节+阿里2026年算力规划</div><div class="src">行业信息</div></div>
+      <div class="data-card"><div class="num">1<small>万亿美元</small></div><div class="label">2029年加速计算服务器市场</div><div class="src">IDC Research</div></div>
+      <div class="data-card"><div class="num">70<small>亿</small></div><div class="label">鲁北大数据中心总投资</div><div class="src">地方媒体</div></div>
+      <div class="data-card"><div class="num">20-30<small>%</small></div><div class="label">2026年液冷渗透率预测</div><div class="src">华创证券</div></div>
+      <div class="data-card"><div class="num">1000<small>W+</small></div><div class="label">GB200/GB300单卡功耗</div><div class="src">华创研报</div></div>
+      <div class="data-card"><div class="num">8-12<small>周</small></div><div class="label">CDU交期延长至</div><div class="src">行业调研</div></div>
+      <div class="data-card"><div class="num">150-200<small>亿</small></div><div class="label">2026国内液冷市场规模</div><div class="src">华创证券</div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>本报告基于公开信息整理，不构成投资建议。转载请注明出处。</p>
+  <p style="margin-top:4px;">发布日期：2026年4月2日 · <a href="../index.html">返回归档站</a></p>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- Share toast -->
+<div class="share-toast" id="shareToast">✅ 链接已复制</div>
+
+<script>
+// ── Reading progress bar ──
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = h > 0 ? (window.scrollY / h * 100) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+// ── Section nav active state ──
+const sections = ['sec-signal','sec-project','sec-tech','sec-policy','sec-supply','sec-recruit','sec-bid','sec-quote','sec-data'];
+const pills = document.querySelectorAll('.nav-pill');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = sections.indexOf(e.target.id);
+      pills.forEach((p,i) => p.classList.toggle('active', i === idx));
+    }
+  });
+}, { rootMargin: '-140px 0px -60% 0px', threshold: 0.1 });
+sections.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
+
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior:'smooth' });
+}
+
+// ── Theme ──
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('idc-theme', theme);
+  updateThemeSwitcher(theme);
+}
+function updateThemeSwitcher(theme) {
+  document.querySelectorAll('.theme-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.theme === theme);
+  });
+}
+(function() {
+  const saved = localStorage.getItem('idc-theme') || 'light';
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  updateThemeSwitcher(saved);
+})();
+
+// ── Share ──
+function shareLink() {
+  navigator.clipboard?.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('shareToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+
+// ── Animate bar chart on scroll ──
+const chartObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.width;
+      });
+      chartObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const chart = document.getElementById('bidChart');
+if (chart) chartObserver.observe(chart);
+</script>
+</body>
+</html>
