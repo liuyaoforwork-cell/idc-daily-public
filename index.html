@@ -311,11 +311,11 @@
     <p class="hero-desc">持续追踪数据中心行业动态，覆盖重大信号、项目市场、技术趋势、政策法规、供应链与招投标。</p>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num" id="totalIssues">1</div>
+        <div class="stat-num" id="totalIssues">6</div>
         <div class="stat-label">已发布期刊</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" id="totalIntel">14</div>
+        <div class="stat-num" id="totalIntel">85</div>
         <div class="stat-label">累计情报条数</div>
       </div>
       <div class="stat-item">
@@ -377,6 +377,30 @@
 // DATA
 // ══════════════════════════════════════════════
 const ISSUES = [
+  {
+    id: "2026-04-04",
+    date: "2026-04-04",
+    dateRange: "2026-04-04",
+    title: "美AI DC暂停法案20MW门槛·字节阿里3.5GW算力规划·ODCC华为AI Fabric NG·OFC光互连紧缺排至2027·液冷放量元年",
+    intelCount: 18,
+    totalAmount: "43.86亿+",
+    sections: 8,
+    tags: ["AI DC暂停法案","字节跳动","阿里巴巴","ODCC","AI Fabric NG","OFC2026","光互连紧缺","液冷CDU","华创证券","EPC招标"],
+    summary: "美国国会推进AI数据中心暂停法案20MW以上项目需联邦审批；字节1.5GW+阿里2GW算力规划浮出水面合计3.5GW；IDC Research发布GTC 2026五大趋势加速计算破万亿美元；ODCC春季全会舟山召开华为发布AI Fabric NG百万卡集群架构；OFC 2026光互连全线紧缺Lumentum订单排至2027英伟达采购20亿美元；华创证券判定2026年为液冷放量元年；移动呼和浩特30亿EPC等4项招投标。",
+    file: "issues/2026-04-04.html"
+  },
+  {
+    id: "2026-04-03",
+    date: "2026-04-03",
+    dateRange: "2026-04-03",
+    title: "海底DC正式运营PUE<1.15 · 太空算力大会开幕 · ODCC春季全会闭幕 · 东阳光280亿收购秦淮 · GPU交期6月+",
+    intelCount: 14,
+    totalAmount: "455亿+",
+    sections: 8,
+    tags: ["海底DC","太空算力","ODCC","AI Fabric NG","秦淮数据","液冷","光互连","算电协同"],
+    summary: "上海临港海底数据中心正式运营PUE<1.15；太空算力产业大会开幕成立专委会；ODCC春季全会华为发布AI Fabric NG；东阳光280亿完成收购秦淮数据中国区；GPU交付延至6个月+；液冷渗透率升至35%+；英伟达中国份额降至55%。",
+    file: "issues/2026-04-03.html"
+  },
   {
     id: "2026-04-02",
     date: "2026-04-02",
@@ -440,6 +464,294 @@ const ISSUES = [
 ];
 
 const INTEL_ITEMS = [
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "美国国会推进AI数据中心暂停法案——20MW以上项目需联邦审批",
+    body: "参议员桑德斯和众议员AOC联合提出《AI数据中心环境责任法案》，要求20MW及以上AIDC项目运营前必须完成环境影响评估并获联邦许可；已运营DC需2年内合规审计；能源部建立全国能耗追踪系统强制公开PUE/用水量/碳排放。科技行业强烈反对，共和党普遍反对，最终立法可能性较低但信号意义重大。",
+    insight: "虽短期通过概率低，但折射全球AI DC监管趋严趋势，ESG审核权重将持续提升。",
+    sourceLabel: "虎嗅/Politico", sourceUrl: "https://www.huxiu.com/article/4846466.html",
+    tags: ["AI DC暂停法案","20MW","监管趋势","美国国会"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "字节跳动与阿里巴巴2026年IDC算力规划深度解析——合计近3.5GW",
+    body: "据IDC圈深度解析：字节跳动2026年算力规划1.5GW（华北/华东/华南多枢纽扩容），阿里巴巴同期约2GW（自建+合租双轨）。两家合计3.5GW≈35个大型DC园区。采购模式从单一设备转向EPC总包，液冷CDU/高功率UPS/800V配电需求激增。",
+    insight: "互联网巨头集中式采购对供应链形成巨大拉动，EPC总包成主流交付模式。",
+    sourceLabel: "IDC圈", sourceUrl: "https://news.idcquan.com/news/206696.shtml",
+    tags: ["字节跳动","阿里巴巴","1.5GW","2GW","算力规划"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "IDC Research发布GTC 2026五大趋势——加速计算服务器2029年破万亿美元",
+    body: "从GTC 2026提炼五大趋势：①智能算力架构专业化GPU→ASIC多元化 ②液冷从可选变必选GB200/NVL72机柜120kW+ ③AI Fabric网络重塑RoCE v2为主流 ④可持续性纳入核心KPI PUE<1.2成硬指标 ⑤边缘-云端协同算力网边缘增速超核心3倍。加速计算服务器市场预计2029年破万亿美元。",
+    insight: "数据中心技术栈正在发生全方位重构，万亿美元市场正在形成。",
+    sourceLabel: "IDC Research", sourceUrl: "https://www.idc.com/resource-center/blog/",
+    tags: ["IDC Research","GTC 2026","万亿美元","五大趋势","加速计算"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "贵州电网数据中心升级改造及信息机房隐患整改招标",
+    body: "南方电网旗下贵州电网公司启动数据中心升级改造项目，含信息机房隐患整改。属电力行业内部数字化转型投入，反映传统能源企业对DC运维质量要求提升。",
+    insight: "电力行业自身数字化转型的标杆案例。",
+    sourceLabel: "中国招标投标平台", sourceUrl: "#",
+    tags: ["贵州电网","数据中心改造","南方电网"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "青海德令哈智算中心二期持续推进",
+    body: "东数西算西部枢纽重点项目，依托青海丰富绿电资源打造零碳智算示范区。清洁能源装机容量居全国前列，建设方向以AIDC智算为主配套绿色能源体系。",
+    insight: "西部绿电+算力模式持续落地，青海优势凸显。",
+    sourceLabel: "青海省公共资源平台", sourceUrl: "#",
+    tags: ["德令哈","智算中心二期","东数西算","绿电"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "ODCC 2026春季全会在舟山召开——华为发布AI Fabric NG下一代网络架构",
+    body: "ODCC春季全会舟山召开超500人参会。华为发布AI Fabric NG支持百万卡集群互联单端口800G。液冷焦点组讨论浸没式标准化路径冷板式接口规范进入报批阶段，800V直流配电标准取得进展。",
+    insight: "ODCC标准直接影响国标和采购要求，华为AI Fabric NG意味着网络层竞争加剧。",
+    sourceLabel: "ODCC官方", sourceUrl: "https://www.odcc.org.cn/news/p-2039593521758724097.html",
+    tags: ["ODCC","华为","AI Fabric NG","800G","800V"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "OFC 2026光互连供应链全线紧缺——Lumentum产能爆满订单排至2027",
+    body: "Lumentum产能饱和订单排至2027年中，仅英伟达一家2026年光器件采购额达20亿美元。1.6T模块进入量产(年出1000-2000万只)，XPO端口密度为OSFP的4倍，OCS收入H2预计4亿美元。各环节交期：1.6T模块26-30周/OCS排至Q4/DSP芯片18-22周。",
+    insight: "光互连是最确定卖方市场环节，紧缺持续至2027年中价格维持高位。",
+    sourceLabel: "OFC 2026/Lumentum/中金", sourceUrl: "#",
+    tags: ["OFC 2026","Lumentum","20亿$","1.6T","OCS","光互连"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "华创证券AIDC液冷深度报告——判定2026年为液冷放量元年",
+    body: "GB200 TPU功耗2700W/NVL72机柜120kW+→风冷极限已至。冷板式PUE降至1.25以下浸没式降至1.1。2026H2 VR+ASIC放量→CDU紧缺贯穿全年。全球CDU市场2031年达251.7亿元(CAGR 18.5%)。英维克/维谛/科华等竞相布局全产品线。",
+    insight: "冷板式已成产业化主流浸没式为100kW+超高密场景未来方向。",
+    sourceLabel: "华创证券", sourceUrl: "#",
+    tags: ["液冷","CDU","放量元年","251.7亿","18.5%"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "全球AI数据中心监管趋严——先发展后治理转向发展与治理并行",
+    body: "美国20MW法案(通过概率低)+欧盟AI法案分级框架+国内PUE<1.25硬指标化+多省暂停高耗能DC审批。先发展后治理→发展与治理并行，ESG审核权重提升绿电配置比例成核心准入条件之一。",
+    insight: "数据中心ESG合规将成为行业标配而非可选项。",
+    sourceLabel: "综合整理", sourceUrl: "https://www.huxiu.com/article/4846466.html",
+    tags: ["监管趋严","ESG","PUE 1.25","绿电准入"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "光器件/光模块供应链全线紧缺一览",
+    body: "OFC 2026各厂商传递信息高度一致：1.6T极度紧张26-30周↑ | 800G DR8紧张16-20w小幅↑ | OCS满载排至Q4高位稳 | TIA/ROSA紧缺20-24周↑ | DSP芯片限制供货18-22周↑。主要供应商产能扩张周期12-18个月短期无法缓解。",
+    insight: "光互连是最确定卖方市场环节，紧缺至少持续至2027年中。",
+    sourceLabel: "OFC 2026/Lumentum/Coherent", sourceUrl: "#",
+    tags: ["光器件","光模块","紧缺","交期延长"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "液冷CDU紧缺态势延续——头部厂商产能竞速",
+    body: "需求端：2026H2 Rubin量产+ASIC放量=CDU配置率大幅提升。供给端：英维克/维谛/酷冷等头部厂商交期8-12周部分型号排至Q4。价格坚挺议价空间有限。新技术：QD可靠性提升泄漏检测智能化冷却液国产替代加速。",
+    insight: "CDU紧缺贯穿全年，头部厂商产能竞速白热化。",
+    sourceLabel: "产业链调研", sourceUrl: "#",
+    tags: ["CDU","液冷","8-12周","紧缺"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
+    title: "Equinix扩大全球数据中心人才培养投资",
+    body: "Pathways to Tech扩展至所有运营地点面向14-18岁学生；联合Generation/ODATA/Cisco/Vertiv在巴西启动培训联盟；达拉斯/巴黎/新加坡三地学习实验室同步启动；此前试点已覆盖近2000名学生。",
+    insight: "全球IDC人才短缺成共性挑战，头部企业从抢人转向育人，人才培养体系化时代来临。",
+    sourceLabel: "Equinix官方", sourceUrl: "https://newsroom.equinix.com/",
+    tags: ["Equinix","人才培养","全球扩展","2000学生"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
+    title: "国内IDC厂商招聘动态扫描",
+    body: "万国数据：持续招液冷工程师/AIDC运维专家含东南亚节点 | 世纪互联：重点招算电协同架构师/800V配电工程师 | 秦淮数据：被收购后调整中高端技术岗仍在招 | 润泽科技：东部运维团队扩张华北岗位较多 | 数据港：一线运维和项目经理为主",
+    insight: "液冷、AIDC运维、算电协同、高密供电成为最热门岗位类别。",
+    sourceLabel: "各厂商官网汇总", sourceUrl: "#",
+    tags: ["万国数据","世纪互联","秦淮数据","润泽科技","数据港"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "中国移动呼和浩特数据中心B11-B16机房楼机电配套EPC招标",
+    body: "预算约30亿元 | B11-B16共6栋机房楼 | 呼和浩特东数西算枢纽 | 要求年内交付 | 截止4月13日",
+    insight: "运营商持续加码东数西算核心节点EPC市场竞争白热化。",
+    sourceLabel: "中国移动采购与招标网", sourceUrl: "#",
+    tags: ["中国移动","呼和浩特","30亿","EPC","东数西算"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "中国电信芜湖集群经开区大数据中心设计招标",
+    body: "A1A2数据机楼+B1运维楼设计 | 关联总投资约7.8亿元 | 长三角算力枢纽芜湖集群 | 此前A6/B1/C4楼已启动设计",
+    insight: "运营商加码长三角枢纽集群芜湖建设进入加速期。",
+    sourceLabel: "芜湖公共资源交易中心", sourceUrl: "https://whsgggy.wuhu.gov.cn/",
+    tags: ["中国电信","芜湖集群","7.8亿","长三角枢纽"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "云南巧家县绿色智能数据中心项目EPC招标",
+    body: "总投资6.86亿元 | 算力约2000 PFLOPS(FP16) | 机房功率1942kW | 依托水电资源优势打造绿色低碳算力基地",
+    insight: "西南地区绿色算力项目持续落地水电资源优势发展AIDC成趋势。",
+    sourceLabel: "云南省公共资源平台", sourceUrl: "https://www.dtdata.cn/news/show/4295.html",
+    tags: ["云南巧家","6.86亿","2000PFLOPS","绿色智算"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "青海海南州云锐智算中心项目EPC询比采购",
+    body: "编号QHXY-2026-02 | A级数据中心标准 | 4组微模块(每组14个机柜) | 青海海南州西部枢纽",
+    insight: "青海作为东数西算西部枢纽之一算力项目持续落地绿电优势吸引持续投资。",
+    sourceLabel: "青海省招标采购平台", sourceUrl: "http://www.qhei.net.cn/html/zbgg/2026_3/220777.html",
+    tags: ["青海海南州","云锐智算","EPC","A级DC"]
+  },
+  {
+    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
+    section: "观点", sectionAnchor: "sec-quote", sectionName: "💬 人物与观点",
+    title: "仲量联行庞树东：DC进入与交通/公用事业同级的全球基础设施资产时代",
+    body: "\"数据中心正式进入与交通、公用事业同级的全球基础设施资产时代。行业呈现超低空置率+稳健收益率格局未现泡沫迹象。算力基础设施正成为与办公空间、生产工厂同等重要的战略性不动产配置。\" JLL报告关键数字：2030年全球DC容量200GW/五年投资3万亿美元/使用率97%/在建77%已预租。",
+    insight: "JLL报告定义了数据中心资产的新坐标——与交通、公用事业并列的全球基础设施层级。",
+    sourceLabel: "仲量联行JLL", sourceUrl: "https://www.joneslanglasalle.com.cn/zh-cn/insights/2026-data-center-outlook",
+    tags: ["仲量联行","庞树东","200GW","3万亿","97%使用率"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "上海临港海底数据中心正式运营——PUE降至1.15以下",
+    body: "央视新闻4月2日报道，上海临港海底数据中心正式投入运营。设施海面以上高度32米，总重1950吨，数据仓位于海平面以下10~15米处。采用\"海风直连\"技术直接使用海上风电，利用年均15°C海水实现无动力散热循环，PUE控制在1.15以下，完全不消耗淡水。同等算力下占地面积仅为传统数据中心的1/10，延迟低至0.5毫秒。",
+    insight: "全球首个商用级海底数据中心实现常态化运营。海风直连+海水散热的\"算电协同\"模式，可能成为沿海城市数据中心建设的标准方案。",
+    sourceLabel: "21经济网/央视新闻", sourceUrl: "https://www.21jingji.com/article/20260402/herald/fbf9f862a25c03d36df444b4819b4de8.html",
+    tags: ["海底DC","PUE 1.15","海风直连","临港","全球首个"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
+    title: "2026太空算力产业大会今日北京亦庄开幕——太空算力专委会成立",
+    body: "4月3日，2026太空算力产业大会在北京亦庄开幕，主题\"智算无界·天地协同\"。三大重要仪式：成立\"太空算力专业委员会\"、揭牌\"北京天基智算创新中心\"、发布太空算力十大关键共性技术攻关榜单，覆盖可回收火箭、太空光伏、激光通信、抗辐照芯片等。",
+    insight: "太空算力从概念进入产业组织化阶段。专委会+创新中心+技术攻关榜单三管齐下，\"天地一体化算力\"从论坛议题转向实质性产业推进。",
+    sourceLabel: "北京市科委/经济观察网", sourceUrl: "https://kw.beijing.gov.cn/xwdt/kcyx/kcyxkchd/202603/t20260331_4570457.html",
+    tags: ["太空算力","天地协同","专委会","亦庄"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "\"京数青算\"首个标杆项目——西宁智算中心9.5亿元签约落地",
+    body: "3月23日，西宁智算中心项目正式签约落地西宁经开区南川工业园区，总投资9.5亿元。重点围绕专有大模型为腾讯等头部企业及本地中小企业提供低成本算力服务。随后3月27日西宁再签2个绿色算力项目，总投资165.5亿元。",
+    insight: "京青算力协作从战略对接迈向实体落地，\"绿电+算力\"的西部模式正式跑通，为西部枢纽节点提供了可复制样板。",
+    sourceLabel: "青海省人民政府网/央广网", sourceUrl: "http://www.qinghai.gov.cn/zwgk/system/2026/03/24/030095535.shtml",
+    tags: ["京数青算","西宁","9.5亿","绿色算力","腾讯"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
+    title: "东阳光280亿收购秦淮数据中国区完成——启动重组整合",
+    body: "东阳光（600673.SH）以280亿元完成对秦淮数据中国区业务的收购交割，为近年亚洲算力基础设施领域最大规模并购案。将铝箔等传统业务剥离，全面转型为算力基础设施运营商。秦淮数据中国区年盈利约13亿元，字节跳动为其最大客户。",
+    insight: "传统制造企业大手笔跨界并购，反映算力基础设施资产的战略溢价。秦淮数据低PUE优势（1.22）与东阳光资本实力结合，可能催生新的第三方IDC巨头。",
+    sourceLabel: "深圳商报/新浪财经", sourceUrl: "https://www.sohu.com/a/977762183_100053070",
+    tags: ["东阳光","秦淮数据","280亿","并购","字节跳动"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "ODCC春季全会舟山闭幕——华为发布AI Fabric NG，OCS焦点组启动",
+    body: "2026 ODCC春季全会4月2日在浙江舟山闭幕。华为发布AI Fabric NG技术并牵头立项三大智算网络项目；ODCC启动OCS（全光交换）焦点组，腾讯基础网络中心总监何泽坤主持网络工作组会议；超擎数智获授\"ODCC AI存储实验室\"。",
+    insight: "智算网络从\"能用\"走向\"标准化确定性\"，光互联从电互联向全光交换跃迁，AI存储从训练侧向推理侧延伸。腾讯在网络标准制定中的主导角色值得关注。",
+    sourceLabel: "华为官微/三石园科技/IT之家", sourceUrl: "https://xinsanban.10jqka.com.cn/20260402/c675735509.shtml",
+    tags: ["ODCC","AI Fabric NG","OCS","腾讯","华为"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "华创证券AIDC深度报告：2026年液冷放量元年，渗透率从15%升至35%+",
+    body: "单机柜功率从传统8~12kW提升到AI场景下的50~100kW，液冷从\"可选\"变为\"必选\"。冷板式液冷成为主流路线，浸没式在超高密度（>100kW/柜）场景加速渗透。全球AI服务器市场规模2026年预计超过2500亿元，液冷渗透率有望从2025年的15%提升至35%以上。",
+    insight: "新建AIDC项目必须标配液冷系统，存量IDC的液冷改造市场将在2026~2027年集中爆发。",
+    sourceLabel: "华创证券/搜狐", sourceUrl: "https://www.sohu.com/a/1003608494_121123901",
+    tags: ["液冷","华创证券","35%","冷板式","放量元年"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
+    title: "英伟达20亿美元押注光互连——Lumentum产能爆满订单排至2027年",
+    body: "OFC 2026大会期间，英伟达向Lumentum投资约20亿美元，推动AI数据中心从传统电互连向光互连（CPO）转型。Lumentum产能已全部售罄，订单排至2027年底。ODCC已启动448G焦点组推动下一代光互连标准。",
+    insight: "英伟达亲自下场投资供应链、Lumentum产能售罄至2027、ODCC启动448G标准——三重信号叠加，CPO/光模块赛道确定性极高。",
+    sourceLabel: "腾讯云开发者社区/ODCC", sourceUrl: "https://cloud.tencent.com/developer/article/2649603",
+    tags: ["英伟达","Lumentum","20亿美元","光互连","CPO"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "庆阳\"算电协同\"写入政府工作报告——绿电聚合降本40%",
+    body: "庆阳市将\"算电协同\"正式写入2026年政府工作报告，成为全国首个将该概念纳入政府工作报告的枢纽节点城市。通过绿电聚合交易模式，数据中心用电成本较标杆电价降低40%，年均PUE可低至1.15。已签约引进算力项目超过3000P。",
+    insight: "\"算电协同\"从企业自发探索上升为政府施政纲领，降本40%的绿电聚合模式如果可复制，将显著改变西部枢纽节点的成本竞争力排序。",
+    sourceLabel: "中国能源新闻网", sourceUrl: "https://www.cwese.com/index.php?m=home&c=View&a=index&aid=1275",
+    tags: ["庆阳","算电协同","降本40%","绿电","3000P"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
+    title: "雅砻江两河口\"算电融合\"智算中心——隧洞里跑AI",
+    body: "人民日报4月2日报道，雅砻江两河口水电站利用地下隧洞空间建设\"算电融合\"智算中心。利用300万千瓦装机容量产生的富余电力，在恒温恒湿的地下隧洞中部署GPU算力。初期规划算力500P，年用电成本较市电低50%以上。",
+    insight: "\"隧洞里跑AI\"是\"算电融合\"的极致形态——利用水电站既有基础设施，几乎零边际成本获得散热和电力。全国300+大型水电站都有可能复制。",
+    sourceLabel: "人民周刊", sourceUrl: "https://www.peopleweekly.cn/html/2026/caijing_0402/267747.html",
+    tags: ["雅砻江","两河口","算电融合","隧洞","水电直供"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "SemiAnalysis：AI算力供应链全线涨价，GPU交付周期延长至6个月",
+    body: "英伟达B200/GB200系列GPU交付周期延长至6个月以上，部分大客户订单排至2027年。HBM3E供不应求，SK海力士、三星产能满负荷运转仍无法满足需求。台积电CoWoS产线利用率超过95%。2026年全球AI基础设施总投资将超过3500亿美元。",
+    insight: "供应链紧张从GPU单点扩散到HBM、先进封装、光模块全链条。提前锁定设备供应成为竞争关键。",
+    sourceLabel: "腾讯新闻/SemiAnalysis", sourceUrl: "https://news.qq.com/rain/a/20260402A079EF00",
+    tags: ["GPU","6个月","HBM3E","CoWoS","3500亿美元"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
+    title: "IDC Research：英伟达中国AI加速卡市场份额从95%跌至55%",
+    body: "英伟达在中国AI加速卡市场份额已从2023年的95%降至2026年的约55%。华为昇腾、海光DCU、寒武纪等国产芯片加速填补。5大趋势：智算架构专业化、推理超越训练、存算分离标准化、液冷入场券化、跨区域算力调度。",
+    insight: "英伟达份额腰斩式下降，国产替代进入\"可用到好用\"的转折期。混合算力运维复杂度提升，需要投资适配层和统一调度平台。",
+    sourceLabel: "ChainThink/IDC Research", sourceUrl: "https://chainthink.cn/article/118504443749437440",
+    tags: ["英伟达","55%","国产替代","昇腾","海光"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
+    title: "三大运营商2026年资本开支聚焦算力——算力投资占比均超35%",
+    body: "三大运营商公布2026年投资计划：中国移动、中国联通算力投资占比均超35%，正从\"管道运营商\"向\"算力运营商\"转型。数据中心运维、液冷工程、AI平台运营等岗位需求大幅增长。",
+    insight: "运营商资本开支向算力倾斜的趋势不可逆，35%的算力投资占比意味着千亿级资金流入IDC/智算中心建设。",
+    sourceLabel: "新华网", sourceUrl: "https://www3.xinhuanet.com/finance/20260327/0ec5bc8810f842a4a27316d7602d98d5/c.html",
+    tags: ["运营商","35%","算力投资","转型","招聘"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
+    title: "中国移动呼和浩特DC B11-B16机房楼EPC招标——预算30.37亿元",
+    body: "中国移动3月20日发布呼和浩特数据中心B11-B16机房楼机电配套EPC总承包采购，预算27.22亿元（不含税），含税约30.37亿元，共6个标段，要求年内交付。此外移动南京C4楼和联通南京超节点同期推进。",
+    insight: "运营商DC建设进入密集招标期。呼和浩特30亿单体项目规模罕见，且要求年内交付，体现对AIDC产能的紧迫需求。",
+    sourceLabel: "C114/新浪财经/DTDATA", sourceUrl: "https://finance.sina.cn/tech/2026-03-23/detail-inhrxvtt5413751.d.html",
+    tags: ["中国移动","呼和浩特","30.37亿","EPC","年内交付"]
+  },
+  {
+    issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
+    section: "观点", sectionAnchor: "sec-quote", sectionName: "👀 人物与观点",
+    title: "秦淮数据总裁汪冬宁登榜\"2026福布斯中国行业发展领创者\"",
+    body: "秦淮数据总裁汪冬宁入选\"2026福布斯中国行业发展领创者\"榜单，秦淮数据入选全球AI赋能可持续发展标杆案例（行业唯一）。在东阳光280亿收购完成后，汪冬宁继续执掌中国区业务运营。",
+    insight: "秦淮数据在\"被收购\"中实现品牌和人才保留，汪冬宁的留任传递出秦淮数据将保持独立运营的信号。",
+    sourceLabel: "秦淮数据集团官网/新浪财经", sourceUrl: "https://www.chindatagroup.com/?lang=cn",
+    tags: ["秦淮数据","汪冬宁","福布斯","领创者"]
+  },
   {
     issueId: "2026-04-02", issueDate: "2026-04-02", issueFile: "issues/2026-04-02.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
