@@ -381,14 +381,27 @@ const ISSUES = [
     id: "2026-04-04",
     date: "2026-04-04",
     dateRange: "2026-04-04",
-    title: "美AI DC暂停法案20MW门槛·字节阿里3.5GW算力规划·ODCC华为AI Fabric NG·OFC光互连紧缺排至2027·液冷放量元年",
-    intelCount: 18,
-    totalAmount: "43.86亿+",
+    title: "Meta百亿美元德州DC/1GW·全球DC资本支出7000亿·储能接管AIDC电力·液冷放量元年·德令哈58.5亿智算中标",
+    intelCount: 16,
+    totalAmount: "7000亿$+",
     sections: 8,
-    tags: ["AI DC暂停法案","字节跳动","阿里巴巴","ODCC","AI Fabric NG","OFC2026","光互连紧缺","液冷CDU","华创证券","EPC招标"],
-    summary: "美国国会推进AI数据中心暂停法案20MW以上项目需联邦审批；字节1.5GW+阿里2GW算力规划浮出水面合计3.5GW；IDC Research发布GTC 2026五大趋势加速计算破万亿美元；ODCC春季全会舟山召开华为发布AI Fabric NG百万卡集群架构；OFC 2026光互连全线紧缺Lumentum订单排至2027英伟达采购20亿美元；华创证券判定2026年为液冷放量元年；移动呼和浩特30亿EPC等4项招投标。",
+    tags: [
+        "Meta",
+        "1GW",
+        "7000亿",
+        "Amazon",
+        "337亿欧元",
+        "储能",
+        "AIDC",
+        "液冷",
+        "Rubin",
+        "德令哈",
+        "东数西算",
+        "微电网"
+    ],
+    summary: "Meta德州数据中心投资翻倍至100亿美元目标1GW；全球超大规模企业资本支出滚动增长至7000亿美元；Amazon西班牙337亿欧元AI基础设施投资；丹麦550MW园区获60亿欧元投资；储能正式接管AIDC电力稳定性2030年需求超300GWh；华创证券判定2026年为液冷放量元年；青海德令哈智算中心58.5亿中标。",
     file: "issues/2026-04-04.html"
-  },
+},
   {
     id: "2026-04-03",
     date: "2026-04-03",
@@ -464,168 +477,22 @@ const ISSUES = [
 ];
 
 const INTEL_ITEMS = [
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
-    title: "美国国会推进AI数据中心暂停法案——20MW以上项目需联邦审批",
-    body: "参议员桑德斯和众议员AOC联合提出《AI数据中心环境责任法案》，要求20MW及以上AIDC项目运营前必须完成环境影响评估并获联邦许可；已运营DC需2年内合规审计；能源部建立全国能耗追踪系统强制公开PUE/用水量/碳排放。科技行业强烈反对，共和党普遍反对，最终立法可能性较低但信号意义重大。",
-    insight: "虽短期通过概率低，但折射全球AI DC监管趋严趋势，ESG审核权重将持续提升。",
-    sourceLabel: "虎嗅/Politico", sourceUrl: "https://www.huxiu.com/article/4846466.html",
-    tags: ["AI DC暂停法案","20MW","监管趋势","美国国会"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
-    title: "字节跳动与阿里巴巴2026年IDC算力规划深度解析——合计近3.5GW",
-    body: "据IDC圈深度解析：字节跳动2026年算力规划1.5GW（华北/华东/华南多枢纽扩容），阿里巴巴同期约2GW（自建+合租双轨）。两家合计3.5GW≈35个大型DC园区。采购模式从单一设备转向EPC总包，液冷CDU/高功率UPS/800V配电需求激增。",
-    insight: "互联网巨头集中式采购对供应链形成巨大拉动，EPC总包成主流交付模式。",
-    sourceLabel: "IDC圈", sourceUrl: "https://news.idcquan.com/news/206696.shtml",
-    tags: ["字节跳动","阿里巴巴","1.5GW","2GW","算力规划"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",
-    title: "IDC Research发布GTC 2026五大趋势——加速计算服务器2029年破万亿美元",
-    body: "从GTC 2026提炼五大趋势：①智能算力架构专业化GPU→ASIC多元化 ②液冷从可选变必选GB200/NVL72机柜120kW+ ③AI Fabric网络重塑RoCE v2为主流 ④可持续性纳入核心KPI PUE<1.2成硬指标 ⑤边缘-云端协同算力网边缘增速超核心3倍。加速计算服务器市场预计2029年破万亿美元。",
-    insight: "数据中心技术栈正在发生全方位重构，万亿美元市场正在形成。",
-    sourceLabel: "IDC Research", sourceUrl: "https://www.idc.com/resource-center/blog/",
-    tags: ["IDC Research","GTC 2026","万亿美元","五大趋势","加速计算"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
-    title: "贵州电网数据中心升级改造及信息机房隐患整改招标",
-    body: "南方电网旗下贵州电网公司启动数据中心升级改造项目，含信息机房隐患整改。属电力行业内部数字化转型投入，反映传统能源企业对DC运维质量要求提升。",
-    insight: "电力行业自身数字化转型的标杆案例。",
-    sourceLabel: "中国招标投标平台", sourceUrl: "#",
-    tags: ["贵州电网","数据中心改造","南方电网"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "项目", sectionAnchor: "sec-project", sectionName: "🏗️ 项目与市场",
-    title: "青海德令哈智算中心二期持续推进",
-    body: "东数西算西部枢纽重点项目，依托青海丰富绿电资源打造零碳智算示范区。清洁能源装机容量居全国前列，建设方向以AIDC智算为主配套绿色能源体系。",
-    insight: "西部绿电+算力模式持续落地，青海优势凸显。",
-    sourceLabel: "青海省公共资源平台", sourceUrl: "#",
-    tags: ["德令哈","智算中心二期","东数西算","绿电"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
-    title: "ODCC 2026春季全会在舟山召开——华为发布AI Fabric NG下一代网络架构",
-    body: "ODCC春季全会舟山召开超500人参会。华为发布AI Fabric NG支持百万卡集群互联单端口800G。液冷焦点组讨论浸没式标准化路径冷板式接口规范进入报批阶段，800V直流配电标准取得进展。",
-    insight: "ODCC标准直接影响国标和采购要求，华为AI Fabric NG意味着网络层竞争加剧。",
-    sourceLabel: "ODCC官方", sourceUrl: "https://www.odcc.org.cn/news/p-2039593521758724097.html",
-    tags: ["ODCC","华为","AI Fabric NG","800G","800V"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
-    title: "OFC 2026光互连供应链全线紧缺——Lumentum产能爆满订单排至2027",
-    body: "Lumentum产能饱和订单排至2027年中，仅英伟达一家2026年光器件采购额达20亿美元。1.6T模块进入量产(年出1000-2000万只)，XPO端口密度为OSFP的4倍，OCS收入H2预计4亿美元。各环节交期：1.6T模块26-30周/OCS排至Q4/DSP芯片18-22周。",
-    insight: "光互连是最确定卖方市场环节，紧缺持续至2027年中价格维持高位。",
-    sourceLabel: "OFC 2026/Lumentum/中金", sourceUrl: "#",
-    tags: ["OFC 2026","Lumentum","20亿$","1.6T","OCS","光互连"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "技术", sectionAnchor: "sec-tech", sectionName: "⚙️ 技术趋势",
-    title: "华创证券AIDC液冷深度报告——判定2026年为液冷放量元年",
-    body: "GB200 TPU功耗2700W/NVL72机柜120kW+→风冷极限已至。冷板式PUE降至1.25以下浸没式降至1.1。2026H2 VR+ASIC放量→CDU紧缺贯穿全年。全球CDU市场2031年达251.7亿元(CAGR 18.5%)。英维克/维谛/科华等竞相布局全产品线。",
-    insight: "冷板式已成产业化主流浸没式为100kW+超高密场景未来方向。",
-    sourceLabel: "华创证券", sourceUrl: "#",
-    tags: ["液冷","CDU","放量元年","251.7亿","18.5%"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "政策", sectionAnchor: "sec-policy", sectionName: "📜 政策法规",
-    title: "全球AI数据中心监管趋严——先发展后治理转向发展与治理并行",
-    body: "美国20MW法案(通过概率低)+欧盟AI法案分级框架+国内PUE<1.25硬指标化+多省暂停高耗能DC审批。先发展后治理→发展与治理并行，ESG审核权重提升绿电配置比例成核心准入条件之一。",
-    insight: "数据中心ESG合规将成为行业标配而非可选项。",
-    sourceLabel: "综合整理", sourceUrl: "https://www.huxiu.com/article/4846466.html",
-    tags: ["监管趋严","ESG","PUE 1.25","绿电准入"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
-    title: "光器件/光模块供应链全线紧缺一览",
-    body: "OFC 2026各厂商传递信息高度一致：1.6T极度紧张26-30周↑ | 800G DR8紧张16-20w小幅↑ | OCS满载排至Q4高位稳 | TIA/ROSA紧缺20-24周↑ | DSP芯片限制供货18-22周↑。主要供应商产能扩张周期12-18个月短期无法缓解。",
-    insight: "光互连是最确定卖方市场环节，紧缺至少持续至2027年中。",
-    sourceLabel: "OFC 2026/Lumentum/Coherent", sourceUrl: "#",
-    tags: ["光器件","光模块","紧缺","交期延长"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "供应链", sectionAnchor: "sec-supply", sectionName: "🔗 供应链动态",
-    title: "液冷CDU紧缺态势延续——头部厂商产能竞速",
-    body: "需求端：2026H2 Rubin量产+ASIC放量=CDU配置率大幅提升。供给端：英维克/维谛/酷冷等头部厂商交期8-12周部分型号排至Q4。价格坚挺议价空间有限。新技术：QD可靠性提升泄漏检测智能化冷却液国产替代加速。",
-    insight: "CDU紧缺贯穿全年，头部厂商产能竞速白热化。",
-    sourceLabel: "产业链调研", sourceUrl: "#",
-    tags: ["CDU","液冷","8-12周","紧缺"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
-    title: "Equinix扩大全球数据中心人才培养投资",
-    body: "Pathways to Tech扩展至所有运营地点面向14-18岁学生；联合Generation/ODATA/Cisco/Vertiv在巴西启动培训联盟；达拉斯/巴黎/新加坡三地学习实验室同步启动；此前试点已覆盖近2000名学生。",
-    insight: "全球IDC人才短缺成共性挑战，头部企业从抢人转向育人，人才培养体系化时代来临。",
-    sourceLabel: "Equinix官方", sourceUrl: "https://newsroom.equinix.com/",
-    tags: ["Equinix","人才培养","全球扩展","2000学生"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招聘", sectionAnchor: "sec-recruit", sectionName: "📌 招聘动向",
-    title: "国内IDC厂商招聘动态扫描",
-    body: "万国数据：持续招液冷工程师/AIDC运维专家含东南亚节点 | 世纪互联：重点招算电协同架构师/800V配电工程师 | 秦淮数据：被收购后调整中高端技术岗仍在招 | 润泽科技：东部运维团队扩张华北岗位较多 | 数据港：一线运维和项目经理为主",
-    insight: "液冷、AIDC运维、算电协同、高密供电成为最热门岗位类别。",
-    sourceLabel: "各厂商官网汇总", sourceUrl: "#",
-    tags: ["万国数据","世纪互联","秦淮数据","润泽科技","数据港"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
-    title: "中国移动呼和浩特数据中心B11-B16机房楼机电配套EPC招标",
-    body: "预算约30亿元 | B11-B16共6栋机房楼 | 呼和浩特东数西算枢纽 | 要求年内交付 | 截止4月13日",
-    insight: "运营商持续加码东数西算核心节点EPC市场竞争白热化。",
-    sourceLabel: "中国移动采购与招标网", sourceUrl: "#",
-    tags: ["中国移动","呼和浩特","30亿","EPC","东数西算"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
-    title: "中国电信芜湖集群经开区大数据中心设计招标",
-    body: "A1A2数据机楼+B1运维楼设计 | 关联总投资约7.8亿元 | 长三角算力枢纽芜湖集群 | 此前A6/B1/C4楼已启动设计",
-    insight: "运营商加码长三角枢纽集群芜湖建设进入加速期。",
-    sourceLabel: "芜湖公共资源交易中心", sourceUrl: "https://whsgggy.wuhu.gov.cn/",
-    tags: ["中国电信","芜湖集群","7.8亿","长三角枢纽"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
-    title: "云南巧家县绿色智能数据中心项目EPC招标",
-    body: "总投资6.86亿元 | 算力约2000 PFLOPS(FP16) | 机房功率1942kW | 依托水电资源优势打造绿色低碳算力基地",
-    insight: "西南地区绿色算力项目持续落地水电资源优势发展AIDC成趋势。",
-    sourceLabel: "云南省公共资源平台", sourceUrl: "https://www.dtdata.cn/news/show/4295.html",
-    tags: ["云南巧家","6.86亿","2000PFLOPS","绿色智算"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "招投标", sectionAnchor: "sec-bid", sectionName: "📋 招投标公告",
-    title: "青海海南州云锐智算中心项目EPC询比采购",
-    body: "编号QHXY-2026-02 | A级数据中心标准 | 4组微模块(每组14个机柜) | 青海海南州西部枢纽",
-    insight: "青海作为东数西算西部枢纽之一算力项目持续落地绿电优势吸引持续投资。",
-    sourceLabel: "青海省招标采购平台", sourceUrl: "http://www.qhei.net.cn/html/zbgg/2026_3/220777.html",
-    tags: ["青海海南州","云锐智算","EPC","A级DC"]
-  },
-  {
-    issueId: "2026-04-04", issueDate: "2026-04-04", issueFile: "issues/2026-04-04.html",
-    section: "观点", sectionAnchor: "sec-quote", sectionName: "💬 人物与观点",
-    title: "仲量联行庞树东：DC进入与交通/公用事业同级的全球基础设施资产时代",
-    body: "\"数据中心正式进入与交通、公用事业同级的全球基础设施资产时代。行业呈现超低空置率+稳健收益率格局未现泡沫迹象。算力基础设施正成为与办公空间、生产工厂同等重要的战略性不动产配置。\" JLL报告关键数字：2030年全球DC容量200GW/五年投资3万亿美元/使用率97%/在建77%已预租。",
-    insight: "JLL报告定义了数据中心资产的新坐标——与交通、公用事业并列的全球基础设施层级。",
-    sourceLabel: "仲量联行JLL", sourceUrl: "https://www.joneslanglasalle.com.cn/zh-cn/insights/2026-data-center-outlook",
-    tags: ["仲量联行","庞树东","200GW","3万亿","97%使用率"]
-  },
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"重大",sectionAnchor:"sec-signal",sectionName:"🔥 重大信号",title:"Meta德州数据中心投资翻倍至100亿美元，目标容量1GW",body:"Meta将其位于德克萨斯州埃尔帕索的数据中心投资额大幅提升至100亿美元，目标容量1GW，预计2028年前投入运营。这是Meta目前最大的单体数据中心项目。",insight:"单体项目百亿美元级投资成为常态，反映超大规模玩家在AI基础设施上的军备竞赛加速。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["Meta","100亿美元","1GW","德克萨斯"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"重大",sectionAnchor:"sec-signal",sectionName:"🔥 重大信号",title:"全球超大规模企业资本支出滚动增长至7000亿美元",body:"Nebius芬兰100亿美元、Oracle密歇根160亿美元、DayOne马来西亚280亿美元等项目持续落地。行业资本支出以GW为单位计量，传统枢纽容量见顶推动投资向东南亚和美国二级市场转移。Oracle裁员数千人同时斥巨资建基础设施。",insight:"数据中心投资已进入万亿美元时代，能源优先取代光纤优先成为选址第一原则。",sourceLabel:"LinkedIn行业周报",sourceUrl:"https://www.linkedin.com/pulse/weekly-data-center-industry-news-first-weeks-april-2026-kim-lwpqf",tags:["7000亿","资本支出","Nebius","Oracle","DayOne"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"重大",sectionAnchor:"sec-signal",sectionName:"🔥 重大信号",title:"Amazon西班牙337亿欧元AI基础设施投资",body:"Amazon公布在西班牙阿拉贡等地扩大云和AI基础设施的大规模投资计划，总额达337亿欧元，涵盖数据中心和供应链设施。",insight:"西班牙凭借可再生能源优势和相对宽松的电力供应吸引巨额投资，成为欧洲数据中心版图的新增长极。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["Amazon","337亿欧元","西班牙","欧洲"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"项目",sectionAnchor:"sec-project",sectionName:"🏗️ 项目与市场",title:"丹麦Prime DC 550MW超大规模园区获60亿欧元投资",body:"Prime Data Centers与Brunswick Real Estate合作，在丹麦埃斯比约建设550MW IT容量的超大规模园区，投资60亿欧元。",insight:"北欧凭借低温气候和丰富可再生能源继续吸引超大规模项目，550MW级单体项目在欧洲属罕见体量。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["丹麦","550MW","60亿欧元","Prime DC"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"项目",sectionAnchor:"sec-project",sectionName:"🏗️ 项目与市场",title:"印尼Digital Edge获6.65亿美元绿色贷款建500MW园区",body:"Digital Edge为其位于印尼Bekasi的500MW数据中心园区一期获得了印尼有史以来最大的数据中心绿色贷款，金额6.65亿美元。",insight:"东南亚数据中心市场融资体量创新高，印尼作为东南亚最大经济体的算力基础设施正快速补位。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["印尼","500MW","6.65亿美元","绿色贷款"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"项目",sectionAnchor:"sec-project",sectionName:"🏗️ 项目与市场",title:"全国首单东数西算绿色ABS成功发行5.95亿元",body:"雅州集团雅安大数据产业园绿色资产支持专项计划（东数西算）在上交所成功发行，规模5.95亿元，期限18年，优先级票面利率2.75%，为全国首单数据中心CMBS产品。",insight:"数据中心资产证券化通道打开，为东数西算西部节点项目提供了新型融资范式。",sourceLabel:"中国证券报",sourceUrl:"https://www.cs.com.cn/qs/202603/t20260324_6542712.html",tags:["东数西算","绿色ABS","5.95亿","雅安"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"项目",sectionAnchor:"sec-project",sectionName:"🏗️ 项目与市场",title:"越南首个200MW AI数据中心4月底开建，投资20亿美元",body:"越南首个AI数据中心项目获批，规模200MW，投资20亿美元，定于4月底启动建设。",insight:"越南凭借较低电力和劳动力成本，有望成为继马来西亚、印尼后东南亚第三个大型数据中心枢纽。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["越南","200MW","20亿美元"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"技术",sectionAnchor:"sec-tech",sectionName:"⚡ 技术趋势",title:"华创证券：2026年为液冷放量元年，风冷已达技术瓶颈",body:"华创证券发布AIDC系列深度报告，单机柜功率从3-8kW飙升至20-100kW，风冷三种方案均达天花板。冷板式液冷PUE降至1.15以下，Rubin平台下半年量产推动全液冷标配。全球CDU市场预计2031年达251.7亿元。",insight:"液冷从可选变必选，CDU供需将持续紧张贯穿全年。",sourceLabel:"华创证券研报",sourceUrl:"https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/industry/rptid/828204753319/index.phtml",tags:["液冷","CDU","Rubin","PUE","华创证券"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"技术",sectionAnchor:"sec-tech",sectionName:"⚡ 技术趋势",title:"储能正式接管AIDC电力稳定性，2030年全球需求超300GWh",body:"ESIE 2026峰会上南都电源成立独立AIDC部门发布10C超高倍率AIOn X-rate系统；天合储能联合科华数能发布AIDC全域融合方案；晶科能源发布全场景光储方案。机构预计2030年全球AIDC储能装机需求超300GWh。",insight:"储能从辅助电源升级为AIDC核心基础设施，运营商需重新评估供电架构。",sourceLabel:"新京报/ESIE 2026",sourceUrl:"https://news.qq.com/rain/a/20260403A05FBQ00",tags:["储能","300GWh","AIDC","南都电源","ESIE"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"技术",sectionAnchor:"sec-tech",sectionName:"⚡ 技术趋势",title:"爱尔兰Pure DC建成欧洲首个110MW数据中心微电网",body:"Pure DC在都柏林建成110MW数据中心微电网为欧洲首创，旨在绕过电网容量限制。Echelon计划建设首个绿色能源园，将数据中心与800MW海上风电并置。",insight:"微电网方案已进入商用验证阶段，对电网受限区域的IDC建设具有参考价值。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["微电网","110MW","爱尔兰","Pure DC"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"政策",sectionAnchor:"sec-policy",sectionName:"📜 政策法规",title:"澳大利亚推出国家数据中心审批框架",body:"澳大利亚工党政府引入国家级框架，将数据中心审批与能源投资、资源管理和经济影响挂钩。国家重建基金向Macquarie提供2亿澳元支持主权云和数据中心扩张。",insight:"能源优先正从企业策略上升为国家政策导向，将数据中心审批制度化。",sourceLabel:"Data Center Knowledge",sourceUrl:"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026",tags:["澳大利亚","审批框架","主权云","能源优先"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"政策",sectionAnchor:"sec-policy",sectionName:"📜 政策法规",title:"美国社区反对加剧：缅因州拟暂停建设，弗吉尼亚州项目被法院阻止",body:"Amazon俄勒冈州支付2050万美元污染和解金；缅因州拟议暂停数据中心建设；弗吉尼亚州项目被法院叫停。民调显示民众对数据中心接受度低于亚马逊仓库。",insight:"NIMBY运动正从个案升级为系统性法律对抗，将显著增加北美IDC项目的时间和合规成本。",sourceLabel:"aitoolly/LinkedIn",sourceUrl:"https://aitoolly.com/zh/ai-news/article/2026-04-04-public-sentiment-shift-why-communities-prefer-amazon-warehouses-over-modern-data-centers",tags:["NIMBY","美国","缅因州","弗吉尼亚","社区反对"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"供应链",sectionAnchor:"sec-supply",sectionName:"🔗 供应链动态",title:"燃气轮机成本飙升195%，能源设备供需矛盾加剧",body:"受数据中心电力需求爆发影响，美国市场燃气轮机成本较一年前飙升195%。Google等被迫转向天然气发电厂。Microsoft与Chevron在德克萨斯州达成独家能源合作。",insight:"电力基础设施设备严重紧张，能源优先已取代光纤优先成为选址第一原则。",sourceLabel:"LinkedIn行业周报",sourceUrl:"https://www.linkedin.com/pulse/weekly-data-center-industry-news-first-weeks-april-2026-kim-lwpqf",tags:["燃气轮机","195%","能源","Chevron","Microsoft"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"供应链",sectionAnchor:"sec-supply",sectionName:"🔗 供应链动态",title:"全球数据中心IT电力需求2026年将翻倍至96GW",body:"AIDC深度报告：全球算力总规模达4495 EFlops（同比+117%），智能算力占比85%。2023-2026年全球DC核心IT电力从49GW翻倍至96GW，智算中心贡献约40GW。",insight:"算力需求爆发式增长对GPU、液冷设备、配电系统的供应链形成持续压力。",sourceLabel:"华创证券AIDC报告",sourceUrl:"https://www.sohu.com/a/1004387494_121123901",tags:["96GW","4495 EFlops","智能算力","供应链"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"招投标",sectionAnchor:"sec-bid",sectionName:"📋 招投标公告",title:"青海德令哈智算中心二期3号数据中心中标，总投资58.5亿元",body:"中铁二十四局以约15亿元中标青海德令哈智算中心项目（二期）3号数据中心PC施工总承包。项目总投资约58.5亿元，规划建设300个高密机柜，利用高原冷空气自然冷却降温，按国标A（T3+）标准建设。",insight:"西部东数西算枢纽节点算力基建持续推进，高原自然冷源+绿电优势使青海成为低PUE数据中心理想选址。",sourceLabel:"青海招标投标信息网",sourceUrl:"https://www.sohu.com/a/1001094367_121123899",tags:["德令哈","58.5亿","中铁二十四局","东数西算"]},
+  {issueId:"2026-04-04",issueDate:"2026-04-04",issueFile:"issues/2026-04-04.html",section:"观点",sectionAnchor:"sec-quote",sectionName:"👀 人物与观点",title:"华创证券：2026年是液冷放量元年，Rubin量产推动全液冷标配",body:"华创证券机械团队：风冷已达技术瓶颈，冷板式液冷PUE可降至1.15以下，相比风冷的1.4+有质的飞跃。随着NVIDIA Rubin平台下半年量产，全液冷架构将成为AIDC标配。",insight:"首次明确提出液冷放量元年判断，对液冷产业链具有重要参考价值。",sourceLabel:"华创证券研报",sourceUrl:"https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/industry/rptid/828204753319/index.phtml",tags:["液冷放量元年","华创证券","Rubin","PUE"]},
   {
     issueId: "2026-04-03", issueDate: "2026-04-03", issueFile: "issues/2026-04-03.html",
     section: "重大", sectionAnchor: "sec-signal", sectionName: "🔴 重大信号",

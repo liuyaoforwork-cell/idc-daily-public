@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDC 行业情报日报 · 2026-04-04</title>
+<meta name="description" content="IDC数据中心行业情报日报，覆盖重大信号、项目市场、技术趋势、政策法规、供应链动态、招投标及行业观点。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<style>
+  /* ═══ 默认浅色 ═══ */
+  :root {
+    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
+    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
+    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+    --topbar-bg: rgba(248,249,252,.9);
+    --nav-bg: rgba(248,249,252,.92);
+  }
+  [data-theme="dark"] {
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --topbar-bg: rgba(15,17,23,.88);
+    --nav-bg: rgba(15,17,23,.92);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    transition: background .3s, color .3s;
+  }
+  a { color: var(--blue); text-decoration: none; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--blue); z-index:200; width:0; transition:width .1s linear; border-radius:0 2px 2px 0; }
+  .topbar {
+    position:sticky; top:0; z-index:100;
+    background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border); padding:0 24px; height:56px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar-left { display:flex; align-items:center; gap:16px; }
+  .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; }
+  .back-link:hover { color:var(--blue); }
+  .topbar-date { font-size:13px; color:var(--text3); }
+  .topbar-actions { display:flex; align-items:center; gap:8px; }
+  .topbar-btn { width:36px; height:36px; border-radius:10px; border:1px solid var(--border); background:transparent; color:var(--text); cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; }
+  .topbar-btn:hover { background:var(--card-hover); border-color:var(--blue); }
+  .theme-switcher { display:flex; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600; }
+  .theme-opt { padding:0 12px; height:100%; display:flex; align-items:center; gap:4px; cursor:pointer; color:var(--text3); border:none; background:transparent; font-family:inherit; }
+  .theme-opt:hover { color:var(--text2); }
+  .theme-opt.active { background:var(--blue); color:#fff; box-shadow:0 1px 6px rgba(77,159,255,.3); }
+  .section-nav { position:sticky; top:56px; z-index:90; background:var(--nav-bg); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:10px 24px; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }
+  .section-nav::-webkit-scrollbar { display:none; }
+  .nav-pill { display:inline-block; font-size:13px; font-weight:600; padding:6px 14px; border-radius:8px; color:var(--text2); cursor:pointer; border:1px solid transparent; margin-right:6px; }
+  .nav-pill:hover { color:var(--text); background:var(--card); }
+  .nav-pill.active { color:var(--blue); background:rgba(77,159,255,.1); border-color:rgba(77,159,255,.2); }
+
+  .hero { background:var(--grad); border-bottom:1px solid var(--border); padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%); animation: drift 25s linear infinite; }
+  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  .hero-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+  .hero-badge { display:inline-block; background:rgba(77,159,255,.12); color:var(--blue); font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:18px; }
+  .hero h1 { font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px; }
+  [data-theme="dark"] .hero h1 { background:linear-gradient(135deg,#fff 0%,#a0aec0 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-meta { color:var(--text2); font-size:15px; }
+  .hero-meta span { display:inline-block; margin:0 8px; }
+  .hero-stats { display:flex; justify-content:center; gap:36px; margin-top:24px; flex-wrap:wrap; }
+  .stat-item { text-align:center; }
+  .stat-num { font-size:28px; font-weight:800; }
+  .stat-num small { font-size:14px; color:var(--text2); font-weight:400; }
+  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
+
+  .container { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
+  .section { margin-bottom:44px; scroll-margin-top:130px; }
+  .section-header { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+  .section-icon { font-size:20px; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; flex-shrink:0; }
+  .section-title { font-size:20px; font-weight:700; letter-spacing:-.3px; }
+  .icon-red { background:rgba(255,77,106,.12); }
+  .icon-blue { background:rgba(77,159,255,.12); }
+  .icon-cyan { background:rgba(34,211,238,.12); }
+  .icon-green { background:rgba(52,211,153,.12); }
+  .icon-orange { background:rgba(255,140,66,.12); }
+  .icon-purple { background:rgba(167,139,250,.12); }
+  .icon-yellow { background:rgba(251,191,36,.12); }
+  .icon-pink { background:rgba(244,114,182,.12); }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; transition:background .2s, border-color .2s; }
+  .card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.2); }
+  .card-title { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+  .card-body { font-size:15px; color:var(--text2); line-height:1.8; }
+  .card-body strong { color:var(--text); }
+  .card-insight { margin-top:14px; padding:12px 16px; background:rgba(77,159,255,.06); border-left:3px solid var(--blue); border-radius:0 8px 8px 0; font-size:14px; color:var(--text2); }
+  .card-insight b { color:var(--blue); }
+  .card-source { margin-top:12px; font-size:13px; }
+  .card-source a { border-bottom:1px dashed rgba(77,159,255,.3); }
+  .card-source a:hover { border-bottom-color:var(--blue); }
+
+  .signal-badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-bottom:10px; letter-spacing:.5px; }
+  .badge-critical { background:rgba(255,77,106,.15); color:var(--red); }
+  .badge-project { background:rgba(77,159,255,.15); color:var(--blue); }
+  .badge-tech { background:rgba(34,211,238,.15); color:var(--cyan); }
+  .badge-policy { background:rgba(52,211,153,.15); color:var(--green); }
+  .badge-supply { background:rgba(255,140,66,.15); color:var(--orange); }
+  .badge-recruit { background:rgba(167,139,250,.15); color:var(--purple); }
+  .badge-bid { background:rgba(244,114,182,.15); color:var(--pink); }
+
+  .spec-list { list-style:none; margin-top:10px; }
+  .spec-list li { padding:4px 0; font-size:14px; color:var(--text2); display:flex; align-items:baseline; gap:8px; }
+  .spec-list li::before { content:'▸'; color:var(--blue); flex-shrink:0; }
+  .spec-list li strong { color:var(--text); }
+
+  .chart-section { margin-top:4px; }
+  .bar-chart { display:flex; flex-direction:column; gap:12px; }
+  .bar-row { display:flex; align-items:center; gap:12px; }
+  .bar-label { flex-shrink:0; width:180px; font-size:13px; color:var(--text2); text-align:right; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .bar-track { flex:1; height:28px; background:rgba(77,159,255,.06); border-radius:8px; overflow:hidden; position:relative; }
+  .bar-fill { height:100%; border-radius:8px; display:flex; align-items:center; justify-content:flex-end; padding-right:10px; font-size:12px; font-weight:700; color:#fff; transition:width 1s cubic-bezier(.4,0,.2,1); }
+  .bar-fill.green { background:linear-gradient(90deg, rgba(52,211,153,.7), var(--green)); }
+  .bar-fill.blue { background:linear-gradient(90deg, rgba(77,159,255,.7), var(--blue)); }
+  .bar-fill.orange { background:linear-gradient(90deg, rgba(255,140,66,.7), var(--orange)); }
+  .bar-fill.yellow { background:linear-gradient(90deg, rgba(251,191,36,.7), var(--yellow)); }
+
+  .data-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:12px; margin-top:4px; }
+  .data-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; transition:all .2s; }
+  .data-card:hover { border-color:rgba(77,159,255,.25); transform:translateY(-1px); }
+  .data-card .num { font-size:24px; font-weight:800; margin-bottom:4px; }
+  .data-card .num small { font-size:13px; color:var(--text2); font-weight:400; }
+  .data-card .label { font-size:12px; color:var(--text2); }
+  .data-card .src { font-size:11px; color:var(--text3); margin-top:6px; opacity:.6; }
+
+  .quote-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; position:relative; }
+  .quote-card::before { content:'\201C'; position:absolute; top:10px; left:18px; font-size:48px; color:rgba(167,139,250,.2); font-family:Georgia,serif; line-height:1; }
+  .quote-text { font-size:15px; color:var(--text2); line-height:1.8; padding-left:28px; font-style:italic; }
+  .quote-text strong { color:var(--text); font-style:normal; }
+  .quote-attr { margin-top:12px; padding-left:28px; font-size:13px; color:var(--purple); font-weight:600; }
+
+  .back-top { position:fixed; bottom:32px; right:32px; width:44px; height:44px; border-radius:12px; background:var(--card); border:1px solid var(--border); color:var(--text); cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; opacity:0; transform:translateY(10px); transition:all .3s; z-index:80; box-shadow:0 4px 16px rgba(0,0,0,.15); }
+  .back-top.visible { opacity:1; transform:translateY(0); }
+  .back-top:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .share-toast { position:fixed; bottom:88px; right:32px; background:var(--green); color:#fff; font-size:13px; font-weight:600; padding:8px 16px; border-radius:10px; opacity:0; transform:translateY(8px); transition:all .3s; z-index:80; pointer-events:none; }
+  .share-toast.show { opacity:1; transform:translateY(0); }
+  .footer { text-align:center; padding:36px 24px; border-top:1px solid var(--border); color:var(--text3); font-size:13px; line-height:1.8; }
+  @media print {
+    .topbar, .section-nav, .progress-bar, .back-top, .share-toast, .topbar-actions { display:none !important; }
+    body { background:#fff; color:#000; }
+    .hero { background:#f5f5f5 !important; padding:24px !important; }
+    .hero h1 { -webkit-text-fill-color:#000 !important; font-size:24px !important; }
+    .card { break-inside:avoid; border:1px solid #ddd; }
+    .section { break-inside:avoid; }
+  }
+  @media (max-width:640px) {
+    .hero { padding:44px 16px 36px; } .hero-stats { gap:20px; } .stat-num { font-size:22px; }
+    .container { padding:20px 16px 40px; } .card { padding:18px; } .section-title { font-size:17px; }
+    .section-nav { padding:8px 16px; } .data-grid { grid-template-columns:repeat(2, 1fr); } .bar-label { width:100px; font-size:11px; }
+    .back-top { bottom:20px; right:20px; width:40px; height:40px; }
+  }
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="topbar">
+  <div class="topbar-left">
+    <a class="back-link" href="../index.html">← 返回期刊列表</a>
+    <span class="topbar-date">2026-04-04 周六</span>
+  </div>
+  <div class="topbar-actions">
+    <div class="theme-switcher">
+      <button class="theme-opt active" data-t="light" title="浅色">☀️ 浅</button>
+      <button class="theme-opt" data-t="dark" title="深色">🌙 深</button>
+    </div>
+  </div>
+</div>
+
+<nav class="section-nav" id="sectionNav">
+  <span class="nav-pill active" data-s="sec-signal">🔥 重大信号</span>
+  <span class="nav-pill" data-s="sec-project">🏗️ 项目市场</span>
+  <span class="nav-pill" data-s="sec-tech">⚡ 技术趋势</span>
+  <span class="nav-pill" data-s="sec-policy">📜 政策法规</span>
+  <span class="nav-pill" data-s="sec-supply">🔗 供应链</span>
+  <span class="nav-pill" data-s="sec-bid">📋 招投标</span>
+  <span class="nav-pill" data-s="sec-quote">👀 观点</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">IDC INDUSTRY INTEL DAILY</span>
+    <h1>🏢 IDC 行业情报日报</h1>
+    <p class="hero-meta">2026-04-04（周六）<span>·</span>覆盖过去 24 小时<span>·</span>仅官方一手信源</p>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" style="color:var(--blue)">16</div><div class="stat-label">核心情报</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--red)">7000亿$<small>+</small></div><div class="stat-label">全球资本支出</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--green)">8</div><div class="stat-label">覆盖板块</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+<div class="section" id="sec-signal">
+<div class="section-header"><span class="section-icon icon-red">🔥</span><span class="section-title">重大信号</span></div>
+
+<div class="card">
+<span class="signal-badge badge-critical">重大 · 投资</span>
+<h3 class="card-title">Meta德州数据中心投资翻倍至100亿美元，目标容量1GW</h3>
+<div class="card-body">Meta将其位于德克萨斯州<strong>埃尔帕索</strong>的数据中心投资额大幅提升至<strong>100亿美元</strong>，目标容量<strong>1GW</strong>，预计2028年前投入运营。</div>
+<div class="card-insight">影响分析：单体项目百亿美元级投资成为常态，反映超大规模玩家在AI基础设施上的"军备竞赛"加速。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+
+<div class="card">
+<span class="signal-badge badge-critical">重大 · 市场格局</span>
+<h3 class="card-title">全球超大规模企业资本支出滚动增长至7000亿美元</h3>
+<div class="card-body"><strong>Nebius芬兰100亿美元</strong>、<strong>Oracle密歇根160亿美元</strong>、<strong>DayOne马来西亚280亿美元</strong>等项目持续落地。行业资本支出以<strong>"吉瓦（GW）"为单位</strong>计量。Oracle裁员数千人同时斥巨资建基础设施，人力资本向AI硬件大规模重新配置。</div>
+<div class="card-insight">影响分析：数据中心投资已进入"万亿美元时代"。"能源优先"取代"光纤优先"成为选址第一原则。</div>
+<div class="card-source">📎 <a href="https://www.linkedin.com/pulse/weekly-data-center-industry-news-first-weeks-april-2026-kim-lwpqf">LinkedIn 行业周报 · 4月3日</a></div>
+</div>
+
+<div class="card">
+<span class="signal-badge badge-critical">重大 · 欧洲布局</span>
+<h3 class="card-title">Amazon西班牙337亿欧元AI基础设施投资</h3>
+<div class="card-body">Amazon公布在西班牙<strong>阿拉贡</strong>等地扩大云和AI基础设施的投资计划，总额达<strong>337亿欧元</strong>，涵盖数据中心和供应链设施。</div>
+<div class="card-insight">影响分析：西班牙凭借可再生能源优势成为欧洲数据中心版图的新增长极。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-project">
+<div class="section-header"><span class="section-icon icon-blue">🏗️</span><span class="section-title">项目与市场</span></div>
+
+<div class="card">
+<h3 class="card-title">丹麦Prime DC 550MW超大规模园区获60亿欧元投资</h3>
+<div class="card-body">Prime Data Centers与Brunswick Real Estate合作，在丹麦<strong>埃斯比约</strong>建设<strong>550MW</strong> IT容量的超大规模园区，投资<strong>60亿欧元</strong>。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">印尼Digital Edge获6.65亿美元绿色贷款建500MW园区</h3>
+<div class="card-body">Digital Edge为其位于印尼<strong>Bekasi</strong>的<strong>500MW</strong>数据中心园区一期获得印尼有史以来<strong>最大的数据中心绿色贷款</strong>，金额<strong>6.65亿美元</strong>。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">全国首单"东数西算"绿色ABS成功发行5.95亿元</h3>
+<div class="card-body">雅州集团雅安大数据产业园绿色资产支持专项计划（东数西算）在上交所成功发行，规模<strong>5.95亿元</strong>，期限18年，优先级利率2.75%，全国首单数据中心CMBS。</div>
+<div class="card-insight">影响分析：数据中心资产证券化通道打开，为东数西算西部节点提供新型融资范式。</div>
+<div class="card-source">📎 <a href="https://www.cs.com.cn/qs/202603/t20260324_6542712.html">中国证券报 · 3月24日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">越南首个200MW AI数据中心4月底开建</h3>
+<div class="card-body">越南首个AI数据中心项目获批，规模<strong>200MW</strong>，投资<strong>20亿美元</strong>，定于4月底启动建设。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-tech">
+<div class="section-header"><span class="section-icon icon-cyan">⚡</span><span class="section-title">技术趋势</span></div>
+
+<div class="card">
+<h3 class="card-title">华创证券：2026年为液冷放量元年，风冷已达技术瓶颈</h3>
+<div class="card-body">单机柜功率从<strong>3-8kW飙升至20-100kW</strong>，风冷达天花板。冷板式液冷PUE降至<strong>1.15以下</strong>。NVIDIA Rubin平台下半年量产推动全液冷标配。全球CDU市场预计2031年达<strong>251.7亿元</strong>（CAGR 18.5%）。</div>
+<div class="card-insight">技术成熟度：冷板式已进入规模化部署，浸没式仍在试点。CDU供需将持续紧张。</div>
+<div class="card-source">📎 <a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/industry/rptid/828204753319/index.phtml">华创证券研报 · 3月30日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">储能正式"接管"AIDC电力稳定性，2030年全球需求超300GWh</h3>
+<div class="card-body">ESIE 2026峰会：<strong>南都电源</strong>成立AIDC部门发布10C超高倍率AIOn X-rate；<strong>天合储能&科华数能</strong>联合发布AIDC全域融合方案；<strong>晶科能源</strong>发布全场景光储方案。机构预计2030年AIDC储能需求超<strong>300GWh</strong>。</div>
+<div class="card-insight">影响分析：储能从辅助电源升级为AIDC核心基础设施。中信证券指出AIDC配储正式走向台前。</div>
+<div class="card-source">📎 <a href="https://news.qq.com/rain/a/20260403A05FBQ00">新京报 / ESIE 2026 · 4月3日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">爱尔兰Pure DC建成欧洲首个110MW数据中心微电网</h3>
+<div class="card-body">Pure DC在<strong>都柏林</strong>建成<strong>110MW</strong>数据中心微电网为欧洲首创。Echelon计划建设绿色能源园，将数据中心与<strong>800MW海上风电</strong>并置。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-policy">
+<div class="section-header"><span class="section-icon icon-green">📜</span><span class="section-title">政策法规</span></div>
+
+<div class="card">
+<h3 class="card-title">澳大利亚推出国家数据中心审批框架</h3>
+<div class="card-body">澳大利亚工党政府引入国家级框架，将数据中心审批与<strong>能源投资、资源管理和经济影响</strong>挂钩。国家重建基金向Macquarie提供<strong>2亿澳元</strong>支持主权云扩张。</div>
+<div class="card-insight">影响分析：能源优先正从企业策略上升为国家政策导向。</div>
+<div class="card-source">📎 <a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026">Data Center Knowledge · 4月2日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">美国社区反对加剧：缅因州拟暂停建设</h3>
+<div class="card-body"><strong>Amazon俄勒冈州2050万美元</strong>污染和解金；<strong>缅因州</strong>拟暂停DC建设；<strong>弗吉尼亚州</strong>项目被法院叫停。民调显示DC接受度<strong>低于仓库</strong>。</div>
+<div class="card-insight">影响分析：NIMBY运动升级为系统性法律对抗，增加北美IDC时间和合规成本。</div>
+<div class="card-source">📎 <a href="https://aitoolly.com/zh/ai-news/article/2026-04-04-public-sentiment-shift-why-communities-prefer-amazon-warehouses-over-modern-data-centers">aitoolly · 4月4日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-supply">
+<div class="section-header"><span class="section-icon icon-orange">🔗</span><span class="section-title">供应链动态</span></div>
+
+<div class="card">
+<h3 class="card-title">燃气轮机成本飙升195%，能源设备供需矛盾加剧</h3>
+<div class="card-body">美国市场燃气轮机成本飙升<strong>195%</strong>。Google等被迫转向天然气发电。<strong>Microsoft与Chevron</strong>在德州达成独家能源合作。</div>
+<div class="card-insight">供需趋势：电力设备严重紧张，"能源优先"成为选址第一原则。</div>
+<div class="card-source">📎 <a href="https://www.linkedin.com/pulse/weekly-data-center-industry-news-first-weeks-april-2026-kim-lwpqf">LinkedIn 行业周报 · 4月3日</a></div>
+</div>
+
+<div class="card">
+<h3 class="card-title">全球DC IT电力需求2026年将翻倍至96GW</h3>
+<div class="card-body">全球算力总规模达<strong>4495 EFlops</strong>（同比+117%），智能算力占比85%。2023-2026年DC IT电力从<strong>49GW翻倍至96GW</strong>，智算中心贡献40GW。</div>
+<div class="card-source">📎 <a href="https://www.sohu.com/a/1004387494_121123901">华创证券 AIDC深度报告 · 4月2日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-bid">
+<div class="section-header"><span class="section-icon icon-pink">📋</span><span class="section-title">招投标公告</span></div>
+
+<div class="card">
+<h3 class="card-title">青海德令哈智算中心二期3号数据中心中标，总投资58.5亿元</h3>
+<div class="card-body"><strong>中铁二十四局</strong>以约<strong>15亿元</strong>中标。项目总投资约<strong>58.5亿元</strong>，规划建设<strong>300个高密机柜</strong>，利用高原冷空气自然冷却，按国标A（T3+）标准建设。</div>
+<div class="card-insight">市场解读：西部"东数西算"枢纽算力基建持续推进，高原自然冷源+绿电优势。</div>
+<div class="card-source">📎 <a href="https://www.sohu.com/a/1001094367_121123899">青海招标投标信息网 · 3月25日</a></div>
+</div>
+</div>
+
+<div class="section" id="sec-quote">
+<div class="section-header"><span class="section-icon icon-purple">👀</span><span class="section-title">人物与观点</span></div>
+
+<div class="card">
+<div class="quote-mark">"</div>
+<div class="card-body" style="font-style:italic;">2026年是<strong>液冷放量元年</strong>。风冷已达技术瓶颈，冷板式液冷PUE可降至1.15以下，相比风冷的1.4+有质的飞跃。随着NVIDIA Rubin平台下半年量产，全液冷架构将成为AIDC标配。</div>
+<div class="card-source" style="color:var(--purple);font-weight:600;">—— 华创证券机械团队<br><span style="color:var(--text3);font-weight:400;">📎 <a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/industry/rptid/828204753319/index.phtml">华创证券AIDC深度报告 · 3月30日</a></span></div>
+</div>
+
+<div class="card">
+<div class="quote-mark">"</div>
+<div class="card-body" style="font-style:italic;">未来能源最大的增量部分在AIDC，但目前<strong>'AI+储能'更多体现在用电激增上</strong>，AI深度参与调度仍处于早期阶段。</div>
+<div class="card-source" style="color:var(--purple);font-weight:600;">—— 南京南瑞继保电气<br><span style="color:var(--text3);font-weight:400;">📎 <a href="https://news.qq.com/rain/a/20260403A05FBQ00">新京报 / ESIE 2026峰会 · 4月3日</a></span></div>
+</div>
+</div>
+
+</div>
+
+<footer style="text-align:center;padding:24px;color:var(--text3);font-size:13px;border-top:1px solid var(--border);">
+  <p>本报告基于公开信息整理，不构成投资建议。转载请注明出处。</p>
+  <p style="margin-top:4px;">生成时间：2026-04-04 CST · <a href="../index.html">返回期刊列表</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = h > 0 ? (window.scrollY / h * 100) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+});
+const sections = ['sec-signal','sec-project','sec-tech','sec-policy','sec-supply','sec-recruit','sec-bid','sec-quote','sec-data'];
+const pills = document.querySelectorAll('.nav-pill');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = sections.indexOf(e.target.id);
+      pills.forEach((p,i) => p.classList.toggle('active', i === idx));
+    }
+  });
+}, { rootMargin: '-140px 0px -60% 0px', threshold: 0.1 });
+sections.forEach(id => { const el = document.getElementById(id); if(el) observer.observe(el); });
+function scrollTo(id) { document.getElementById(id)?.scrollIntoView({ behavior:'smooth' }); }
+function setTheme(theme) {
+  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('idc-theme', theme);
+  updateThemeSwitcher(theme);
+}
+function updateThemeSwitcher(theme) {
+  document.querySelectorAll('.theme-opt').forEach(btn => btn.classList.toggle('active', btn.dataset.theme === theme));
+}
+(function() { const saved = localStorage.getItem('idc-theme') || 'light';
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); updateThemeSwitcher(saved);
+})();
+function shareLink() {
+  navigator.clipboard?.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('shareToast');
+    toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+const chartObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach(bar => bar.style.width = bar.dataset.width);
+      chartObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const chart = document.getElementById('bidChart');
+if (chart) chartObserver.observe(chart);
+</script>
+</body>
+</html>
