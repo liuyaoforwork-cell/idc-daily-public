@@ -314,6 +314,34 @@
 // DATA (same as desktop)
 // ══════════════════════════════════════════════
 var ISSUES = [
+      {
+      "id": "2026-04-08",
+      "date": "2026-04-08",
+      "dateRange": "2026-04-07 ~ 2026-04-08",
+      "title": "IDC 行业情报日报 · 2026-04-08",
+      "intelCount": 18,
+      "totalAmount": "7000亿$+",
+      "sections": [
+            "signal",
+            "project",
+            "tech",
+            "policy",
+            "supply",
+            "recruit",
+            "bid",
+            "quote"
+      ],
+      "tags": [
+            "Intel Terafab",
+            "广州48亿开工",
+            "Crusoe 2.1GW",
+            "Meta 100亿$",
+            "算电协同",
+            "液冷国产替代"
+      ],
+      "summary": "Intel加入Musk Terafab 250亿$芯片项目；广州4大算力项目48.39亿集体开工；Crusoe为微软建900MW园区总容量2.1GW；Meta El Paso投资翻6.7倍至100亿$；\"算电协同\"首次写入十五五规划。",
+      "file": "issues/2026-04-08.html"
+},
     {"id":"2026-04-07","date":"2026-04-07","dateRange":"2026-04-07","title":"IDC日报·4月7日丨Neocloud信用危机；4000亿Neocloud市场；Crusoe 900MW","intelCount":14,"totalAmount":"4040亿$","sections":["signal","project","tech","policy","supply","recruit","bid","quote"],"tags":["Neocloud信用","GPU债务","Synergy Research","Crusoe 900MW","新西兰AI工厂","氢能驳船"],"summary":"Neocloud信用风险导致DC交易停滞；Synergy Research预测Neocloud市场2031年逼近4000亿$；Penzance西弗吉尼亚40亿$600MW；新西兰首个AI工厂280MW获批；Bridge×协鑫新加坡驳船氢能供电；Crusoe为微软建900MW DC","file":"issues/2026-04-07.html"},
     {"id":"2026-04-06","date":"2026-04-06","dateRange":"2026-04-04 ~ 2026-04-06","title":"IDC日报·4月6日（含周末）丨美国近半DC延期；秦淮数据宜都开工","intelCount":20,"totalAmount":"7000亿$","sections":["signal","project","tech","policy","supply","recruit","bid","quote"],"tags":["电力瓶颈","变压器短缺","秦淮数据","海底DC","SiC SST","800V DC"],"summary":"美国近半数2026年新建DC面临延期；Digital Realty 32.5亿美元基金关闭；东阳光·秦淮数据宜都先进算力基地开工；首个海底DC在上海临港投运；花旗：变压器短缺持续至2029年","file":"issues/2026-04-06.html"},
   {
@@ -446,6 +474,24 @@ var ISSUES = [
 ];
 
 var INTEL_ITEMS = [
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"Intel正式加入Musk旗下Terafab芯片工厂项目","body":"Intel以代工角色加入250亿美元Terafab计划，生产2nm AI芯片，目标年产1太瓦计算产能。","insight":"Intel Foundry去年亏损70亿$，Terafab为其带来产能增量，挑战TSMC垄断。","sourceLabel":"TechCrunch","sourceUrl":"https://techcrunch.com/2026/04/07/intel-signs-on-to-elon-musks-terafab-chips-project/","tags":["芯片","Intel","Terafab"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"S&P Global：Equinix与Digital Realty加速扩张DC管线","body":"Equinix年Capex 50亿$、全球翻倍；Digital Realty美洲规划499MW。穆迪评级：2026全球DC Capex达7000亿$。","insight":"两大REIT同步扩张确认AI驱动DC需求为结构性增长。","sourceLabel":"S&P Global","sourceUrl":"https://www.spglobal.com/market-intelligence/en/news-insights/articles/2025/6/digital-realty-equinix-ramp-up-datacenters-as-ai-drives-demand-90542889","tags":["Equinix","Digital Realty","Capex"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"广州4大算力项目集体开工 总投资48.39亿","body":"广州移动/联通/云下科技/连云大数据4项目开工，新增4万P智算，上线全国首个Token级调度平台。","insight":"广州从规划审批进入实质落地，Token级调度是算力精细化运营里程碑。","sourceLabel":"广州市政府","sourceUrl":"https://www.gz.gov.cn/szgzkfgx/zdgz/content/post_10756479.html","tags":["广州","智算","Token"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Crusoe为微软建900MW AI园区 总容量2.1GW","body":"德克萨斯阿比林新建900MW专用AI工厂，behind-the-meter模式，总容量2.1GW。","insight":"单一园区2.1GW刷新行业纪录，behind-the-meter绕过电网瓶颈。","sourceLabel":"Crusoe","sourceUrl":"https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure","tags":["Crusoe","微软","900MW"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Meta El Paso DC投资上调至100亿$ 目标1GW","body":"Meta将El Paso投资从15亿上调至100亿$(6.7倍)，2028年建成1GW。","insight":"Hyperscaler单体DC投资指数级跃升，100亿$将成常态。","sourceLabel":"Meta/CNBC","sourceUrl":"https://datacenters.atmeta.com/2026/03/big-things-are-happening-el-paso/","tags":["Meta","100亿$","1GW"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"秦淮数据+湖北能源7.5MW DC湖北动工","body":"Chindata与HEC合建7.5MW DC在湖北破土，东阳光280亿并购后持续落地。","insight":"与地方能源集团合作解决电力接入瓶颈。","sourceLabel":"DCD","sourceUrl":"https://www.datacenterdynamics.com/en/","tags":["秦淮数据","湖北"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Aligned Data Centers获25.8亿$信贷扩张","body":"完成25.8亿美元Devco循环信贷，加速美国DC投资组合扩张。","insight":"信贷市场对AI基础设施信心强劲。","sourceLabel":"Aligned","sourceUrl":"https://aligneddc.com/press-release/aligned-data-centers-closes-on-2-58-billion-credit-facility-to-fuel-continued-u-s-expansion/","tags":["Aligned","融资"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"MIT智能存储调度：AI训练性能近乎翻倍","body":"MIT CSAIL开发智能SSD负载均衡系统，AI训练性能提升近100%，延长SSD寿命。","insight":"DC存储成本占TCO 15-20%，该技术落地将大幅降低AIDC投入。","sourceLabel":"MIT News","sourceUrl":"https://news.mit.edu/2026/helping-data-centers-deliver-higher-performance-less-hardware-0407","tags":["MIT","存储","SSD"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"TIA发布AI-Ready DC认证标准增补","body":"ANSI/TIA-942新增补针对AI DC基础设施规范（液冷、高密机架、电力冗余），Google加入推动。","insight":"AIDC从自由发挥走向标准化，对国内厂商出海认证有参考意义。","sourceLabel":"TIA","sourceUrl":"https://www.cadria.org/2026/03/24/tia-advances-ai-ready-data-centers-with-new-ansi-tia-942-addendum-global-certification-leadership-and-expanded-industry-quality-initiative/","tags":["TIA","标准","AI-Ready"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"Pure DC欧洲首个110MW微电网DC运营","body":"都柏林110MW微电网DC，天然气发电脱网运行，绕过电网并网延迟3-5年。","insight":"微电网模式为电网受限区域DC建设提供破局方案。","sourceLabel":"Pure DC/CNBC","sourceUrl":"https://puredc.com/2026/03/11/pure-dc-and-avk-deploy-europes-first-data-centre-microgrid","tags":["微电网","Pure DC","都柏林"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"policy","sectionAnchor":"sec-policy","sectionName":"政策法规","title":"\"算电协同\"首次写入政府工作报告和十五五规划","body":"算电协同首次入政府工作报告及十五五纲要，枢纽节点新建算力设施绿电占比80%+。","insight":"从概念到纲要级约束，对DC选址和绿电采购策略产生深远影响。","sourceLabel":"苏州发改委","sourceUrl":"https://fg.suzhou.gov.cn/szfgw/rdxw/202604/aaefb6f944f046db9647155179270022.shtml","tags":["算电协同","十五五","绿电"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"policy","sectionAnchor":"sec-policy","sectionName":"政策法规","title":"全国首个Token级算力调度平台上线","body":"广州上线词元级城市综合算力监测调度平台，Token粒度资源调度。","insight":"算力从机柜计量升级到Token计量，算力交易进入数字化新纪元。","sourceLabel":"广东省政府","sourceUrl":"https://www.gd.gov.cn/gdywdt/dsdt/content/post_4879058.html","tags":["Token","算力调度","广州"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"高盛：变压器瓶颈持续至2028-2030","body":"变压器和燃气轮机叶片是AI DC最紧张瓶颈，定制化+劳动力密集，缺口持续至2028-2030。","insight":"国内DC商需提前18-24月锁定变压器产能。","sourceLabel":"高盛/华尔街见闻","sourceUrl":"https://wallstreetcn.com/articles/3763234","tags":["变压器","供应链","瓶颈"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"维谛CDU份额下降 国产液冷厂商崛起","body":"GB300时代Vertiv CDU份额下降，英维克/申菱崛起。深圳龙头切入Meta。CDU紧缺持续。","insight":"液冷从一家独大转向多元竞争，国产替代加速。","sourceLabel":"行业调研纪要","sourceUrl":"https://xueqiu.com/4794747175/346297741","tags":["液冷","CDU","国产替代"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"recruit","sectionAnchor":"sec-recruit","sectionName":"招聘动向","title":"Equinix扩大全球DC人才培养投资","body":"3/24扩大全球DC Workforce Development，面向运维和新兴市场扩招。","insight":"为70+市场容量翻倍储备人力，运维人才缺口是行业增长隐形瓶颈。","sourceLabel":"Equinix","sourceUrl":"https://newsroom.equinix.com/press-releases-global","tags":["Equinix","招聘","人才"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"bid","sectionAnchor":"sec-bid","sectionName":"招投标公告","title":"上海奉贤智算云中心招标 2999万","body":"奉贤区大数据中心公开招标智算云中心，多源异构统一调度，预算2999.97万。","insight":"区县级智算中心建设加速，Token级调度成新标配。","sourceLabel":"政府采购网","sourceUrl":"https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202603/t20260316_26272377.htm","tags":["招标","奉贤","智算"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"bid","sectionAnchor":"sec-bid","sectionName":"招投标公告","title":"青海20.59亿两大智算中心+德令哈二期招标","body":"德令哈智算二期施工总承包招标中；两个大型智算项目预算超20亿推进。","insight":"西部枢纽二期扩容，东数西算EPC需求持续释放。","sourceLabel":"青海招标网","sourceUrl":"http://www.qhei.net.cn/html/zbgg/2026_3/218843.html","tags":["招标","青海","东数西算"]},
+      {"issueId":"2026-04-08","issueDate":"2026-04-08","issueFile":"issues/2026-04-08.html","section":"quote","sectionAnchor":"sec-quote","sectionName":"人物与观点","title":"Musk：Terafab年产1太瓦计算产能","body":"Elon Musk：Terafab将是人类历史上最大半导体设施之一。郭泽邦（北京经开区）：天地协同算力网络加速构建。","insight":"从Starcloud融资到政府表态，太空数据中心从科幻走向产业规划。","sourceLabel":"Fortune/ODCC","sourceUrl":"https://fortune.com/2026/03/22/musk-terafab-chip-project-tesla-spacex-xai-space-data-center-satellite/","tags":["Musk","太空算力"]},
     {"issueId":"2026-04-07","issueDate":"2026-04-07","issueFile":"issues/2026-04-07.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"Neocloud信用风险导致DC交易大面积停滞","body":"即使160$/kW+15年租约+预付现金，仍因信用评级被拒","insight":"Neocloud融资模式面临系统性挑战，DC运营商转向追逐超大规模客户","sourceLabel":"DCK","sourceUrl":"https://www.datacenterknowledge.com/cloud/neocloud-storm-gathers-as-data-center-deals-stall-over-credit-risk","tags":["Neocloud","信用风险"]},
     {"issueId":"2026-04-07","issueDate":"2026-04-07","issueFile":"issues/2026-04-07.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"AI DC boom压力测试保险业——GPU债务跑步机","body":"单个DC园区价值100-200亿$，GPU寿命仅7年需不断举债","insight":"GPU资产证券化快速扩张，被比作2008金融危机前融资","sourceLabel":"CNBC","sourceUrl":"https://www.cnbc.com/2026/04/06/ai-data-centers-financing-insurance-deals-gpu-debt.html","tags":["GPU债务","金融风险"]},
     {"issueId":"2026-04-07","issueDate":"2026-04-07","issueFile":"issues/2026-04-07.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"Synergy Research：Neocloud市场2031年逼近4000亿$ CAGR58%","body":"2025年Q4收入90亿$同比增223%，全年突破250亿$","insight":"Neocloud从补充力量演变为与AWS/Azure并行的独立赛道","sourceLabel":"Synergy Research","sourceUrl":"https://www.srgresearch.com/articles/neocloud-market-forecast-to-approach-400b-by-2031-driven-by-surging-ai-infrastructure-demand","tags":["Neocloud","市场预测"]},

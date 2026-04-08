@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDC 行业情报日报 · 2026-04-08</title>
+<meta name="description" content="IDC数据中心行业情报日报，覆盖重大信号（Intel Terafab）、项目市场（广州48亿开工/Crusoe 2.1GW）、技术趋势（MIT存储优化/微电网DC）、政策法规（算电协同入十五五）、供应链（变压器瓶颈/液冷国产替代）、招投标及行业观点。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<style>
+  /* ═══ 默认浅色 ═══ */
+  :root {
+    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
+    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
+    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+    --topbar-bg: rgba(248,249,252,.9);
+    --nav-bg: rgba(248,249,252,.92);
+  }
+  [data-theme="dark"] {
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --topbar-bg: rgba(15,17,23,.88);
+    --nav-bg: rgba(15,17,23,.92);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    transition: background .3s, color .3s;
+  }
+  a { color: var(--blue); text-decoration: none; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--blue); z-index:200; width:0; transition:width .1s linear; border-radius:0 2px 2px 0; }
+  .topbar {
+    position:sticky; top:0; z-index:100;
+    background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border); padding:0 24px; height:56px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar-left { display:flex; align-items:center; gap:16px; }
+  .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; }
+  .back-link:hover { color:var(--blue); }
+  .topbar-date { font-size:13px; color:var(--text3); }
+  .topbar-actions { display:flex; align-items:center; gap:8px; }
+  .topbar-btn { width:36px; height:36px; border-radius:10px; border:1px solid var(--border); background:transparent; color:var(--text); cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; }
+  .topbar-btn:hover { background:var(--card-hover); border-color:var(--blue); }
+  .theme-switcher { display:flex; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600; }
+  .theme-opt { padding:0 12px; height:100%; display:flex; align-items:center; gap:4px; cursor:pointer; color:var(--text3); border:none; background:transparent; font-family:inherit; }
+  .theme-opt:hover { color:var(--text2); }
+  .theme-opt.active { background:var(--blue); color:#fff; box-shadow:0 1px 6px rgba(77,159,255,.3); }
+  .section-nav { position:sticky; top:56px; z-index:90; background:var(--nav-bg); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:10px 24px; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }
+  .section-nav::-webkit-scrollbar { display:none; }
+  .nav-pill { display:inline-block; font-size:13px; font-weight:600; padding:6px 14px; border-radius:8px; color:var(--text2); cursor:pointer; border:1px solid transparent; margin-right:6px; }
+  .nav-pill:hover { color:var(--text); background:var(--card); }
+  .nav-pill.active { color:var(--blue); background:rgba(77,159,255,.1); border-color:rgba(77,159,255,.2); }
+
+  .hero { background:var(--grad); border-bottom:1px solid var(--border); padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%); animation: drift 25s linear infinite; }
+  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  .hero-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+  .hero-badge { display:inline-block; background:rgba(77,159,255,.12); color:var(--blue); font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:18px; }
+  .hero h1 { font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px; }
+  [data-theme="dark"] .hero h1 { background:linear-gradient(135deg,#fff 0%,#a0aec0 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-meta { color:var(--text2); font-size:15px; }
+  .hero-meta span { display:inline-block; margin:0 8px; }
+  .hero-stats { display:flex; justify-content:center; gap:36px; margin-top:24px; flex-wrap:wrap; }
+  .stat-item { text-align:center; }
+  .stat-num { font-size:28px; font-weight:800; }
+  .stat-num small { font-size:14px; color:var(--text2); font-weight:400; }
+  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
+
+  .container { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
+  .section { margin-bottom:44px; scroll-margin-top:130px; }
+  .section-header { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+  .section-icon { font-size:20px; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; flex-shrink:0; }
+  .section-title { font-size:20px; font-weight:700; letter-spacing:-.3px; }
+  .icon-red { background:rgba(255,77,106,.12); }
+  .icon-blue { background:rgba(77,159,255,.12); }
+  .icon-cyan { background:rgba(34,211,238,.12); }
+  .icon-green { background:rgba(52,211,153,.12); }
+  .icon-orange { background:rgba(255,140,66,.12); }
+  .icon-purple { background:rgba(167,139,250,.12); }
+  .icon-yellow { background:rgba(251,191,36,.12); }
+  .icon-pink { background:rgba(244,114,182,.12); }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; transition:background .2s, border-color .2s; }
+  .card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.2); }
+  .card-title { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+  .card-body { font-size:15px; color:var(--text2); line-height:1.8; }
+  .card-body strong { color:var(--text); }
+  .card-insight { margin-top:14px; padding:12px 16px; background:rgba(77,159,255,.06); border-left:3px solid var(--blue); border-radius:0 8px 8px 0; font-size:14px; color:var(--text2); }
+  .card-insight b { color:var(--blue); }
+  .card-source { margin-top:12px; font-size:13px; }
+  .card-source a { border-bottom:1px dashed rgba(77,159,255,.3); }
+  .card-source a:hover { border-bottom-color:var(--blue); }
+
+  .signal-badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-bottom:10px; letter-spacing:.5px; }
+  .badge-critical { background:rgba(255,77,106,.15); color:var(--red); }
+  .badge-project { background:rgba(77,159,255,.15); color:var(--blue); }
+  .badge-tech { background:rgba(34,211,238,.15); color:var(--cyan); }
+  .badge-policy { background:rgba(52,211,153,.15); color:var(--green); }
+  .badge-supply { background:rgba(255,140,66,.15); color:var(--orange); }
+  .badge-recruit { background:rgba(167,139,250,.15); color:var(--purple); }
+  .badge-bid { background:rgba(244,114,182,.15); color:var(--pink); }
+
+  .spec-list { list-style:none; margin-top:10px; }
+  .spec-list li { padding:4px 0; font-size:14px; color:var(--text2); display:flex; align-items:baseline; gap:8px; }
+  .spec-list li::before { content:'▸'; color:var(--blue); flex-shrink:0; }
+  .spec-list li strong { color:var(--text); }
+
+  .chart-section { margin-top:4px; }
+  .bar-chart { display:flex; flex-direction:column; gap:12px; }
+  .bar-row { display:flex; align-items:center; gap:12px; }
+  .bar-label { flex-shrink:0; width:180px; font-size:13px; color:var(--text2); text-align:right; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .bar-track { flex:1; height:28px; background:rgba(77,159,255,.06); border-radius:8px; overflow:hidden; position:relative; }
+  .bar-fill { height:100%; border-radius:8px; display:flex; align-items:center; justify-content:flex-end; padding-right:10px; font-size:12px; font-weight:700; color:#fff; transition:width 1s cubic-bezier(.4,0,.2,1); }
+  .bar-fill.green { background:linear-gradient(90deg, rgba(52,211,153,.7), var(--green)); }
+  .bar-fill.blue { background:linear-gradient(90deg, rgba(77,159,255,.7), var(--blue)); }
+  .bar-fill.orange { background:linear-gradient(90deg, rgba(255,140,66,.7), var(--orange)); }
+  .bar-fill.yellow { background:linear-gradient(90deg, rgba(251,191,36,.7), var(--yellow)); }
+
+  .data-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:12px; margin-top:4px; }
+  .data-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; transition:all .2s; }
+  .data-card:hover { border-color:rgba(77,159,255,.25); transform:translateY(-1px); }
+  .data-card .num { font-size:24px; font-weight:800; margin-bottom:4px; }
+  .data-card .num small { font-size:13px; color:var(--text2); font-weight:400; }
+  .data-card .label { font-size:12px; color:var(--text2); }
+  .data-card .src { font-size:11px; color:var(--text3); margin-top:6px; opacity:.6; }
+
+  .quote-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; position:relative; }
+  .quote-card::before { content:'\201C'; position:absolute; top:10px; left:18px; font-size:48px; color:rgba(167,139,250,.2); font-family:Georgia,serif; line-height:1; }
+  .quote-text { font-size:15px; color:var(--text2); line-height:1.8; padding-left:28px; font-style:italic; }
+  .quote-text strong { color:var(--text); font-style:normal; }
+  .quote-attr { margin-top:12px; padding-left:28px; font-size:13px; color:var(--purple); font-weight:600; }
+
+  .back-top { position:fixed; bottom:32px; right:32px; width:44px; height:44px; border-radius:12px; background:var(--card); border:1px solid var(--border); color:var(--text); cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; opacity:0; transform:translateY(10px); transition:all .3s; z-index:80; box-shadow:0 4px 16px rgba(0,0,0,.15); }
+  .back-top.visible { opacity:1; transform:translateY(0); }
+  .back-top:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .share-toast { position:fixed; bottom:88px; right:32px; background:var(--green); color:#fff; font-size:13px; font-weight:600; padding:8px 16px; border-radius:10px; opacity:0; transform:translateY(8px); transition:all .3s; z-index:80; pointer-events:none; }
+  .share-toast.show { opacity:1; transform:translateY(0); }
+  .footer { text-align:center; padding:36px 24px; border-top:1px solid var(--border); color:var(--text3); font-size:13px; line-height:1.8; }
+  @media print {
+    .topbar, .section-nav, .progress-bar, .back-top, .share-toast, .topbar-actions { display:none !important; }
+    body { background:#fff; color:#000; }
+    .hero { background:#f5f5f5 !important; padding:24px !important; }
+    .hero h1 { -webkit-text-fill-color:#000 !important; font-size:24px !important; }
+    .card { break-inside:avoid; border:1px solid #ddd; }
+    .section { break-inside:avoid; }
+  }
+  @media (max-width:640px) {
+    .hero { padding:44px 16px 36px; } .hero-stats { gap:20px; } .stat-num { font-size:22px; }
+    .container { padding:20px 16px 40px; } .card { padding:18px; } .section-title { font-size:17px; }
+    .section-nav { padding:8px 16px; } .data-grid { grid-template-columns:repeat(2, 1fr); } .bar-label { width:100px; font-size:11px; }
+    .back-top { bottom:20px; right:20px; width:40px; height:40px; }
+  }
+</style>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="../index.html" class="back-link">← 返回归档</a>
+    <span class="topbar-date">2026-04-08 · 周三</span>
+  </div>
+  <div class="topbar-actions">
+    <div class="theme-switcher"><button class="theme-opt active" data-theme="light">☀️ 浅</button><button class="theme-opt" data-theme="dark">🌙 深</button></div>
+  </div>
+</div>
+<nav class="section-nav">
+  <span class="nav-pill active" data-target="sec-signal">🔥 重大信号</span>
+  <span class="nav-pill" data-target="sec-project">🏗️ 项目市场</span>
+  <span class="nav-pill" data-target="sec-tech">⚡ 技术趋势</span>
+  <span class="nav-pill" data-target="sec-policy">📜 政策法规</span>
+  <span class="nav-pill" data-target="sec-supply">🔗 供应链</span>
+  <span class="nav-pill" data-target="sec-recruit">📌 招聘</span>
+  <span class="nav-pill" data-target="sec-bid">📋 招投标</span>
+  <span class="nav-pill" data-target="sec-quote">👀 观点</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">IDC INTELLIGENCE DAILY</div>
+    <h1>IDC 行业情报日报</h1>
+    <div class="hero-meta">2026-04-08 · 周三<span>|</span>时间窗口 24h<span>|</span>仅一手信源</div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" style="color:var(--blue);">18</div><div class="stat-label">情报条数</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--red);">7000<small>亿$</small></div><div class="stat-label">全球DC Capex</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--green);">8</div><div class="stat-label">覆盖板块</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--purple);">250<small>亿$</small></div><div class="stat-label">Terafab投资</div></div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+<div class="section" id="sec-signal">
+  <div class="section-header">
+    <div class="section-icon icon-red">🔥</div>
+    <div class="section-title">重大信号</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">芯片</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Intel</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Terafab</span>
+  <div class="card-title">Intel正式加入Musk旗下Terafab芯片工厂项目</div>
+  <div class="card-body">Intel以代工角色加入<strong>250亿</strong>美元Terafab计划，生产2nm AI芯片，目标年产1太瓦计算产能。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>Intel Foundry去年亏损70亿$，Terafab为其带来产能增量，挑战TSMC垄断。</div>
+  <div class="card-source">📎 <a href="https://techcrunch.com/2026/04/07/intel-signs-on-to-elon-musks-terafab-chips-project/" target="_blank">TechCrunch</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Equinix</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Digital Realty</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Capex</span>
+  <div class="card-title">S&P Global：Equinix与Digital Realty加速扩张DC管线</div>
+  <div class="card-body">Equinix年Capex <strong>50亿</strong>$、全球翻倍；Digital Realty美洲规划<strong>499MW</strong>。穆迪评级：2026全球DC Capex达<strong>7000亿</strong>$。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>两大REIT同步扩张确认AI驱动DC需求为结构性增长。</div>
+  <div class="card-source">📎 <a href="https://www.spglobal.com/market-intelligence/en/news-insights/articles/2025/6/digital-realty-equinix-ramp-up-datacenters-as-ai-drives-demand-90542889" target="_blank">S&P Global</a></div>
+</div>
+</div>
+<div class="section" id="sec-project">
+  <div class="section-header">
+    <div class="section-icon icon-blue">🏗️</div>
+    <div class="section-title">项目与市场</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">广州</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">智算</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Token</span>
+  <div class="card-title">广州4大算力项目集体开工 总投资48.39亿</div>
+  <div class="card-body">广州移动/联通/云下科技/连云大数据4项目开工，新增<strong>4万</strong>P智算，上线全国首个Token级调度平台。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>广州从规划审批进入实质落地，Token级调度是算力精细化运营里程碑。</div>
+  <div class="card-source">📎 <a href="https://www.gz.gov.cn/szgzkfgx/zdgz/content/post_10756479.html" target="_blank">广州市政府</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Crusoe</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">微软</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">900MW</span>
+  <div class="card-title">Crusoe为微软建900MW AI园区 总容量2.1GW</div>
+  <div class="card-body">德克萨斯阿比林新建<strong>900MW</strong>专用AI工厂，behind-the-meter模式，总容量<strong>2.1GW</strong>。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>单一园区2.1GW刷新行业纪录，behind-the-meter绕过电网瓶颈。</div>
+  <div class="card-source">📎 <a href="https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure" target="_blank">Crusoe</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Meta</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">100亿$</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">1GW</span>
+  <div class="card-title">Meta El Paso DC投资上调至100亿$ 目标1GW</div>
+  <div class="card-body">Meta将El Paso投资从<strong>15亿</strong>上调至<strong>100亿</strong>$(6.7倍)，2028年建成<strong>1GW</strong>。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>Hyperscaler单体DC投资指数级跃升，100亿$将成常态。</div>
+  <div class="card-source">📎 <a href="https://datacenters.atmeta.com/2026/03/big-things-are-happening-el-paso/" target="_blank">Meta/CNBC</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">秦淮数据</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">湖北</span>
+  <div class="card-title">秦淮数据+湖北能源7.5MW DC湖北动工</div>
+  <div class="card-body">Chindata与HEC合建<strong>7.5MW</strong> DC在湖北破土，东阳光<strong>280亿</strong>并购后持续落地。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>与地方能源集团合作解决电力接入瓶颈。</div>
+  <div class="card-source">📎 <a href="https://www.datacenterdynamics.com/en/" target="_blank">DCD</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Aligned</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">融资</span>
+  <div class="card-title">Aligned Data Centers获25.8亿$信贷扩张</div>
+  <div class="card-body">完成<strong>25.8亿</strong>美元Devco循环信贷，加速美国DC投资组合扩张。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>信贷市场对AI基础设施信心强劲。</div>
+  <div class="card-source">📎 <a href="https://aligneddc.com/press-release/aligned-data-centers-closes-on-2-58-billion-credit-facility-to-fuel-continued-u-s-expansion/" target="_blank">Aligned</a></div>
+</div>
+</div>
+<div class="section" id="sec-tech">
+  <div class="section-header">
+    <div class="section-icon icon-cyan">⚡</div>
+    <div class="section-title">技术趋势</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">MIT</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">存储</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">SSD</span>
+  <div class="card-title">MIT智能存储调度：AI训练性能近乎翻倍</div>
+  <div class="card-body">MIT CSAIL开发智能SSD负载均衡系统，AI训练性能提升近<strong>100%</strong>，延长SSD寿命。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>DC存储成本占TCO 15-20%，该技术落地将大幅降低AIDC投入。</div>
+  <div class="card-source">📎 <a href="https://news.mit.edu/2026/helping-data-centers-deliver-higher-performance-less-hardware-0407" target="_blank">MIT News</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">TIA</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">标准</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">AI-Ready</span>
+  <div class="card-title">TIA发布AI-Ready DC认证标准增补</div>
+  <div class="card-body">ANSI/TIA-942新增补针对AI DC基础设施规范（液冷、高密机架、电力冗余），Google加入推动。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>AIDC从自由发挥走向标准化，对国内厂商出海认证有参考意义。</div>
+  <div class="card-source">📎 <a href="https://www.cadria.org/2026/03/24/tia-advances-ai-ready-data-centers-with-new-ansi-tia-942-addendum-global-certification-leadership-and-expanded-industry-quality-initiative/" target="_blank">TIA</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">微电网</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Pure DC</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">都柏林</span>
+  <div class="card-title">Pure DC欧洲首个110MW微电网DC运营</div>
+  <div class="card-body">都柏林<strong>110MW</strong>微电网DC，天然气发电脱网运行，绕过电网并网延迟3-5年。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>微电网模式为电网受限区域DC建设提供破局方案。</div>
+  <div class="card-source">📎 <a href="https://puredc.com/2026/03/11/pure-dc-and-avk-deploy-europes-first-data-centre-microgrid" target="_blank">Pure DC/CNBC</a></div>
+</div>
+</div>
+<div class="section" id="sec-policy">
+  <div class="section-header">
+    <div class="section-icon icon-yellow">📜</div>
+    <div class="section-title">政策法规</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">算电协同</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">十五五</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">绿电</span>
+  <div class="card-title">"算电协同"首次写入政府工作报告和十五五规划</div>
+  <div class="card-body">算电协同首次入政府工作报告及十五五纲要，枢纽节点新建算力设施绿电占比<strong>80%</strong>+。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>从概念到纲要级约束，对DC选址和绿电采购策略产生深远影响。</div>
+  <div class="card-source">📎 <a href="https://fg.suzhou.gov.cn/szfgw/rdxw/202604/aaefb6f944f046db9647155179270022.shtml" target="_blank">苏州发改委</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Token</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">算力调度</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">广州</span>
+  <div class="card-title">全国首个Token级算力调度平台上线</div>
+  <div class="card-body">广州上线词元级城市综合算力监测调度平台，Token粒度资源调度。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>算力从机柜计量升级到Token计量，算力交易进入数字化新纪元。</div>
+  <div class="card-source">📎 <a href="https://www.gd.gov.cn/gdywdt/dsdt/content/post_4879058.html" target="_blank">广东省政府</a></div>
+</div>
+</div>
+<div class="section" id="sec-supply">
+  <div class="section-header">
+    <div class="section-icon icon-purple">🔗</div>
+    <div class="section-title">供应链动态</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">变压器</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">供应链</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">瓶颈</span>
+  <div class="card-title">高盛：变压器瓶颈持续至2028-2030</div>
+  <div class="card-body">变压器和燃气轮机叶片是AI DC最紧张瓶颈，定制化+劳动力密集，缺口持续至2028-2030。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>国内DC商需提前18-24月锁定变压器产能。</div>
+  <div class="card-source">📎 <a href="https://wallstreetcn.com/articles/3763234" target="_blank">高盛/华尔街见闻</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">液冷</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">CDU</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">国产替代</span>
+  <div class="card-title">维谛CDU份额下降 国产液冷厂商崛起</div>
+  <div class="card-body">GB300时代Vertiv CDU份额下降，英维克/申菱崛起。深圳龙头切入Meta。CDU紧缺持续。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>液冷从一家独大转向多元竞争，国产替代加速。</div>
+  <div class="card-source">📎 <a href="https://xueqiu.com/4794747175/346297741" target="_blank">行业调研纪要</a></div>
+</div>
+</div>
+<div class="section" id="sec-recruit">
+  <div class="section-header">
+    <div class="section-icon icon-green">📌</div>
+    <div class="section-title">招聘动向</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Equinix</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">招聘</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">人才</span>
+  <div class="card-title">Equinix扩大全球DC人才培养投资</div>
+  <div class="card-body">3/24扩大全球DC Workforce Development，面向运维和新兴市场扩招。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>为70+市场容量翻倍储备人力，运维人才缺口是行业增长隐形瓶颈。</div>
+  <div class="card-source">📎 <a href="https://newsroom.equinix.com/press-releases-global" target="_blank">Equinix</a></div>
+</div>
+</div>
+<div class="section" id="sec-bid">
+  <div class="section-header">
+    <div class="section-icon icon-orange">📋</div>
+    <div class="section-title">招投标公告</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">招标</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">奉贤</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">智算</span>
+  <div class="card-title">上海奉贤智算云中心招标 2999万</div>
+  <div class="card-body">奉贤区大数据中心公开招标智算云中心，多源异构统一调度，预算<strong>2999.97万</strong>。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>区县级智算中心建设加速，Token级调度成新标配。</div>
+  <div class="card-source">📎 <a href="https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202603/t20260316_26272377.htm" target="_blank">政府采购网</a></div>
+</div>
+<div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">招标</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">青海</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">东数西算</span>
+  <div class="card-title">青海20.59亿两大智算中心+德令哈二期招标</div>
+  <div class="card-body">德令哈智算二期施工总承包招标中；两个大型智算项目预算超<strong>20亿</strong>推进。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>西部枢纽二期扩容，东数西算EPC需求持续释放。</div>
+  <div class="card-source">📎 <a href="http://www.qhei.net.cn/html/zbgg/2026_3/218843.html" target="_blank">青海招标网</a></div>
+</div>
+</div>
+<div class="section" id="sec-quote">
+  <div class="section-header">
+    <div class="section-icon icon-pink">👀</div>
+    <div class="section-title">人物与观点</div>
+  </div>
+  <div class="card">
+  <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">Musk</span> <span class="signal-badge" style="background:rgba(77,159,255,.1);color:var(--blue);">太空算力</span>
+  <div class="card-title">Musk：Terafab年产1太瓦计算产能</div>
+  <div class="card-body">Elon Musk：Terafab将是人类历史上最大半导体设施之一。郭泽邦（北京经开区）：天地协同算力网络加速构建。</div>
+  <div class="card-insight"><b>💡 影响分析：</b>从Starcloud融资到政府表态，太空数据中心从科幻走向产业规划。</div>
+  <div class="card-source">📎 <a href="https://fortune.com/2026/03/22/musk-terafab-chip-project-tesla-spacex-xai-space-data-center-satellite/" target="_blank">Fortune/ODCC</a></div>
+</div>
+</div>
+
+</main>
+
+<footer style="text-align:center;padding:32px;color:var(--text3);font-size:13px;border-top:1px solid var(--border);">
+  <p>📊 本期共 18 条情报 | 时间窗口：24h | 仅官方一手信源</p>
+  <p style="margin-top:8px;font-style:italic;">本日报由 AI 情报系统自动生成，仅供内部参考。信息以原始信源为准。</p>
+</footer>
+
+<script>
+// Theme
+document.querySelectorAll('.theme-opt').forEach(b=>{b.onclick=function(){
+  document.querySelectorAll('.theme-opt').forEach(x=>x.classList.remove('active'));
+  this.classList.add('active');
+  var t=this.dataset.theme;
+  if(t==='dark')document.documentElement.setAttribute('data-theme','dark');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('idc-theme',t);
+}});
+// Nav
+document.querySelectorAll('.nav-pill').forEach(p=>{p.onclick=function(){
+  document.querySelectorAll('.nav-pill').forEach(x=>x.classList.remove('active'));
+  this.classList.add('active');
+  var el=document.getElementById(this.dataset.target);
+  if(el)el.scrollIntoView({behavior:'smooth'});
+}});
+// Progress
+window.addEventListener('scroll',function(){
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progressBar').style.width=(window.scrollY/h*100)+'%';
+});
+</script>
+</body></html>
