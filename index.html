@@ -378,17 +378,46 @@
 // ══════════════════════════════════════════════
 const ISSUES = [
       {
-      "id": "2026-04-09",
-      "date": "2026-04-09",
-      "dateRange": "2026-04-08 ~ 2026-04-09",
-      "title": "IDC 行业情报日报 · 2026-04-09",
-      "intelCount": 17,
-      "totalAmount": "1284亿$",
+      "id": "2026-04-10",
+      "date": "2026-04-10",
+      "dateRange": "2026-04-10",
+      "title": "IDC日报·美半数DC延期 | SoftBank 10GW | 华为AIDC方案 | 算电协同入两会",
+      "intelCount": 18,
+      "totalAmount": "7000亿$ CapEx",
       "sections": [
             "signal",
             "project",
             "tech",
             "policy",
+            "supply",
+            "bid",
+            "quote",
+            "data"
+      ],
+      "tags": [
+            "电力瓶颈",
+            "SoftBank",
+            "Crusoe",
+            "Meta",
+            "华为AIDC",
+            "液冷",
+            "算电协同",
+            "变压器荒"
+      ],
+      "summary": "美国半数DC因电力设备短缺延期；SoftBank 10GW俄亥俄超级DC落地；Crusoe为微软建900MW；华为发布AIDC四大链路创新；算电协同写入两会报告；全球变压器荒持续。",
+      "file": "issues/2026-04-10.html"
+},
+      {
+      "id": "2026-04-09",
+      "date": "2026-04-09",
+      "dateRange": "2026-04-08 ~ 2026-04-09",
+      "title": "IDC 行业情报日报 · 2026-04-09",
+      "intelCount": 15,
+      "totalAmount": "1284亿$",
+      "sections": [
+            "signal",
+            "project",
+            "tech",
             "supply",
             "recruit",
             "bid",
@@ -397,12 +426,11 @@ const ISSUES = [
       "tags": [
             "Digital Realty NRT14",
             "美国DC 1284亿$",
-            "临港海底DC",
             "海尔AIDC液冷",
             "SST固态变压器",
-            "东数东算"
+            "Penzance 600MW"
       ],
-      "summary": "Digital Realty日本NRT14启用园区突破100MW；美国DC建设2026开局创纪录全年预计1284亿$；上海临港海底DC全面商用PUE≤1.15；海尔发布AIDC风液同源六大新品；SST固态变压器产业化提速。",
+      "summary": "Digital Realty日本NRT14启用园区突破100MW；美国DC建设2026开局创纪录全年预计1284亿$；海尔发布AIDC风液同源六大新品；SST固态变压器产业化提速；Penzance规划40亿$西弗吉尼亚600MW DC园区。",
       "file": "issues/2026-04-09.html"
 },
       {
@@ -565,15 +593,31 @@ const ISSUES = [
 ];
 
 const INTEL_ITEMS = [
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"美国半数DC项目因电力设备短缺延期","body":"12GW规划仅1/3在建，变压器交期延至5年","insight":"全球变压器供需重构，中国出口暴增182%","sourceLabel":"Sightline Climate","sourceUrl":"https://finance.sina.com.cn/wm/2026-04-02/doc-inhtcnfx9362725.shtml","tags":["电力瓶颈","变压器"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"SoftBank 10GW俄亥俄超级AI DC正式落地","body":"配套330亿$天然气发电9.2GW，一期800MW目标2028投产","insight":"全球最大单体DC项目，AI算力进入太瓦级时代","sourceLabel":"彭博社","sourceUrl":"https://finance.sina.cn/tech/2026-03-21/detail-inhrtipy3306432.d.html","tags":["SoftBank","10GW"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"Crusoe为微软新建900MW AI工厂，Abilene园区2.1GW","body":"Oracle退出后微软接盘，园区总规模达2.1GW","insight":"超大规模客户对算力容量饥渴，Crusoe转型路径值得关注","sourceLabel":"Crusoe官方","sourceUrl":"https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure","tags":["Crusoe","微软"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Meta El Paso DC扩建至100亿$/1GW","body":"从3栋扩至11栋，目标2028年达1GW","insight":"单园区百亿$投资成常态","sourceLabel":"DCK","sourceUrl":"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026","tags":["Meta"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"美六大云厂2026 CapEx 7000亿$","body":"穆迪评级数据，是2022年六倍","insight":"AI基建投资远超互联网时代峰值","sourceLabel":"穆迪","sourceUrl":"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026","tags":["CapEx"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Nebius×Meta 120亿$ AI基础设施协议","body":"多地点承诺容量，2027年部署","insight":"Meta自建速度跟不上需求增长","sourceLabel":"Aterio","sourceUrl":"https://menafn.com/1110952271/10-GW-Ohio-AI-Campus-And-12B-Meta-Deal-Signal-Next-Phase-Of-US-Data-Center-Expansion","tags":["Meta","Nebius"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"芬兰Prime Data Centers 60亿€/550MW","body":"利用北欧冷气候和清洁能源优势","insight":"","sourceLabel":"DCK","sourceUrl":"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026","tags":["欧洲"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"华为AIDC\"以电强算·以冷强算\"四大链路创新","body":"电力模块5.0/SmartLi5.0/TMU热管理/超节点方案","insight":"供电与制冷并列为AIDC两大关键基础设施","sourceLabel":"DTDATA","sourceUrl":"https://www.dtdata.cn/news/show/4325.html","tags":["华为","AIDC"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"美的DC全栈液冷方案+10亿元顺德液冷基地","body":"氟+水+液冷全栈矩阵，磁悬浮离心机国内第一","insight":"传统暖通巨头全面转向DC液冷","sourceLabel":"美的官方","sourceUrl":"http://bas.qianjia.com/html/2026-04/10_424064.html","tags":["液冷","美的"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"爱尔兰Echelon绿色能源园区+800MW海上风电","body":"DC与SSE海上风电共置，2028完工","insight":"欧洲DC离网化趋势","sourceLabel":"Echelon官方","sourceUrl":"https://echelon-dc.com/echelon-launches-irelands-first-green-energy-park/","tags":["绿色能源","欧洲"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"policy","sectionAnchor":"sec-policy","sectionName":"政策法规","title":"算电协同首次写入两会政府工作报告","body":"枢纽节点DC绿电≥80%硬约束，庆阳模式领跑","insight":"算电协同从行业倡议升级为国策","sourceLabel":"央视新闻","sourceUrl":"https://news.cctv.com/2026/04/09/ARTIqTYZ4rq6tACMXyd08sfZ260409.shtml","tags":["算电协同","政策"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"policy","sectionAnchor":"sec-policy","sectionName":"政策法规","title":"第九届数字中国建设峰会4/29-30福州举办","body":"23场分论坛+50余场活动","insight":"十五五数字基建政策风向标","sourceLabel":"中国政府网","sourceUrl":"https://www.gov.cn/lianbo/202603/content_7063673.htm","tags":["峰会"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"全球变压器荒：高端型号交期推至2029年","body":"中国出口同比+61%，对美+182%，龙头排单至2027底","insight":"变压器从通用品升级为战略瓶颈物资","sourceLabel":"央视/搜狐","sourceUrl":"https://www.sohu.com/a/999997707_100032387","tags":["变压器","供应链"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"2026中国制冷展开幕：11.5万m²/1041家企业","body":"主题\"数智塑冷暖零碳启新程\"，DC液冷成最热","insight":"","sourceLabel":"腾讯新闻","sourceUrl":"https://news.qq.com/rain/a/20260403A05TBD00","tags":["制冷展"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"bid","sectionAnchor":"sec-bid","sectionName":"招投标公告","title":"中国电信内蒙古D区算力中心：土建11.66亿+机电EPC 12.29亿/70MW","body":"新建D6/D7/D9/D10四栋，15.7万m²","insight":"运营商智算中心扩张不减速","sourceLabel":"内蒙古公共资源交易网","sourceUrl":"https://finance.sina.com.cn/wm/2026-03-25/doc-inhseqha3652914.shtml","tags":["电信","招标"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"bid","sectionAnchor":"sec-bid","sectionName":"招投标公告","title":"中国移动2026冷却塔设备全国集采","body":"2026-2027年开式横流冷却塔集中采购","insight":"运营商设备集采规模持续扩大","sourceLabel":"中国移动采购网","sourceUrl":"https://b2b.10086.cn/","tags":["移动","集采"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"quote","sectionAnchor":"sec-quote","sectionName":"人物与观点","title":"杜坤：算力是新电力，DC是AI工厂","body":"中国AI产业投资突破1.2万亿，GW级园区涌现","insight":"华为加速从设备到解决方案转型","sourceLabel":"DTDATA","sourceUrl":"https://www.dtdata.cn/news/show/4325.html","tags":["华为","观点"]},
+      {"issueId":"2026-04-10","issueDate":"2026-04-10","issueFile":"issues/2026-04-10.html","section":"quote","sectionAnchor":"sec-quote","sectionName":"人物与观点","title":"杨威：直流800V供电是超节点关键路径","body":"传统配电难以为继，需供电制冷协同","insight":"","sourceLabel":"DTDATA","sourceUrl":"https://www.dtdata.cn/news/show/4326.html","tags":["技术","观点"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"Digital Realty日本NRT14启用 园区突破100MW","body":"MC Digital Realty在日本千叶县印西市NRT园区第三座DC NRT14正式投运，IT容量31MW，园区总容量达100MW。","insight":"DLR加速亚太扩张，印西市成日本最重要DC集群，百MW级里程碑标志日本AI基础设施竞争进入新阶段。","sourceLabel":"Data Center Dynamics","sourceUrl":"https://www.datacenterdynamics.com/en/news/digital-realty-adds-third-data-center-to-campus-in-inzai-japan/","tags":["Digital Realty","日本","100MW"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"signal","sectionAnchor":"sec-signal","sectionName":"重大信号","title":"美国DC建设2026开局创纪录 全年预计1284亿$","body":"ConstructConnect报告：1-2月开工369亿$(1月254亿创历史单月最高)，12个月均值97亿$/月，未来6月管道708亿$。","insight":"DC超级周期兑现，伊利诺伊(103亿)、俄亥俄(100亿)、北卡(100亿)成新热点。","sourceLabel":"ConstructConnect","sourceUrl":"https://news.constructconnect.com/april-2026-data-center-report-extraordinary-growth-continues","tags":["美国","建设","1284亿$"]},
-      {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"上海临港海底DC全面商用投运 全球首个海风直连","body":"全球首个海风直连+海水冷却商用海底DC，高32米重1950吨，PUE≤1.15，延迟0.5ms，占地仅传统1/10。","insight":"东数东算模式从概念走向实践，海底DC商业化运营阶段开启。","sourceLabel":"央视网","sourceUrl":"https://energy.cctv.com/2026/04/03/ARTIlSLgzgLu6cekjxsVpFLn260403.shtml","tags":["临港","海底DC","PUE 1.15"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Penzance 40亿$/600MW西弗吉尼亚DC园区","body":"Penzance Management规划西弗吉尼亚伯克利县600MW DC园区，投资40亿$，该州首个高影响力智能中心。","insight":"美国DC热潮外溢至周边州，低电价+土地优势吸引新投资。","sourceLabel":"Data Center Knowledge","sourceUrl":"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026","tags":["美国","600MW","40亿$"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"project","sectionAnchor":"sec-project","sectionName":"项目与市场","title":"Digital Edge获印尼6.65亿$绿色贷款建500MW园区","body":"印尼勿加泗500MW DC园区一期获6.65亿$绿色贷款，创印尼DC行业最大贷款纪录。","insight":"东南亚DC融资体量跃升新台阶，绿色金融渗透加深。","sourceLabel":"Data Center Knowledge","sourceUrl":"https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-april-2026","tags":["印尼","绿色贷款","500MW"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"海尔暖通发布AIDC风液同源六大新品","body":"北京制冷展发布磁悬浮冷机+相变多联+风墙+列间末端+液冷CDU，35℃高温出水，PUE<1.2，节省70%占地。","insight":"传统家电巨头加码AIDC温控，海尔20余年磁悬浮技术转化为全栈方案。","sourceLabel":"腾讯新闻","sourceUrl":"https://news.qq.com/rain/a/20260408A07HLC00","tags":["海尔","液冷","磁悬浮"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"SST固态变压器产业化提速 英伟达GB300白皮书推动","body":"英伟达800VDC白皮书明确SST为GB300理想电源方案，当前购置成本为传统变压器3-4倍。四方股份等密集布局。","insight":"传统变压器3年交期瓶颈加速SST商业化窗口打开。","sourceLabel":"新浪财经","sourceUrl":"https://finance.sina.com.cn/jjxw/2026-04-03/doc-inhtfeqw0352614.shtml","tags":["SST","英伟达","800V"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"tech","sectionAnchor":"sec-tech","sectionName":"技术趋势","title":"海悟AIDC技术巡回研讨会4月10日广州站","body":"海悟集团算驭AI·破界而生系列研讨会广州站，聚焦高密部署供电与制冷，此前已在西安和上海举办。","insight":"AIDC温控技术进入密集推广期，供应商争夺市场话语权。","sourceLabel":"海悟官网","sourceUrl":"https://www.haiwu.com/news/dynamic/1985.html","tags":["海悟","AIDC","研讨会"]},
-      {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"policy","sectionAnchor":"sec-policy","sectionName":"政策法规","title":"东数东算模式获央视专题报道 算电协同沿海落地","body":"上海临港海底DC投运标志东数东算模式实践，海风直连+海水冷却实现就近部署。","insight":"东数西算体系之外，东数东算路线开始被认可，国家算力布局趋向多元化。","sourceLabel":"央视网","sourceUrl":"https://energy.cctv.com/2026/04/03/ARTIlSLgzgLu6cekjxsVpFLn260403.shtml","tags":["东数东算","政策","算力布局"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"Wolfspeed：中压变压器交付3年 20%规划DC延期","body":"Wolfspeed白皮书引用IEA数据，中压变压器交付周期拉长至3年，SiC基SST成替代方案。","insight":"变压器瓶颈从偶发延期升级为系统性风险，加速SST产业化。","sourceLabel":"雪球/Wolfspeed","sourceUrl":"https://xueqiu.com/1181902298/382595579","tags":["变压器","瓶颈","SiC"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"supply","sectionAnchor":"sec-supply","sectionName":"供应链动态","title":"美国电力基建2026预计增长32%","body":"2025年电力基建开工额首超360亿$，2026年预计同比增32%，DC能源需求驱动。","insight":"建设端高速投入预示2027-2028年新增电力容量释放。","sourceLabel":"ConstructConnect","sourceUrl":"https://news.constructconnect.com/april-2026-data-center-report-extraordinary-growth-continues","tags":["电力基建","32%增长"]},
       {"issueId":"2026-04-09","issueDate":"2026-04-09","issueFile":"issues/2026-04-09.html","section":"recruit","sectionAnchor":"sec-recruit","sectionName":"招聘动向","title":"万国数据2026 Capex 90亿元 预示大规模招聘","body":"万国数据2026资本开支90亿元，大摩预计销售目标500MW，大部分产能2027年上架。","insight":"90亿Capex预示Q2-Q3集中释放运维、工程、项目管理岗位。","sourceLabel":"金融界","sourceUrl":"https://usstock.jrj.com.cn/2026/03/18161656358497.shtml","tags":["万国数据","Capex","招聘"]},
