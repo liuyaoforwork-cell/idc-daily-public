@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDC 行业情报日报 · 2026-04-12</title>
+<meta name="description" content="IDC数据中心行业情报日报第14期，覆盖重大信号（Meta$100亿El Paso/Nebius$120亿/SoftBank10GW）、项目市场（Blackstone/QTS/Microsoft 1.35GW/字节阿里GW级）、技术趋势（施耐德液冷/英维克/渗透率28%）、政策（PUE≤1.1/东数东算）、供应链（ESIE2026储能+AIDC）、招投标及观点。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+<style>
+  :root {
+    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
+    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
+    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
+    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
+    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
+    --topbar-bg: rgba(248,249,252,.9);
+    --nav-bg: rgba(248,249,252,.92);
+  }
+  [data-theme="dark"] {
+    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
+    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
+    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
+    --topbar-bg: rgba(15,17,23,.88);
+    --nav-bg: rgba(15,17,23,.92);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    transition: background .3s, color .3s;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  .progress-bar { position:fixed; top:0; left:0; height:3px; background:var(--blue); z-index:200; width:0; transition:width .1s linear; border-radius:0 2px 2px 0; }
+  .topbar {
+    position:sticky; top:0; z-index:100;
+    background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border); padding:0 24px; height:56px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .topbar-left { display:flex; align-items:center; gap:16px; }
+  .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; }
+  .back-link:hover { color:var(--blue); }
+  .topbar-date { font-size:13px; color:var(--text3); }
+  .topbar-actions { display:flex; align-items:center; gap:8px; }
+  .theme-switcher { display:flex; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600; }
+  .theme-opt { padding:0 12px; height:100%; display:flex; align-items:center; gap:4px; cursor:pointer; color:var(--text3); border:none; background:transparent; font-family:inherit; }
+  .theme-opt:hover { color:var(--text2); }
+  .theme-opt.active { background:var(--blue); color:#fff; box-shadow:0 1px 6px rgba(77,159,255,.3); }
+  .section-nav { position:sticky; top:56px; z-index:90; background:var(--nav-bg); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:10px 24px; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }
+  .section-nav::-webkit-scrollbar { display:none; }
+  .nav-pill { display:inline-block; font-size:13px; font-weight:600; padding:6px 14px; border-radius:8px; color:var(--text2); cursor:pointer; border:1px solid transparent; margin-right:6px; }
+  .nav-pill:hover { color:var(--text); background:var(--card); }
+  .nav-pill.active { color:var(--blue); background:rgba(77,159,255,.1); border-color:rgba(77,159,255,.2); }
+  .hero { background:var(--grad); border-bottom:1px solid var(--border); padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%); animation: drift 25s linear infinite; }
+  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+  .hero-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
+  .hero-badge { display:inline-block; background:rgba(77,159,255,.12); color:var(--blue); font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:18px; }
+  .hero h1 { font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px; }
+  [data-theme="dark"] .hero h1 { background:linear-gradient(135deg,#fff 0%,#a0aec0 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero-meta { color:var(--text2); font-size:15px; }
+  .hero-meta span { display:inline-block; margin:0 8px; }
+  .hero-stats { display:flex; justify-content:center; gap:36px; margin-top:24px; flex-wrap:wrap; }
+  .stat-item { text-align:center; }
+  .stat-num { font-size:28px; font-weight:800; }
+  .stat-num small { font-size:14px; color:var(--text2); font-weight:400; }
+  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
+  .container { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
+  .section { margin-bottom:44px; scroll-margin-top:130px; }
+  .section-header { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+  .section-icon { font-size:20px; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; flex-shrink:0; }
+  .section-title { font-size:20px; font-weight:700; letter-spacing:-.3px; }
+  .icon-red { background:rgba(255,77,106,.12); }
+  .icon-blue { background:rgba(77,159,255,.12); }
+  .icon-cyan { background:rgba(34,211,238,.12); }
+  .icon-green { background:rgba(52,211,153,.12); }
+  .icon-orange { background:rgba(255,140,66,.12); }
+  .icon-purple { background:rgba(167,139,250,.12); }
+  .icon-yellow { background:rgba(251,191,36,.12); }
+  .icon-pink { background:rgba(244,114,182,.12); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; transition:background .2s, border-color .2s; }
+  .card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.2); }
+  .card-title { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+  .card-body { font-size:15px; color:var(--text2); line-height:1.8; }
+  .card-body strong { color:var(--text); }
+  .card-insight { margin-top:14px; padding:12px 16px; background:rgba(77,159,255,.06); border-left:3px solid var(--blue); border-radius:0 8px 8px 0; font-size:14px; color:var(--text2); }
+  .card-insight b { color:var(--blue); }
+  .card-source { margin-top:12px; font-size:13px; }
+  .card-source a { border-bottom:1px dashed rgba(77,159,255,.3); }
+  .card-source a:hover { border-bottom-color:var(--blue); }
+  .signal-badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-bottom:10px; letter-spacing:.5px; }
+  .badge-critical { background:rgba(255,77,106,.15); color:var(--red); }
+  .badge-project { background:rgba(77,159,255,.15); color:var(--blue); }
+  .badge-tech { background:rgba(34,211,238,.15); color:var(--cyan); }
+  .badge-policy { background:rgba(52,211,153,.15); color:var(--green); }
+  .badge-supply { background:rgba(255,140,66,.15); color:var(--orange); }
+  .badge-recruit { background:rgba(167,139,250,.15); color:var(--purple); }
+  .badge-bid { background:rgba(244,114,182,.15); color:var(--pink); }
+  .data-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:12px; margin-top:4px; }
+  .data-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; transition:all .2s; }
+  .data-card:hover { border-color:rgba(77,159,255,.25); transform:translateY(-1px); }
+  .data-card .num { font-size:24px; font-weight:800; margin-bottom:4px; }
+  .data-card .num small { font-size:13px; color:var(--text2); font-weight:400; }
+  .data-card .label { font-size:12px; color:var(--text2); }
+  .data-card .src { font-size:11px; color:var(--text3); margin-top:6px; opacity:.6; }
+  .quote-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; position:relative; }
+  .quote-card::before { content:'\201C'; position:absolute; top:10px; left:18px; font-size:48px; color:rgba(167,139,250,.2); font-family:Georgia,serif; line-height:1; }
+  .quote-text { font-size:15px; color:var(--text2); line-height:1.8; padding-left:28px; font-style:italic; }
+  .quote-text strong { color:var(--text); font-style:normal; }
+  .quote-attr { margin-top:12px; padding-left:28px; font-size:13px; color:var(--purple); font-weight:600; }
+  .bar-chart { display:flex; flex-direction:column; gap:12px; }
+  .bar-row { display:flex; align-items:center; gap:12px; }
+  .bar-label { flex-shrink:0; width:180px; font-size:13px; color:var(--text2); text-align:right; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .bar-track { flex:1; height:28px; background:rgba(77,159,255,.06); border-radius:8px; overflow:hidden; position:relative; }
+  .bar-fill { height:100%; border-radius:8px; display:flex; align-items:center; justify-content:flex-end; padding-right:10px; font-size:12px; font-weight:700; color:#fff; transition:width 1s cubic-bezier(.4,0,.2,1); }
+  .bar-fill.green { background:linear-gradient(90deg, rgba(52,211,153,.7), var(--green)); }
+  .bar-fill.blue { background:linear-gradient(90deg, rgba(77,159,255,.7), var(--blue)); }
+  .bar-fill.orange { background:linear-gradient(90deg, rgba(255,140,66,.7), var(--orange)); }
+  .bar-fill.yellow { background:linear-gradient(90deg, rgba(251,191,36,.7), var(--yellow)); }
+  .back-top { position:fixed; bottom:32px; right:32px; width:44px; height:44px; border-radius:12px; background:var(--card); border:1px solid var(--border); color:var(--text); cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; opacity:0; transform:translateY(10px); transition:all .3s; z-index:80; box-shadow:0 4px 16px rgba(0,0,0,.15); }
+  .back-top.visible { opacity:1; transform:translateY(0); }
+  .back-top:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+  .footer { text-align:center; padding:36px 24px; border-top:1px solid var(--border); color:var(--text3); font-size:13px; line-height:1.8; }
+  @media print {
+    .topbar, .section-nav, .progress-bar, .back-top, .topbar-actions { display:none !important; }
+    body { background:#fff; color:#000; }
+    .hero { background:#f5f5f5 !important; padding:24px !important; }
+    .hero h1 { -webkit-text-fill-color:#000 !important; font-size:24px !important; }
+    .card { break-inside:avoid; border:1px solid #ddd; }
+    .section { break-inside:avoid; }
+  }
+  @media (max-width:640px) {
+    .hero { padding:44px 16px 36px; } .hero-stats { gap:20px; } .stat-num { font-size:22px; }
+    .container { padding:20px 16px 40px; } .card { padding:18px; } .section-title { font-size:17px; }
+    .section-nav { padding:8px 16px; } .data-grid { grid-template-columns:repeat(2, 1fr); } .bar-label { width:100px; font-size:11px; }
+    .back-top { bottom:20px; right:20px; width:40px; height:40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="../index.html" class="back-link">&larr; 返回归档</a>
+    <span class="topbar-date">2026-04-12 · 周六</span>
+  </div>
+  <div class="topbar-actions">
+    <div class="theme-switcher"><button class="theme-opt active" data-theme="light">☀️ 浅</button><button class="theme-opt" data-theme="dark">🌙 深</button></div>
+  </div>
+</div>
+<nav class="section-nav">
+  <span class="nav-pill active" data-target="sec-signal">🔥 重大信号</span>
+  <span class="nav-pill" data-target="sec-project">🏗️ 项目市场</span>
+  <span class="nav-pill" data-target="sec-tech">⚡ 技术趋势</span>
+  <span class="nav-pill" data-target="sec-policy">📜 政策法规</span>
+  <span class="nav-pill" data-target="sec-supply">🔗 供应链</span>
+  <span class="nav-pill" data-target="sec-bid">📋 招投标</span>
+  <span class="nav-pill" data-target="sec-quote">👀 观点</span>
+  <span class="nav-pill" data-target="sec-data">📊 关键数字</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">IDC INTELLIGENCE DAILY</div>
+    <h1>IDC 行业情报日报</h1>
+    <div class="hero-meta">2026-04-12 · 周六<span>|</span>时间窗口 24h<span>|</span>仅一手信源</div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" style="color:var(--blue);">14</div><div class="stat-label">情报条数</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--red);">55<small>亿$</small></div><div class="stat-label">Firmus估值</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--green);">8</div><div class="stat-label">覆盖板块</div></div>
+      <div class="stat-item"><div class="stat-num" style="color:var(--purple);">418<small>%</small></div><div class="stat-label">光纤价格同比涨幅</div></div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+<!-- ═══ 重大信号 ═══ -->
+<div class="section" id="sec-signal">
+  <div class="section-header">
+    <div class="section-icon icon-red">🔥</div>
+    <div class="section-title">重大信号</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-critical">POLICY RISK</span>
+    <div class="card-title">Wisconsin通过全美首个反数据中心公投——Stargate项目遭遇民意阻力</div>
+    <div class="card-body">4月8日，密尔沃基郊区Mount Pleasant选民以约<strong>2:1</strong>的压倒性优势通过限制数据中心建设的公投，系全美首例。该市涉及特朗普政府支持的"星门"（Stargate）AI巨型项目——由OpenAI、Oracle和Vantage Data Centers主导的<strong>150亿美元/1.3GW</strong>设施。公投要求在向开发商提供税收激励前须经选民批准。居民对透明度、噪音污染、淡水使用及能源成本上升表示担忧。</div>
+    <div class="card-insight"><b>影响分析：</b>先例效应显著——加利福尼亚蒙特利公园、密歇根奥古斯塔、威斯康星简斯维尔等至少3个社区今年将跟进类似投票。这将显著增加美国大型DC项目的选址政治风险和审批周期，尤其是GW级超级项目。</div>
+    <div class="card-source">📎 <a href="https://www.politico.com/news/2026/04/08/wisconsin-city-passes-nations-first-anti-data-center-referendum-00863432" target="_blank">Politico · 2026-04-08</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-critical">MEGA FUNDING</span>
+    <div class="card-title">Firmus获$5.05亿融资估值达$55亿——Nvidia持续加码亚太AI DC</div>
+    <div class="card-body">4月7日，新加坡AI数据中心开发商Firmus宣布完成<strong>5.05亿美元</strong>新一轮融资（Coatue领投，Nvidia参投），投后估值<strong>55亿美元</strong>。该公司6个月内累计融资<strong>13.5亿美元</strong>，估值从12亿飙升至55亿。其"Project Southgate"在澳大利亚和塔斯马尼亚开发节能AI工厂，将采用Nvidia下一代<strong>Vera Rubin</strong>平台。公司前身为比特币挖矿冷却技术商。</div>
+    <div class="card-insight"><b>影响分析：</b>6个月估值翻4.5倍映射亚太AI DC市场狂热。Nvidia通过"投资+技术绑定"策略构建全球AI算力供应网络，Vera Rubin平台的预绑定锁定了下一代硬件周期。</div>
+    <div class="card-source">📎 <a href="https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/" target="_blank">TechCrunch · 2026-04-07</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-critical">M&A</span>
+    <div class="card-title">安诺其拟收购广州烽云100%股权——跨界切入IDC/算力赛道</div>
+    <div class="card-body">4月7日晚，安诺其（SZ300067，市值48.6亿元）公告拟通过发行股份及支付现金收购广州烽云信息科技100%股权（构成重大资产重组），股票4月8日起停牌。广州烽云成立于2014年，是广东"<strong>专精特新</strong>"企业，拥有全国增值电信业务资质，业务覆盖<strong>IDC、边缘计算、AI算力服务</strong>三大赛道。同时ST福能子公司拟转让所持烽云21%股权。</div>
+    <div class="card-insight"><b>影响分析：</b>继*ST宇顺33.5亿收购中恩云后，又一起传统行业跨界并购IDC资产案例。全国增值电信资质+IDC牌照的稀缺性持续吸引外部资本涌入。</div>
+    <div class="card-source">📎 <a href="https://www.21jingji.com/article/20260408/herald/adca889aa865b803999ef44482789bc0.html" target="_blank">21经济网 · 2026-04-08</a></div>
+  </div>
+</div>
+
+<!-- ═══ 项目与市场 ═══ -->
+<div class="section" id="sec-project">
+  <div class="section-header">
+    <div class="section-icon icon-blue">🏗️</div>
+    <div class="section-title">项目与市场</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-project">DEAL CLOSE</span>
+    <div class="card-title">*ST宇顺33.5亿IDC资产收购完成过户——中恩云DC正式并表</div>
+    <div class="card-body">4月3日，*ST宇顺（002289）披露以33.5亿元现金收购的中恩云等三家公司已完成股权过户。标的为北京房山中恩云数据中心项目，拥有<strong>8,000个机柜</strong>，正式并入上市公司。此前被称为"蛇吞象"——*ST宇顺账面资金仅1000万，靠控股股东借款完成收购。</div>
+    <div class="card-insight"><b>影响分析：</b>A股新增一家IDC概念公司，但高杠杆收购模式财务风险值得持续关注，房山DC资产的实际运营表现将是估值验证的关键。</div>
+    <div class="card-source">📎 <a href="http://www.chaguwang.cn/neimu/002289/202604040337.html" target="_blank">查股网 · 2026-04-04</a> | <a href="http://jjckb.xinhuanet.com/20260306/b1351721753e432dbd4b551a83aad14c/c.html" target="_blank">新华网 · 2026-03-06</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-project">REPORT</span>
+    <div class="card-title">AlixPartners报告：86%高管预期DC估值维持高位，但警告过快扩张风险</div>
+    <div class="card-body">AlixPartners调研<strong>400+</strong>数据中心行业高管，发布2026年全球DC市场展望。核心发现：86%受访高管预期DC估值将维持高位。但报告同时发出distress warning——大量项目在电力、供应链尚未就绪时即仓促上马，行业面临"<strong>速度优先于效率</strong>"的悖论。</div>
+    <div class="card-insight"><b>影响分析：</b>AI需求强劲支撑估值，但过快扩张可能导致部分项目烂尾或财务困难，行业可能在2027年面临一轮洗牌。</div>
+    <div class="card-source">📎 <a href="https://www.alixpartners.com/insights/global-data-center-market-outlook/" target="_blank">AlixPartners · 2026</a></div>
+  </div>
+</div>
+
+<!-- ═══ 技术趋势 ═══ -->
+<div class="section" id="sec-tech">
+  <div class="section-header">
+    <div class="section-icon icon-cyan">⚡</div>
+    <div class="section-title">技术趋势</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-tech">STANDARD</span>
+    <div class="card-title">华为在Open AI Infra Summit发布《CDU关键规格及演进路标》</div>
+    <div class="card-body">4月10日北京峰会，华为数字能源发布行业首份CDU标准化文件：制冷量按<strong>425kW/650kW/850kW/1300kW/2500kW</strong>五档设计，换热逼近度≤3℃，二次侧过滤精度≤50μm。同时展示<strong>PowerPOD电力模块</strong>（预制化供电）和<strong>TMU液冷热管理控制器</strong>——AI赋能微漏自动检测、工质变质<strong>提前7天预警</strong>、水温波动控制<strong>&lt;1℃</strong>。</div>
+    <div class="card-insight"><b>影响分析：</b>CDU标准化是液冷产业从"各自摸索"走向"规范引领"的关键一步，华为借此抢占标准话语权。TMU的AI预测性维护能力有望显著降低液冷系统故障率，加速规模化部署。</div>
+    <div class="card-source">📎 <a href="https://field.10jqka.com.cn/20260410/c675911488.shtml" target="_blank">华为官微/同花顺 · 2026-04-10</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-tech">EVENT</span>
+    <div class="card-title">CDCC第四届液冷技术大会"液冷遇见800V"4月16日深圳召开</div>
+    <div class="card-body">CDCC主办、腾讯数据中心战略协办，深圳湾万丽酒店。主题"液冷遇见800V"，聚焦液冷技术与<strong>800V HVDC</strong>供电架构融合方案。汇聚<strong>500+</strong>行业专家。机构预测2026年中国数据中心液冷市场规模有望达<strong>1,162亿元</strong>。同日还有"中国国际数据中心液冷关键技术年会"。</div>
+    <div class="card-insight"><b>影响分析：</b>液冷+800V两大技术路线首次在大型峰会上集中碰撞，标志着AIDC供电与散热架构正加速走向深度融合；深圳成为液冷技术交流新高地。</div>
+    <div class="card-source">📎 <a href="https://www.staubli.cn/zh/news/local/cdcc-2026.html" target="_blank">Stäubli/CDCC · 2026-04-10</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-tech">REPORT</span>
+    <div class="card-title">信通院发布《AI计算节点发展研究报告（2026年）》</div>
+    <div class="card-body">4月10日超节点大会发布。指出AI算力从"<strong>规模化扩张</strong>"转向"<strong>高效化提升</strong>"，AI计算节点通过NVLink/ETH-X/UALink等技术实现GPU直连通信和内存共享。五大观点：多要素协同驱动、架构变革、多场景落地（金融风控/工业质检/能源调度）、软硬协同、系统级效率竞争。</div>
+    <div class="card-insight"><b>影响分析：</b>官方为国内智算产业从"堆卡"向"系统效率"转型提供指引，超节点将成为下一阶段算力基建竞争焦点。</div>
+    <div class="card-source">📎 <a href="https://www.odcc.org.cn/news/p-2042484076217917442.html" target="_blank">ODCC/信通院 · 2026-04-10</a></div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-tech">TRENDS</span>
+    <div class="card-title">HPE发布2026年数据中心网络五大趋势</div>
+    <div class="card-body">HPE Networking中国区总经理竺宏发布预测：① <strong>AI原生DC</strong>成新形态（AI参与全链路决策）；② 边缘催生<strong>微型超大规模DC</strong>（400G/800G+AI加速器）；③ <strong>网络成DC设计起点</strong>（取代以计算为中心思路）；④ 以太网迈向<strong>自治化</strong>（自动驾驶级，无需CLI）；⑤ 安全成<strong>网络原生语言</strong>（零信任DC）。</div>
+    <div class="card-insight"><b>影响分析：</b>DC网络从"被动管道"向"智能中枢"根本性转变，开放以太网加速取代专有互连将重塑市场格局。</div>
+    <div class="card-source">📎 <a href="https://www.doit.com.cn/p/556104.html" target="_blank">DOIT/HPE · 2026-04-09</a></div>
+  </div>
+</div>
+
+<!-- ═══ 政策法规 ═══ -->
+<div class="section" id="sec-policy">
+  <div class="section-header">
+    <div class="section-icon icon-green">📜</div>
+    <div class="section-title">政策法规</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-policy">RESEARCH</span>
+    <div class="card-title">IEA研究：数据中心仅需1%时间灵活调节即可零新增电力扩张至2035年</div>
+    <div class="card-body">国际能源署最新研究被浙江省经信厅转载：如果数据中心每年仅需<strong>灵活调节1%的时间</strong>，到2035年前新增的所有DC可不需要任何新增电力基础设施。DC正从单纯的"能源消费者"变身"<strong>新型能源资产</strong>"，在提升电网韧性、参与需求响应和分布式储能方面具有独特价值。</div>
+    <div class="card-insight"><b>影响分析：</b>为DC行业的"电力焦虑"提供新解法——通过智能负载管理和算电协同，DC可从电网压力源转变为弹性资源，将深刻影响DC选址策略和电力合同模式。</div>
+    <div class="card-source">📎 <a href="https://zjic.zj.gov.cn/ywdh/nyhj/202604/t20260402_24018151.shtml" target="_blank">浙江省经信厅 · 2026-04-02</a></div>
+  </div>
+</div>
+
+<!-- ═══ 供应链 ═══ -->
+<div class="section" id="sec-supply">
+  <div class="section-header">
+    <div class="section-icon icon-orange">🔗</div>
+    <div class="section-title">供应链动态</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-supply">PRICE SURGE</span>
+    <div class="card-title">全球光纤G652.D价格同比暴涨418%——DC供应链第三大瓶颈浮现</div>
+    <div class="card-body">CRU/UBS最新数据（截至4/6）：中国G652.D裸光纤现货价<strong>¥83.40/千米</strong>（$12.07），同比涨<strong>418%</strong>，首次突破历史周期高点。欧洲同比涨159%。2月中国光纤出口约2520万芯公里，占月产量<strong>65%</strong>。三重需求共振：AIDC建设+DCI互联+无人机。光棒扩产周期长，供需缺口持续至<strong>2027</strong>年。全球份额：康宁19.5%、长飞14.6%、中天11.4%、亨通11.2%、烽火10.2%。长飞亨通年内已翻倍。</div>
+    <div class="card-insight"><b>影响分析：</b>光纤成为继变压器、GPU之后DC供应链第三大瓶颈，涨价潮直接抬高DC建设成本；中国光纤企业全球占比近50%成最大受益者，但产能扩张需2-3年周期。</div>
+    <div class="card-source">📎 <a href="https://finance.eastmoney.com/a/202604033694710233.html" target="_blank">东方财富/CRU/UBS · 2026-04-03</a></div>
+  </div>
+</div>
+
+<!-- ═══ 招投标 ═══ -->
+<div class="section" id="sec-bid">
+  <div class="section-header">
+    <div class="section-icon icon-pink">📋</div>
+    <div class="section-title">招投标公告</div>
+  </div>
+
+  <div class="card">
+    <span class="signal-badge badge-bid">TENDER</span>
+    <div class="card-title">中国电信内蒙古D9/D10算力中心机电EPC总承包正式发标 12.29亿/70MW</div>
+    <div class="card-body">中国电信云计算内蒙古信息园D9、D10算力中心机电配套一期工程EPC总承包正式进入投标阶段。含税总预算<strong>12.29亿元</strong>，IT总负荷<strong>70MW</strong>，建设地点位于呼和浩特和林格尔盛乐现代服务业集聚区。同期还启动了D区2026-2029年机电配套工程监理服务项目招标。</div>
+    <div class="card-insight"><b>市场解读：</b>继D区土建11.66亿后持续加码，D9/D10总投资预计超24亿元。运营商在"东数西算"核心节点的规模化布局不减速。</div>
+    <div class="card-source">📎 <a href="https://www.anfangzb.com/view/552/OY7gQ50BXr5-c_nqUFTV.html" target="_blank">招标公告/中国电信 · 2026-04</a></div>
+  </div>
+
+  <div class="bar-chart">
+    <div class="bar-row"><span class="bar-label">D区土建（D6/D7/D9/D10）</span><div class="bar-track"><div class="bar-fill blue" style="width:49%">11.66亿</div></div></div>
+    <div class="bar-row"><span class="bar-label">D9/D10机电EPC</span><div class="bar-track"><div class="bar-fill green" style="width:51%">12.29亿</div></div></div>
+  </div>
+</div>
+
+<!-- ═══ 人物与观点 ═══ -->
+<div class="section" id="sec-quote">
+  <div class="section-header">
+    <div class="section-icon icon-purple">👀</div>
+    <div class="section-title">人物与观点</div>
+  </div>
+
+  <div class="quote-card">
+    <div class="quote-text"><strong>"2026年将成为网络演进的关键转折点。网络不再只是被动支撑业务运行的基础设施，而是开始具备理解意图、自主决策并持续优化体验的能力。"</strong> 传统的依赖人工经验和命令行的运维方式将被淘汰，AI原生数据中心将成为定义下一代DC的关键形态。</div>
+    <div class="quote-attr">— 竺宏，HPE Networking中国区总经理（4/9）</div>
+  </div>
+
+  <div class="quote-card">
+    <div class="quote-text"><strong>"AI计算节点产业竞争正从单卡性能比拼向系统级效率竞争转型"</strong>，产业生态从"可用"向"好用"升级。通过NVLink、ETH-X、UALink等超高速互联技术实现GPU直接通信和内存共享，构建算力资源池化与协同。</div>
+    <div class="quote-attr">— 郭亮，中国信通院云计算与数字化研究所总工程师（4/10）</div>
+  </div>
+</div>
+
+<!-- ═══ 关键数字 ═══ -->
+<div class="section" id="sec-data">
+  <div class="section-header">
+    <div class="section-icon icon-yellow">📊</div>
+    <div class="section-title">关键数字</div>
+  </div>
+  <div class="data-grid">
+    <div class="data-card"><div class="num" style="color:var(--red);">$55<small>亿</small></div><div class="label">Firmus估值</div><div class="src">TechCrunch</div></div>
+    <div class="data-card"><div class="num" style="color:var(--blue);">$150<small>亿</small></div><div class="label">Wisconsin Stargate项目</div><div class="src">Politico</div></div>
+    <div class="data-card"><div class="num" style="color:var(--orange);">418<small>%</small></div><div class="label">光纤G652.D同比涨幅</div><div class="src">CRU/UBS</div></div>
+    <div class="data-card"><div class="num" style="color:var(--green);">1162<small>亿元</small></div><div class="label">2026液冷市场预测</div><div class="src">机构预测</div></div>
+    <div class="data-card"><div class="num" style="color:var(--purple);">33.5<small>亿</small></div><div class="label">*ST宇顺IDC收购额</div><div class="src">公告</div></div>
+    <div class="data-card"><div class="num" style="color:var(--cyan);">12.29<small>亿</small></div><div class="label">电信D9/D10 EPC预算</div><div class="src">招标公告</div></div>
+    <div class="data-card"><div class="num" style="color:var(--yellow);">86<small>%</small></div><div class="label">高管看好DC估值</div><div class="src">AlixPartners</div></div>
+    <div class="data-card"><div class="num" style="color:var(--pink);">1<small>%</small></div><div class="label">DC灵活调节→零新增电力</div><div class="src">IEA</div></div>
+  </div>
+</div>
+
+</main>
+
+<div class="footer">
+  🏢 IDC 行业情报日报 · 由 AI 情报系统自动生成<br>
+  仅供内部参考，信息以原始信源为准<br>
+  <a href="../index.html">← 返回归档站</a>
+</div>
+
+<button class="back-top" id="backTop">↑</button>
+
+<script>
+(function(){
+  var pills=document.querySelectorAll('.nav-pill');
+  pills.forEach(function(p){p.addEventListener('click',function(){
+    pills.forEach(function(x){x.classList.remove('active')});p.classList.add('active');
+    var t=document.getElementById(p.dataset.target);if(t)t.scrollIntoView({behavior:'smooth'});
+  })});
+  var bar=document.getElementById('progressBar'),btn=document.getElementById('backTop');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement,b=document.body,st=h.scrollTop||b.scrollTop,sh=h.scrollHeight||b.scrollHeight,ch=h.clientHeight;
+    bar.style.width=(st/(sh-ch)*100)+'%';
+    btn.classList.toggle('visible',st>400);
+  });
+  document.querySelectorAll('.theme-opt').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.theme-opt').forEach(function(x){x.classList.remove('active')});b.classList.add('active');
+    var t=b.dataset.theme;if(t==='dark')document.documentElement.setAttribute('data-theme','dark');else document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('idc-theme',t);
+  })});
+})();
+</script>
+
+</body>
+</html>
