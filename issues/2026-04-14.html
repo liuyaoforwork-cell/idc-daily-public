@@ -1,257 +1,227 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IDC 行业情报日报 · 2026-04-14</title>
-<meta name="description" content="IDC数据中心行业情报日报，覆盖黑石IPO/OpenAI暂停UK/Digital Realty$55亿/TikTok芬兰/CyrusOne634MW等13条情报。">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
-<script>(function(){var t=localStorage.getItem('idc-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
 <style>
-  :root {
-    --bg: #f8f9fc; --bg2: #fff; --card: #fff; --card-hover: #f0f4ff;
-    --border: #e2e6f0; --text: #1a1d2e; --text2: #5a5e73; --text3: #8b8fa3;
-    --blue: #4d9fff; --red: #ff4d6a; --green: #34d399; --purple: #a78bfa;
-    --orange: #ff8c42; --cyan: #22d3ee; --yellow: #fbbf24; --pink: #f472b6;
-    --grad: linear-gradient(135deg, #e8e6f8 0%, #f8f9fc 50%, #e8f0f8 100%);
-    --topbar-bg: rgba(248,249,252,.9);
-    --nav-bg: rgba(248,249,252,.92);
-  }
-  [data-theme="dark"] {
-    --bg: #0f1117; --bg2: #161824; --card: #1a1d2e; --card-hover: #222640;
-    --border: #2a2e45; --text: #e2e4ed; --text2: #8b8fa3; --text3: #5a5e73;
-    --grad: linear-gradient(135deg, #1e1b4b 0%, #0f1117 50%, #0c1524 100%);
-    --topbar-bg: rgba(15,17,23,.88);
-    --nav-bg: rgba(15,17,23,.92);
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition: background .3s, color .3s; }
-  a { color: var(--blue); text-decoration: none; }
-  .topbar { position:sticky; top:0; z-index:100; background:var(--topbar-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 24px; height:56px; display:flex; align-items:center; justify-content:space-between; }
-  .topbar-left { display:flex; align-items:center; gap:16px; }
-  .back-link { display:flex; align-items:center; gap:6px; color:var(--text2); font-size:14px; font-weight:500; }
-  .back-link:hover { color:var(--blue); }
-  .topbar-date { font-size:13px; color:var(--text3); }
-  .topbar-actions { display:flex; align-items:center; gap:8px; }
-  .theme-switcher { display:flex; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; height:36px; font-size:13px; font-weight:600; }
-  .theme-opt { padding:0 12px; height:100%; display:flex; align-items:center; gap:4px; cursor:pointer; color:var(--text3); border:none; background:transparent; font-family:inherit; }
-  .theme-opt:hover { color:var(--text2); }
-  .theme-opt.active { background:var(--blue); color:#fff; }
-  .section-nav { position:sticky; top:56px; z-index:90; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:10px 24px; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }
-  .section-nav::-webkit-scrollbar { display:none; }
-  .nav-pill { display:inline-block; font-size:13px; font-weight:600; padding:6px 14px; border-radius:8px; color:var(--text2); cursor:pointer; border:1px solid transparent; margin-right:6px; }
-  .nav-pill:hover { color:var(--text); background:var(--card); }
-  .hero { background:var(--grad); border-bottom:1px solid var(--border); padding:56px 24px 48px; text-align:center; position:relative; overflow:hidden; }
-  .hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle at 30% 40%, rgba(77,159,255,.06) 0%, transparent 60%), radial-gradient(circle at 70% 60%, rgba(167,139,250,.05) 0%, transparent 60%); animation: drift 25s linear infinite; }
-  @keyframes drift { from{transform:rotate(0)} to{transform:rotate(360deg)} }
-  .hero-inner { position:relative; z-index:1; max-width:800px; margin:0 auto; }
-  .hero-badge { display:inline-block; background:rgba(77,159,255,.12); color:var(--blue); font-size:12px; font-weight:700; padding:5px 14px; border-radius:20px; border:1px solid rgba(77,159,255,.2); letter-spacing:1.5px; margin-bottom:18px; }
-  .hero h1 { font-size:clamp(26px,4.5vw,36px); font-weight:800; letter-spacing:-.5px; margin-bottom:12px; }
-  .hero-meta { color:var(--text2); font-size:15px; }
-  .hero-stats { display:flex; justify-content:center; gap:36px; margin-top:24px; flex-wrap:wrap; }
-  .stat-item { text-align:center; }
-  .stat-num { font-size:28px; font-weight:800; }
-  .stat-label { font-size:12px; color:var(--text3); margin-top:2px; }
-  .container { max-width:900px; margin:0 auto; padding:32px 24px 60px; }
-  .section { margin-bottom:44px; scroll-margin-top:130px; }
-  .section-header { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
-  .section-icon { font-size:20px; width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:12px; flex-shrink:0; }
-  .section-title { font-size:20px; font-weight:700; }
-  .icon-red { background:rgba(255,77,106,.12); }
-  .icon-blue { background:rgba(77,159,255,.12); }
-  .icon-cyan { background:rgba(34,211,238,.12); }
-  .icon-green { background:rgba(52,211,153,.12); }
-  .icon-orange { background:rgba(255,140,66,.12); }
-  .icon-purple { background:rgba(167,139,250,.12); }
-  .icon-pink { background:rgba(244,114,182,.12); }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; margin-bottom:16px; transition:background .2s, border-color .2s; }
-  .card:hover { background:var(--card-hover); border-color:rgba(77,159,255,.2); }
-  .card-title { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
-  .card-body { font-size:15px; color:var(--text2); line-height:1.8; }
-  .card-body strong { color:var(--text); }
-  .card-insight { margin-top:14px; padding:12px 16px; background:rgba(77,159,255,.06); border-left:3px solid var(--blue); border-radius:0 8px 8px 0; font-size:14px; color:var(--text2); }
-  .card-insight b { color:var(--blue); }
-  .card-source { margin-top:12px; font-size:13px; }
-  .card-source a { border-bottom:1px dashed rgba(77,159,255,.3); }
-  .signal-badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-bottom:10px; letter-spacing:.5px; }
-  .badge-critical { background:rgba(255,77,106,.15); color:var(--red); }
-  .badge-project { background:rgba(77,159,255,.15); color:var(--blue); }
-  .badge-tech { background:rgba(34,211,238,.15); color:var(--cyan); }
-  .badge-policy { background:rgba(52,211,153,.15); color:var(--green); }
-  .badge-supply { background:rgba(255,140,66,.15); color:var(--orange); }
-  .badge-bid { background:rgba(244,114,182,.15); color:var(--pink); }
-  .footer { text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--text3); font-size:13px; }
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f0f2f5;color:#1a1a2e}
+.hero{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:40px 24px;text-align:center}
+.hero h1{font-size:26px;margin-bottom:6px}.hero .sub{font-size:14px;opacity:.8;margin-bottom:20px}
+.stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}.stat-num{font-size:32px;font-weight:700}.stat-label{font-size:12px;opacity:.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+a{color:#0f3460}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="topbar-left">
-    <a class="back-link" href="index.html">← 归档站</a>
-    <span class="topbar-date">2026-04-14</span>
-  </div>
-  <div class="topbar-actions">
-    <div class="theme-switcher">
-      <button class="theme-opt active" onclick="setTheme('light')">☀️</button>
-      <button class="theme-opt" onclick="setTheme('dark')">🌙</button>
-    </div>
-  </div>
-</div>
-<div class="section-nav"><span class="nav-pill" onclick="document.getElementById('sec-signal').scrollIntoView({behavior:'smooth'})">🔥 重大信号</span><span class="nav-pill" onclick="document.getElementById('sec-project').scrollIntoView({behavior:'smooth'})">🏗️ 项目与市场</span><span class="nav-pill" onclick="document.getElementById('sec-tech').scrollIntoView({behavior:'smooth'})">⚡ 技术趋势</span><span class="nav-pill" onclick="document.getElementById('sec-policy').scrollIntoView({behavior:'smooth'})">📜 政策法规</span><span class="nav-pill" onclick="document.getElementById('sec-supply').scrollIntoView({behavior:'smooth'})">🔗 供应链</span><span class="nav-pill" onclick="document.getElementById('sec-bid').scrollIntoView({behavior:'smooth'})">📋 招投标</span><span class="nav-pill" onclick="document.getElementById('sec-quote').scrollIntoView({behavior:'smooth'})">👀 观点</span></div>
 <div class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">IDC DAILY INTEL</div>
-    <h1>🏢 IDC 行业情报日报</h1>
-    <div class="hero-meta">2026-04-14 <span>·</span> 过去24小时 <span>·</span> 仅官方一手信源</div>
-    <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">13</div><div class="stat-label">情报条数</div></div>
-      <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">活跃板块</div></div>
-      <div class="stat-item"><div class="stat-num">$55亿+</div><div class="stat-label">项目规模</div></div>
-    </div>
+  <h1>🏢 IDC 行业情报日报</h1>
+  <div class="sub">2026-04-14 · 第16期（修订版）· 24h窗口</div>
+  <div class="stats">
+    <div><div class="stat-num">17</div><div class="stat-label">情报条数</div></div>
+    <div><div class="stat-num">7</div><div class="stat-label">活跃板块</div></div>
+    <div><div class="stat-num">3</div><div class="stat-label">招投标</div></div>
   </div>
 </div>
 <div class="container">
-<div class="section" id="sec-signal">
-  <div class="section-header">
-    <div class="section-icon icon-red">🔥</div>
-    <div class="section-title">重大信号</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-critical">重大信号</span>
-    <div class="card-title">黑石集团推旗下DC收购公司$20亿IPO</div>
-    <div class="card-body">高盛主承销，花旗/摩根士丹利联合承销，路演最早<strong>本月启动</strong>。黑石近年累计在DC领域投入超<strong>$400亿</strong>。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>PE巨头通过资产证券化实现AI基础设施退出路径，DC赛道从"买入持有"向"资本市场循环"模式演进</div>
-    <div class="card-source">📎 <a href="https://www.dtm.com.cn/news/202604/229578.html" target="_blank">天脉财经</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-critical">重大信号</span>
-    <div class="card-title">OpenAI暂停英国Stargate DC项目</div>
-    <div class="card-body">因<strong>高能源成本</strong>+<strong>版权法规不确定性</strong>暂停，原计划部署<strong>8000-31000个GPU</strong>。英国工业电价全球最高行列。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>超大规模AI基建首次因能源+监管被冻结，能源可用性和政策确定性成AI选址决定性因素</div>
-    <div class="card-source">📎 <a href="https://www.cnbc.com/2026/04/09/openai-halts-uk-stargate-project.html" target="_blank">CNBC</a></div>
-  </div>
-</div>
-<div class="section" id="sec-project">
-  <div class="section-header">
-    <div class="section-icon icon-blue">🏗️</div>
-    <div class="section-title">项目与市场</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-project">项目与市场</span>
-    <div class="card-title">Digital Realty新加坡总投资$55亿</div>
-    <div class="card-body">其中<strong>$34亿</strong>用于新建AI数据中心，另设创新实验室展示液冷/高密度技术。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>新加坡AI枢纽地位巩固，土地电力稀缺推升马来西亚/印尼溢出效应</div>
-    <div class="card-source">📎 <a href="https://w.media/digital-realty-targets-us5-5-billion-ai-investment-in-singapore/" target="_blank">W.Media</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-project">项目与市场</span>
-    <div class="card-title">TikTok芬兰€10亿第二DC，Project Clover总€120亿</div>
-    <div class="card-body">Lahti第二座DC，两座均€10亿。Project Clover服务<strong>2亿欧洲用户</strong>数据本地化。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>芬兰凭清洁能源+低温+政治中立成欧洲DC新热土，中企走数据本地化+合规先行路线</div>
-    <div class="card-source">📎 <a href="https://technode.com/2026/04/09/tiktok-announces-e1-billion-investment-to-build-second-data-center-in-finland/" target="_blank">TechNode</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-project">项目与市场</span>
-    <div class="card-title">CyrusOne伊利诺伊$5亿/634MW获批</div>
-    <div class="card-body">Sangamon County <strong>280英亩</strong>园区，闭环冷却系统。此前社区反对后经济收益+环境顾虑达成妥协。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>美国中西部DC选址典型矛盾——农业社区vs科技巨头，634MW定位超大规模AI客户</div>
-    <div class="card-source">📎 <a href="https://www.datacenterdynamics.com/en/news/cyrusone-gets-go-ahead-for-data-center-in-sangamon-illinois/" target="_blank">DCD</a></div>
-  </div>
-</div>
-<div class="section" id="sec-tech">
-  <div class="section-header">
-    <div class="section-icon icon-cyan">⚡</div>
-    <div class="section-title">技术趋势</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-tech">技术趋势</span>
-    <div class="card-title">CDCC第四届液冷大会"液冷遇见800V"4/16深圳</div>
-    <div class="card-body">CDCC主办腾讯协办。国海证券测算2026全球液冷市场<strong>165亿美元</strong>(约1162亿元)，同比+59%。GB300液冷供应链放开+Google TPU液冷直采，国产厂商迎战略窗口。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>冷板液冷全面商用，液冷+800V HVDC耦合成下一代AI DC标准架构</div>
-    <div class="card-source">📎 <a href="https://www.cfi.cn/p20260413000413.html" target="_blank">中财网/财联社</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-tech">技术趋势</span>
-    <div class="card-title">施耐德电气AI工厂液冷+电力集成方案</div>
-    <div class="card-body">"电网到芯片、芯片到冷却器"端到端架构。Motivair产线布局<strong>美/印/意三地</strong>，搭配ETAP+AVEVA数字孪生。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>传统配电巨头全面切入液冷，收购Motivair实现端到端集成，定位100kW+机架密度</div>
-    <div class="card-source">📎 <a href="https://blog.se.com/datacenter/2026/04/09/building-ai-factories-why-integrated-power-and-liquid-cooling-systems-are-critical-for-high-density-ai-data-centers/" target="_blank">Schneider Electric</a></div>
-  </div>
-</div>
-<div class="section" id="sec-policy">
-  <div class="section-header">
-    <div class="section-icon icon-green">📜</div>
-    <div class="section-title">政策法规</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-policy">政策法规</span>
-    <div class="card-title">Ohio农业社区抵制DC秘密土地收购</div>
-    <div class="card-body">科技公司通过匿名代理在Adams County收购农地，出价<strong>2倍市价</strong>。Sheffield市探索工业区DC条例。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>美国多州面临DC热与农业保护立法平衡，预计2026下半年将出现更多州级DC建设监管法案</div>
-    <div class="card-source">📎 <a href="https://www.cleveland.com/metro/2026/04/data-centers-and-secret-land-deals-target-ohio-farms-the-wake-up-for-monday-april-13-2026.html" target="_blank">Cleveland.com</a></div>
-  </div>
-</div>
-<div class="section" id="sec-supply">
-  <div class="section-header">
-    <div class="section-icon icon-orange">🔗</div>
-    <div class="section-title">供应链动态</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-supply">供应链动态</span>
-    <div class="card-title">全球DC基础设施7天$620亿/85笔交易</div>
-    <div class="card-body">4月2-9日，33笔纯DC项目。单笔大单：Google印度<strong>$150亿</strong>、微软日本<strong>$100亿</strong>、Intel-Tesla <strong>$250亿</strong>TeraFab、黑石$46亿绿债。17笔聚焦电力能源。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>资本从AI软件转向物理基础设施，电力超越芯片成首要瓶颈，"能源一体化DC"加速成型</div>
-    <div class="card-source">📎 <a href="https://inforcapital.com/blog/2026-04-09-infrastructure-deals-hit-62-billion-in-7-days-ais-physical-backbone-gets-massive-capital-infusion/" target="_blank">InforCapital</a></div>
-  </div>
-</div>
-<div class="section" id="sec-bid">
-  <div class="section-header">
-    <div class="section-icon icon-pink">📋</div>
-    <div class="section-title">招投标公告</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-bid">招投标公告</span>
-    <div class="card-title">电科数字中标安徽农信社DC机房二期6031万</div>
-    <div class="card-body">中电科数字技术(600850)中标滨湖数据中心机房二期建设工程，金额<strong>6031.34万元</strong>。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>农信体系DC建设需求持续释放，央企IT集成商在金融DC领域竞争力突出</div>
-    <div class="card-source">📎 <a href="https://www.msn.cn/zh-cn/money/" target="_blank">同壁财经</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-bid">招投标公告</span>
-    <div class="card-title">联通阜新绿电智算中心EPC中标公示</div>
-    <div class="card-body">辽宁阜新市，定位利用当地<strong>风电/光伏</strong>的绿色智算中心，土建EPC总承包中标候选人公示。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>运营商加速东北/西部低电价区布局绿电智算，契合东数西算+绿色算力双重政策导向</div>
-    <div class="card-source">📎 <a href="https://www.rccchina.com/services/bid_project_list/FOcskM6iPZpUp3jE61qbUg==" target="_blank">RCC瑞达恒</a></div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-bid">招投标公告</span>
-    <div class="card-title">宁夏隆德县智算中心2000P机电EPC招标</div>
-    <div class="card-body">宁夏固原市，规划<strong>2000P(FP16)</strong>，自筹<strong>8000万元</strong>，招标人宁夏圳云科技。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>西部县域级智算中心建设提速，算力需求向基层渗透，东数西算枢纽周边梯次布局成型</div>
-    <div class="card-source">📎 <a href="https://www.rccchina.com/services/bid_project_list/DtyRgTCf3AJl-IzOOZhPkw==" target="_blank">公共资源交易</a></div>
-  </div>
-</div>
-<div class="section" id="sec-quote">
-  <div class="section-header">
-    <div class="section-icon icon-red">👀</div>
-    <div class="section-title">人物与观点</div>
-  </div>
-  <div class="card">
-    <span class="signal-badge badge-critical">人物与观点</span>
-    <div class="card-title">Dell'Oro Baron Fung：AI基建转向效率与ROI审视</div>
-    <div class="card-body">"超大规模AI基建从弹性/冗余/主权驱动的快速扩张，转向更成熟阶段。2026年核心特征是<strong>资本支出纪律和执行风险</strong>。" 推理超训练成部署增长主力；NVIDIA Vera Rubin下半年出货；HBM优先致DRAM/NAND供给偏紧价格急涨。</div>
-    <div class="card-insight"><b>💡 影响分析：</b>Dell'Oro预计全球DC Capex至2030年累计$1.7万亿，但ROI审查加剧，AI投资回报若滞后将承压</div>
-    <div class="card-source">📎 <a href="https://www.delloro.com/2026-predictions-data-center-infrastructure/" target="_blank">Dell'Oro Group</a></div>
-  </div>
-</div>
+
+    <section id="sec-signal" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">🔥 重大信号 <span style="font-size:13px;color:#888;font-weight:400;">(2条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔥</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">重大信号</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">黑石集团推旗下DC收购公司$20亿IPO</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">高盛主承销，花旗/摩根士丹利联合承销，路演最早<strong>本月启动</strong>。黑石近年累计在DC领域投入超<strong>$400亿</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 PE巨头通过资产证券化实现AI基础设施退出路径，DC赛道从"买入持有"向"资本市场循环"模式演进</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.dtm.com.cn/news/202604/229578.html" target="_blank" style="color:#0f3460;text-decoration:underline;">天脉财经</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔥</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">重大信号</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">OpenAI暂停英国Stargate DC项目</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">因<strong>高能源成本</strong>+<strong>版权法规不确定性</strong>暂停，原计划部署<strong>8000-31000个GPU</strong>。英国工业电价全球最高行列。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 超大规模AI基建首次因能源+监管被冻结，能源可用性和政策确定性成AI选址决定性因素</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.cnbc.com/2026/04/09/openai-halts-uk-stargate-project.html" target="_blank" style="color:#0f3460;text-decoration:underline;">CNBC</a></div>
+      </div>
+    </section>
+
+    <section id="sec-project" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">🏗️ 项目与市场 <span style="font-size:13px;color:#888;font-weight:400;">(5条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏗️</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">项目与市场</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">Digital Realty新加坡总投资$55亿</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">其中<strong>$34亿</strong>用于新建AI数据中心，另设创新实验室展示液冷/高密度技术。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 新加坡AI枢纽地位巩固，土地电力稀缺推升马来西亚/印尼溢出效应</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://w.media/digital-realty-targets-us5-5-billion-ai-investment-in-singapore/" target="_blank" style="color:#0f3460;text-decoration:underline;">W.Media</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏗️</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">项目与市场</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">TikTok追加€10亿芬兰第二DC</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">Project Clover总投资达<strong>€120亿</strong>，服务<strong>2亿</strong>欧洲用户数据本地化。芬兰Lahti。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 芬兰成欧洲DC新热土（清洁能源+低温+政治中立），中国企业走"数据本地化+合规先行"路线</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://technode.com/2026/04/09/tiktok-announces-e1-billion-investment-to-build-second-data-center-in-finland/" target="_blank" style="color:#0f3460;text-decoration:underline;">TechNode</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏗️</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">项目与市场</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">CyrusOne伊利诺伊$5亿/634MW获批</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">Sangamon County董事会批准<strong>280英亩</strong>DC园区，闭环冷却，首期<strong>634MW</strong>。社区博弈后通过。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 美国中西部DC选址典型矛盾：农业社区vs科技巨头，634MW定位超大规模AI客户</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.datacenterdynamics.com/en/news/cyrusone-gets-go-ahead-for-data-center-in-sangamon-illinois/" target="_blank" style="color:#0f3460;text-decoration:underline;">DCD</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏗️</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">项目与市场</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">越南首个200MW AI DC $21亿 4月底开工</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">AIC集团SGI-HCM园区在胡志明市开建，投资<strong>$21亿</strong>、规划<strong>200MW</strong>。VNG/ST Telemedia合资DC已投运。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 越南从制造业出口国转型东南亚AI基建热土：廉价电力+年轻人才+中美供应链分散化三重驱动</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://w.media/vietnams-us2-billion-ai-data-center-to-start-construction-in-april/" target="_blank" style="color:#0f3460;text-decoration:underline;">W.Media</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏗️</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">项目与市场</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">光环新网：23万机柜规划，智算出海布局</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">已投产<strong>8.2万</strong>机柜，全国规划超<strong>23万</strong>个，内蒙古/海南/马来西亚有智算中心拓展计划。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 国内IDC上市公司加速"传统IDC→智算"转型，"出海+东数西算"双轮驱动，23万规划仍有近3倍扩张空间</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.nbd.com.cn/articles/2026-04-14/4338230.html" target="_blank" style="color:#0f3460;text-decoration:underline;">每日经济新闻</a></div>
+      </div>
+    </section>
+
+    <section id="sec-tech" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">⚡ 技术趋势 <span style="font-size:13px;color:#888;font-weight:400;">(1条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">⚡</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">技术趋势</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">科技巨头全面押注核能供电AI DC</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">Alphabet 2026年AI基建投入<strong>$1850亿</strong>（史上最大单年度企业科技投资），Amazon未来十年超<strong>$1万亿</strong>。SMR设计为邻近DC部署、自主运行。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 核能从"备选"晋升为超大规模DC"首选"电力方案，SMR商业化时间表从2030+提前到2028-2029</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="http://planet.news/article/big-tech-nuclear-ai-data-centers-april-2026" target="_blank" style="color:#0f3460;text-decoration:underline;">Planet News</a></div>
+      </div>
+    </section>
+
+    <section id="sec-policy" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">📜 政策法规 <span style="font-size:13px;color:#888;font-weight:400;">(3条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📜</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">政策法规</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">"算电协同"首次写入政府工作报告</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">明确实施超大规模智算集群、算电协同新基建工程。国家数据局要求新建算力设施<strong>绿电占比≥80%</strong>。电力成本占DC运营支出<strong>56.7%</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 算电协同从技术概念升级国家战略，将重构DC选址逻辑和电力设备市场格局</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://finance.cnr.cn/ycbd/20260316/t20260316_527553447.shtml" target="_blank" style="color:#0f3460;text-decoration:underline;">央广网</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📜</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">政策法规</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">美国BIS人员危机致AI芯片出口审批停滞</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">BIS流失<strong>101人</strong>（总人数减<strong>19%</strong>），审批周期从38天翻倍至<strong>76天</strong>。H200对华出货<strong>至今为零</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 BIS人员危机延缓全球AI芯片流通，冲击中东/亚太DC建设时间表，加速中国国产芯片替代</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.tomshardware.com/tech-industry/us-export-control-agency-has-lost-nearly-a-fifth-of-its-licensing-staff" target="_blank" style="color:#0f3460;text-decoration:underline;">Tom's Hardware/Bloomberg</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📜</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">政策法规</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">Ohio农业社区抵制DC秘密土地收购</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">科技公司通过匿名代理在Adams County秘密收购农地，出价达<strong>土地价值2倍</strong>。Sheffield市仅允许工业区建DC。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 美国多州面临"DC热"与农业保护立法平衡，预计2026下半年出现更多州级监管法案</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.cleveland.com/metro/2026/04/data-centers-and-secret-land-deals-target-ohio-farms-the-wake-up-for-monday-april-13-2026.html" target="_blank" style="color:#0f3460;text-decoration:underline;">Cleveland.com</a></div>
+      </div>
+    </section>
+
+    <section id="sec-supply" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">🔗 供应链动态 <span style="font-size:13px;color:#888;font-weight:400;">(2条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔗</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">供应链动态</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">美国近半DC项目延迟：变压器交期延至5年</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">2026年预计<strong>12GW</strong>美国DC产能上线，仅<strong>三分之一</strong>在建。变压器交期从24-30月延至<strong>最长5年</strong>。四大云厂商DC投入超<strong>$6500亿</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 电力设备已取代GPU成DC建设首要瓶颈，"有钱建不了"成2026年美国DC行业最大悖论</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.computeforecast.com/news/us-data-center-electrical-equipment-shortage-delays/" target="_blank" style="color:#0f3460;text-decoration:underline;">ComputeForecast</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔗</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">供应链动态</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">全球DC基建7天吸引$620亿/85笔交易</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">4/2-9日33笔纯DC交易创纪录。含Google印度<strong>$150亿</strong>、微软日本<strong>$100亿</strong>、黑石<strong>$46亿</strong>绿色债券。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 资本从AI软件层加速转向物理基建层，"能源一体化DC"模式加速成型</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://inforcapital.com/blog/2026-04-09-infrastructure-deals-hit-62-billion-in-7-days-ais-physical-backbone-gets-massive-capital-infusion/" target="_blank" style="color:#0f3460;text-decoration:underline;">InforCapital</a></div>
+      </div>
+    </section>
+
+    <section id="sec-bid" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">📋 招投标公告 <span style="font-size:13px;color:#888;font-weight:400;">(3条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📋</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">招投标公告</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">电科数字中标安徽农信社DC 6031万</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">中标安徽省农信社滨湖数据中心机房<strong>二期</strong>建设，金额<strong>6031.34万元</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 农信体系DC需求持续释放，电科数字央企背景在金融DC领域竞争力突出</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.msn.cn/zh-cn/money/other/电科数字-600850-中标安徽省农村信用社联合社采购项目-中标金额为6031-34万元/ar-AA20K7JC" target="_blank" style="color:#0f3460;text-decoration:underline;">同壁财经</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📋</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">招投标公告</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">联通阜新绿电智算中心EPC中标公示</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">辽宁阜新绿电智算中心新建工程（土建）<strong>EPC总承包</strong>中标候选人公示。利用当地风电/光伏资源。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 运营商加速东北/西部低电价区布局绿电智算，契合"东数西算+绿色算力"双重导向</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.rccchina.com/services/bid_project_list/FOcskM6iPZpUp3jE61qbUg==" target="_blank" style="color:#0f3460;text-decoration:underline;">RCC瑞达恒</a></div>
+      </div>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">📋</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">招投标公告</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">隆德县2000P智算中心机电EPC招标</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">宁夏固原隆德县智算中心，规划<strong>2000P FP16</strong>，自筹<strong>8000万</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 西部县域级智算中心建设提速，算力需求向基层渗透</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.rccchina.com/services/bid_project_list/DtyRgTCf3AJl-IzOOZhPkw==" target="_blank" style="color:#0f3460;text-decoration:underline;">公共资源交易</a></div>
+      </div>
+    </section>
+
+    <section id="sec-quote" style="margin-bottom:36px;">
+      <h2 style="font-size:22px;color:#1a1a2e;border-bottom:3px solid #e94560;padding-bottom:8px;margin-bottom:18px;">👀 人物与观点 <span style="font-size:13px;color:#888;font-weight:400;">(1条)</span></h2>
+      <div class="card" style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px 22px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:18px;">👀</span>
+          <span class="signal-badge" style="background:#e94560;color:#fff;padding:2px 10px;border-radius:12px;font-size:12px;">人物与观点</span>
+        </div>
+        <h3 class="card-title" style="font-size:17px;color:#16213e;margin:0 0 10px;">Dell'Oro Baron Fung：AI基建转向效率与ROI审视</h3>
+        <div class="card-body" style="font-size:14px;color:#333;line-height:1.7;margin-bottom:10px;">推理超越训练成部署增长主力；Vera Rubin下半年出货提升组件搭载率；HBM产能优先致<strong>DRAM/NAND价格急涨</strong>。DC Capex到2030年累计<strong>$1.7万亿</strong>。</div>
+        <div class="card-insight" style="background:#f8f8f8;border-left:3px solid #e94560;padding:10px 14px;font-size:13px;color:#555;margin-bottom:10px;line-height:1.6;">💡 AI投资回报若滞后于基建扩张，利润率将承压；近边缘DC成推理部署增量方向</div>
+        <div class="card-source" style="font-size:12px;color:#999;">📎 <a href="https://www.delloro.com/2026-predictions-data-center-infrastructure/" target="_blank" style="color:#0f3460;text-decoration:underline;">Dell'Oro Group</a></div>
+      </div>
+    </section>
 
 </div>
-<div class="footer">
-  <p>本日报由 AI 情报系统自动生成，仅供内部参考。信息以原始信源为准。</p>
-  <p style="margin-top:8px">🏢 IDC 行业情报日报 · <a href="index.html">归档站</a></p>
-</div>
-<script>
-function setTheme(t){document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'');localStorage.setItem('idc-theme',t);document.querySelectorAll('.theme-opt').forEach(function(b,i){b.classList.toggle('active',i===(t==='dark'?1:0));});}
-(function(){var t=localStorage.getItem('idc-theme');if(t)setTheme(t);})();
-</script>
 </body>
 </html>
