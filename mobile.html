@@ -1765,6 +1765,16 @@ function clearSearch() {
 }
 
 // ══════════════════════════════════════════════
+// NORMALIZE section names (en → zh)
+// ══════════════════════════════════════════════
+(function() {
+  var map = {signal:'重大',project:'项目',tech:'技术',policy:'政策',supply:'供应链',bid:'招投标',quote:'观点',recruit:'招聘',data:'数据'};
+  INTEL_ITEMS.forEach(function(item) {
+    if (map[item.section]) item.section = map[item.section];
+  });
+})();
+
+// ══════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════
 renderLatestHero();
