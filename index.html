@@ -78888,6 +78888,9 @@ function getCurrentTheme() {
 // ══════════════════════════════════════════════
 // RENDER: Latest Issue (最新一期完整内容)
 // ══════════════════════════════════════════════
+var SECTION_LABEL = {'signal':'重大','project':'项目','tech':'技术','policy':'政策','supply':'供应链','quote':'观点','bid':'招投标','recruit':'招聘','data':'数据'};
+var SECTION_ALIAS = {'重大':'signal','项目':'project','技术':'tech','政策':'policy','供应链':'supply','观点':'quote','招投标':'bid','招聘':'recruit','数据':'data'};
+
 function renderLatestIssue() {
   var latestSection = document.getElementById('latestSection');
   if (ISSUES.length === 0 || INTEL_ITEMS.length === 0) {
@@ -78902,22 +78905,24 @@ function renderLatestIssue() {
 
   // 按板块分组
   var items = INTEL_ITEMS.filter(function(i) { return i.issueId === latest.id; });
-  var sectionOrder = ['重大','项目','技术','政策','供应链','观点','招投标','数据'];
+  var sectionOrder = ['signal','project','tech','policy','supply','quote','bid','recruit','data'];
   var groups = {};
   items.forEach(function(item) {
-    if (!groups[item.section]) {
-      groups[item.section] = { name: item.sectionName || item.section, items: [] };
+    var key = SECTION_ALIAS[item.section] || item.section;
+    if (!groups[key]) {
+      groups[key] = { name: item.sectionName || item.section, items: [] };
     }
-    groups[item.section].items.push(item);
+    groups[key].items.push(item);
   });
 
   var html = '';
   sectionOrder.forEach(function(sec) {
     if (!groups[sec]) return;
     var g = groups[sec];
+    var secZh = SECTION_LABEL[sec] || sec;
     html += '<div class="sec-group">';
     html += '<div class="sec-group-header">';
-    html += '<span class="sec-group-badge badge-' + sec + '">' + sec + '</span>';
+    html += '<span class="sec-group-badge badge-' + secZh + '">' + secZh + '</span>';
     html += '<span class="sec-group-name">' + g.name + '</span>';
     html += '<span class="sec-group-count">' + g.items.length + ' 条</span>';
     html += '</div>';
@@ -78937,7 +78942,8 @@ function renderLatestIssue() {
 
       html += '<div class="intel-card">';
       html += '<div class="intel-card-header">';
-      html += '<span class="intel-badge badge-' + item.section + '">' + item.section + '</span>';
+      var itemSecZh = SECTION_LABEL[item.section] || item.section;
+      html += '<span class="intel-badge badge-' + itemSecZh + '">' + itemSecZh + '</span>';
       html += '<div class="intel-title">' + item.title + '</div>';
       html += '</div>';
       html += '<div class="intel-body">' + item.body + '</div>';
@@ -78991,7 +78997,7 @@ function renderIssues(list) {
         '<div class="issue-meta">' +
           '<span class="issue-tag tag-intel">' + issue.intelCount + ' 条情报</span>' +
           '<span class="issue-tag tag-amount">¥ ' + issue.totalAmount + '</span>' +
-          '<span class="issue-tag tag-sections">' + issue.sections + ' 板块</span>' +
+          '<span class="issue-tag tag-sections">' + (Array.isArray(issue.sections) ? issue.sections.length : issue.sections) + ' 板块</span>' +
         '</div>' +
         '<div class="issue-summary">' + issue.summary + '</div>' +
       '</div>' +
@@ -79031,7 +79037,7 @@ function renderIntelResults(items, query) {
     var linkUrl = item.issueFile + '#' + item.sectionAnchor;
     return '<div class="intel-card">' +
       '<div class="intel-card-header">' +
-        '<span class="intel-badge badge-' + item.section + '">' + item.section + '</span>' +
+        '<span class="intel-badge badge-' + (SECTION_LABEL[item.section] || item.section) + '">' + (SECTION_LABEL[item.section] || item.section) + '</span>' +
         '<div class="intel-title">' + titleHtml + '</div>' +
       '</div>' +
       '<div class="intel-body">' + bodyHtml + '</div>' +
