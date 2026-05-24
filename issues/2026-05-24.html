@@ -3,138 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IDC日报·第36期 2026-05-24</title>
+<title>IDC日报·第38期 2026-05-24（增补版）</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f8f9fa;color:#1a1a1a;line-height:1.7}
-.container{max-width:900px;margin:0 auto;padding:20px}
+.container{max-width:920px;margin:0 auto;padding:20px}
 .header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;padding:40px 30px;border-radius:12px;margin-bottom:30px}
 .header h1{font-size:28px;margin-bottom:8px}.header .meta{font-size:14px;opacity:.85}
 .stats{display:flex;gap:20px;margin-top:16px;flex-wrap:wrap}
 .stat{background:rgba(255,255,255,.15);padding:8px 16px;border-radius:8px;text-align:center}
 .stat .num{font-size:24px;font-weight:700}.stat .label{font-size:11px;opacity:.8}
 .section{background:#fff;border-radius:10px;padding:25px 30px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.section h2{font-size:20px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid}
-.section h2.signal{color:#d32f2f;border-color:#d32f2f}.section h2.project{color:#1565c0;border-color:#1565c0}
-.section h2.tech{color:#2e7d32;border-color:#2e7d32}
-.section h2.policy{color:#e65100;border-color:#e65100}.section h2.supply{color:#6a1b9a;border-color:#6a1b9a}
-.section h2.recruit{color:#00695c;border-color:#00695c}
-.section h2.bid{color:#00838f;border-color:#00838f}.section h2.quote{color:#37474f;border-color:#37474f}
-.item{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid #f0f0f0}
-.item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.item h3{font-size:16px;margin-bottom:8px}.item h3 a{color:#1565c0;text-decoration:none}
-.item p{font-size:14px;color:#333;margin-bottom:8px}
-.insight{background:#f5f5f5;padding:10px 14px;border-radius:6px;font-size:13px;color:#555;font-style:italic;margin:8px 0}
+.section h2{font-size:20px;margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid}
+.section .desc{color:#888;font-size:12px;margin-bottom:16px}
+.section h2.cat1{color:#d32f2f;border-color:#d32f2f}
+.section h2.cat2{color:#1565c0;border-color:#1565c0}
+.section h2.cat3{color:#6a1b9a;border-color:#6a1b9a}
+.section h2.cat4{color:#e65100;border-color:#e65100}
+.section h2.cat5{color:#2e7d32;border-color:#2e7d32}
+.section h2.cat6{color:#37474f;border-color:#37474f}
+.vendor-block{margin-bottom:18px;padding:14px 16px;background:#fafafa;border-left:3px solid #1565c0;border-radius:4px}
+.vendor-block.cat1{border-left-color:#d32f2f}
+.vendor-block.cat2{border-left-color:#1565c0}
+.vendor-block.cat3{border-left-color:#6a1b9a}
+.vendor-block.cat4{border-left-color:#e65100}
+.vendor-block.cat5{border-left-color:#2e7d32}
+.vendor-name{font-weight:700;font-size:15px;color:#1a237e;margin-bottom:6px}
+.vendor-block p{font-size:14px;color:#333;margin-bottom:6px}
+.insight{background:#fffde7;padding:8px 12px;border-radius:4px;font-size:13px;color:#5d4037;margin:6px 0}
 .source{font-size:12px;color:#999}
-.badge{display:inline-block;background:#e3f2fd;color:#1565c0;font-size:11px;padding:2px 8px;border-radius:10px;margin:2px}
+.source a{color:#1565c0;text-decoration:none}
+.summary-box{background:#f5f5f5;padding:14px 18px;border-radius:6px;margin-top:20px}
+.summary-box h3{font-size:15px;margin-bottom:8px;color:#333}
+.summary-box ol{padding-left:20px;font-size:13px;color:#555}
+.summary-box li{margin-bottom:4px}
 .footer{text-align:center;padding:20px;font-size:12px;color:#999}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="header">
-<h1>🏢 IDC 行业情报日报 · 第36期</h1>
-<div class="meta">2026年5月24日（周六） | 10条情报 | 7板块覆盖</div>
-<div class="stats">
-<div class="stat"><div class="num">$668亿</div><div class="label">NextEra并购</div></div>
-<div class="stat"><div class="num">$816亿</div><div class="label">NVIDIA Q1营收</div></div>
-<div class="stat"><div class="num">10</div><div class="label">情报条数</div></div>
-<div class="stat"><div class="num">40%</div><div class="label">液冷渗透率</div></div>
-</div>
-</div>
-
-<div class="section" id="sec-signal">
-<h2 class="signal">🔥 重大信号</h2>
-
-<div class="item">
-<h3><a href="https://www.stcn.com/article/detail/3915148.html" target="_blank">NextEra Energy以$668亿收购Dominion Energy：美国电力史最大并购</a></h3>
-<p>全股票交易，合并后企业价值约$4200亿。Dominion覆盖弗吉尼亚"数据中心走廊"，签约DC供电产能近51GW，客户涵盖Google、Amazon、Microsoft、Meta、Equinix、CoreWeave。</p>
-<div class="insight">"电力即算力瓶颈"从行业判断变为资本行动。$668亿体量意味着华尔街认为DC用电需求增长是确定性最高的基础设施趋势。电力资源战略绑定将成新一轮竞争壁垒。</div>
-<div class="source">路透社/第一财经/CNBC 5/18</div>
+  <h1>IDC 行业情报日报 · 第38期</h1>
+  <div class="meta">2026-05-24（周日） · 国际大厂深度监控版 · 时间窗口 24h（5/23–5/24）</div>
+  <div class="stats">
+    <div class="stat"><div class="num">22</div><div class="label">条情报</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">大类厂商</div></div>
+    <div class="stat"><div class="num">$2470亿+</div><div class="label">CapEx 总规模</div></div>
+    <div class="stat"><div class="num">21+</div><div class="label">家国际大厂</div></div>
+  </div>
 </div>
 
-<div class="item">
-<h3><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027" target="_blank">英伟达FY27Q1营收$816亿(+85%)，数据中心$752亿(+92%)：黄仁勋称AI基建年支出将达$3-4万亿</a></h3>
-<p>净利润$583亿(+211%)，Q2指引$910亿。超大规模云AI CapEx已达年$1万亿，黄仁勋预计将增长至$3-4万亿。数据中心拆分Hyperscale($380亿/季)+ACIE($370亿/季)，Vera CPU打开$2000亿新市场。</p>
-<div class="insight">$752亿单季DC收入=英伟达年DC业务$3000亿，相当于整个中国半导体产业年产值。$3-4万亿年支出预判是对DC产业链最激进增长预期，5年+超级投资周期被最核心芯片供应商确认。</div>
-<div class="source">英伟达官网/证券时报 5/20</div>
-</div>
-</div>
+<!-- ========== 一、超大规模云厂商 ========== -->
+<div class="section">
+<h2 class="cat1">🏢 一、超大规模云厂商（Hyperscalers）</h2>
+<div class="desc">全球数据中心建设最大投资方，AI算力驱动 CapEx 高速增长 · 2026 年合计资本支出 $7250 亿</div>
 
-<div class="section" id="sec-project">
-<h2 class="project">🏗️ 项目与市场</h2>
-
-<div class="item">
-<h3><a href="https://governor.mo.gov/press-releases/archive/missouri-secures-15-billion-investment-google-montgomery-county" target="_blank">Google在密苏里州投资$150亿新建数据中心：紧邻Amazon $350亿项目</a></h3>
-<p>占地超900英亩，已签约引入超1GW新增发电容量，与Ameren合作开发超500MW额外产能。设立$2000万能源影响基金。Google CEO宣布2026全年CapEx达$1800-1900亿（2022年$310亿，6倍增长）。</p>
-<div class="insight">Google+Amazon在密苏里同县比邻而建，两项目合计$500亿/2000英亩，该州正成为继弗吉尼亚、德克萨斯后美国第三大DC投资目的地。</div>
-<div class="source">密苏里州政府/CRN 5/21</div>
+<div class="vendor-block cat1">
+  <div class="vendor-name">Microsoft Azure</div>
+  <p>📍 <strong>佐治亚 East US 3 新区域</strong>：Fulton + Douglas 两县建设，作为美国新一代数据中心枢纽。</p>
+  <p>📍 <strong>俄亥俄 New Albany & Hebron 工地推进</strong>：5 月持续场平施工，部分周日加班保进度。</p>
+  <p>📍 <strong>印度 Hyderabad 数据中心 2026 年中投运</strong>：印度最大 DC，承接 $175 亿在印总投资（亚洲最大）。</p>
+  <div class="insight">💡 影响：Azure 全球 CapEx 持续高位，<strong>印度成为亚洲核心增长极</strong>，在印投资规模超越东南亚总和。</div>
+  <div class="source">来源：<a href="https://azure.microsoft.com/zh-tw/blog/microsoft-will-establish-its-next-us-datacenter-region-in-georgia-s-fulton-and-douglas-counties/">Microsoft Azure</a> · <a href="https://www.ndtvprofit.com/business/microsoft-speeds-up-india-ai-push-with-mega-hyderabad-data-centre-11518356">NDTV Profit</a></div>
 </div>
 
-<div class="item">
-<h3><a href="https://inforcapital.com/news/prime-data-centers-breaks-ground-on-three-out-of-five-buildings-at-its-240mw-campus-in-phoenix-arizona/" target="_blank">Prime Data Centers凤凰城240MW园区动工：$30亿总投资，首批全部预租</a></h3>
-<p>亚利桑那州Avondale PHX01园区，首批3栋建筑各48MW（共144MW首期），总规划5栋/240MW IT负载/66.5英亩。配备专用250MW变电站和闭环冷却。首批3栋已被一家超大规模运营商全部预租。</p>
-<div class="insight">凤凰城凭电力可用性和土地优势崛起为美国DC新热点，动工即预租清空验证AI DC供不应求。</div>
-<div class="source">InforCapital 5/21</div>
-</div>
-</div>
-
-<div class="section" id="sec-tech">
-<h2 class="tech">⚡ 技术趋势</h2>
-
-<div class="item">
-<h3><a href="https://finance.eastmoney.com/a/202605213745390545.html" target="_blank">液冷渗透率2026年达40%：上海千人峰会确认液冷从"可选"变"必选"</a></h3>
-<p>TrendForce：AI DC液冷渗透率2024年14%→2025年33%→2026年40%。英伟达Rubin NVL72与Google TPUv7均100%全液冷。川润股份液冷收入2.25亿(+77.8%)，申菱环境新增订单+72%。美的投资超10亿元建顺德液冷基地（2027投产）。</p>
-<div class="insight">40%渗透率=液冷过"概念验证"进入"放量交付"。头部设备商订单增速70-80%，2026年是液冷从可选件变标配的分水岭。</div>
-<div class="source">证券日报/东方财富 5/21</div>
-</div>
+<div class="vendor-block cat1">
+  <div class="vendor-name">Amazon AWS（重磅 ⭐）</div>
+  <p>💰 <strong>$500亿扩建美国政府专区</strong>：AWS Top Secret/Secret/GovCloud 三大政府专区新增近 1.3GW AI 算力，史上最大规模公共部门云投资。</p>
+  <p>💰 <strong>$150亿印第安纳追加投资</strong>：北部园区新增 2.4GW 容量，作为 Project Rainier 核心枢纽，创造 1100+ 高技能岗位。</p>
+  <p>💰 <strong>$120亿路易斯安那首批数据中心</strong>：5/4 公布，540 个现场岗位、1700 个社区岗位。</p>
+  <p>💰 <strong>$40亿+智利 AWS 区域</strong>：5/7 宣布，2026 年底前启动南美第二大基础设施区域。</p>
+  <p>💰 <strong>$200亿 2026 全年 CapEx</strong>：从 $1318 亿暴增 52%，$3640 亿合同积压验证需求。</p>
+  <div class="insight">💡 影响：AWS 进入<strong>"国家算力主权"</strong>新阶段，政府专区、新地理布局、产业链全面铺开，单家全年 CapEx 即超中国半导体年产值。</div>
+  <div class="source">来源：<a href="https://tw.stock.yahoo.com/news/亞馬遜斥資500億美元擴建美政府AI算力-再加碼印第安納數據中心-235602588.html">Yahoo财经</a> · <a href="https://www.ainvest.com/news/amazon-priced-perfection-200b-ai-bet-leaves-room-error-2605/">AInvest</a></div>
 </div>
 
-<div class="section" id="sec-policy">
-<h2 class="policy">📜 政策法规</h2>
-
-<div class="item">
-<h3><a href="https://www.21jingji.com/article/20260521/herald/85a9da5fd9b5eabd156c139c13a1f0b3.html" target="_blank">美国反DC运动升级：新泽西1.4GW项目被禁，达拉斯暂停，国会首次举行DC水污染听证</a></h3>
-<p>①新泽西Millville全面禁止DC建设，叫停1.4GW/60英亩项目；②达拉斯暂停DC新建，ERCOT预测2032年DC用电新增111GW；③国会能源委员会首次就DC水污染举行听证，EPA承诺介入；④全美已提出300+项DC限制法案。</p>
-<div class="insight">反DC运动从地方NIMBYism升级为联邦政策议题。300+法案系统性收紧选址空间，"有电+有水+有许可"三重约束推高美国DC用地溢价，为海外市场创造转移机遇。</div>
-<div class="source">21经济/钛媒体/IT之家 5/20-23</div>
-</div>
+<div class="vendor-block cat1">
+  <div class="vendor-name">Google Cloud / DeepMind（重磅 ⭐）</div>
+  <p>💰 <strong>密苏里州 $150亿新 DC</strong>：占地 900 英亩，签约 1GW+ 新增发电，紧邻 Amazon $350亿园区。</p>
+  <p>💰 <strong>2026 全年 CapEx $1800-1900亿</strong>，是 2022 年 6 倍。</p>
+  <div class="insight">💡 影响：Google + Amazon 同县 $500亿比邻建设，<strong>密苏里崛起为美国第三大 DC 投资目的地</strong>。</div>
+  <div class="source">来源：<a href="https://governor.mo.gov/press-releases/archive/missouri-secures-15-billion-investment-google-montgomery-county">密苏里州政府</a></div>
 </div>
 
-<div class="section" id="sec-supply">
-<h2 class="supply">🔗 供应链动态</h2>
-
-<div class="item">
-<h3><a href="https://www.cnstock.com/commonDetail/717441" target="_blank">长江计算中标中国移动$19亿ARM服务器集采：运营商算力国产化加速</a></h3>
-<p>中标全部4个ARM架构标包，金额超19亿元。一个月前已以超5亿元中标AI超节点集采。加上中国电信、联通大额订单，长江计算已成三大运营商算力网络核心供应商。</p>
-<div class="insight">一个月内连中24亿元运营商大单（19亿ARM+5亿AI超节点），运营商算力基础设施已形成"ARM优先"国产化路线，华为鲲鹏生态话语权持续增强。</div>
-<div class="source">上海证券报 5/20</div>
-</div>
-</div>
-
-<div class="section" id="sec-bid">
-<h2 class="bid">📋 招投标公告</h2>
-
-<div class="item">
-<h3><a href="https://m.c114.com.cn/w117-1310205.html" target="_blank">中国电信174亿元"Token工厂"集采：首个百亿级Token生成能力服务采购</a></h3>
-<p>宁夏分公司2026年"Token工厂"预估规模174.38亿元（含税），11个标包，服务期60个月。标包一（14.5亿元）6家中标：华胜天成/乐讯科技/湖北大数据/清芯智算/创世云/东方国信。</p>
-<div class="insight">电信将AI推理封装为"Token生成服务"大规模集采，从"卖算力"走向"卖Token"。174亿元总量级说明Token经济规模化需求确定，联通/移动大概率跟进。</div>
-<div class="source">C114/21经济/证券时报 5/13-20</div>
-</div>
+<div class="vendor-block cat1">
+  <div class="vendor-name">Meta（重磅 ⭐）</div>
+  <p>🏗️ <strong>Prometheus 园区 2026 投运</strong>：俄亥俄 New Albany，占地 22.8 平方英里（≈半个曼哈顿）。</p>
+  <p>🏗️ <strong>Hyperion 园区路易斯安那</strong>：目标 5GW 容量，2030 年完工。</p>
+  <p>💰 <strong>德州 El Paso $130亿融资</strong>：大摩+小摩主导，目标 1GW，2028 年投运。</p>
+  <p>💰 <strong>2026 全年 CapEx $1150-1350亿</strong>，同比增 73-75%。</p>
+  <p>🤝 <strong>与 AWS Graviton 合作</strong>：3-5 年部署数千万 Graviton 核心，跻身 AWS 前五客户。</p>
+  <div class="insight">💡 影响：扎克伯格<strong>"用资金买 AI 主导权"</strong>路径清晰，举债建 DC 成大厂新常态（Meta 去年完成 $300亿融资）。</div>
+  <div class="source">来源：<a href="https://www.civitas.global/story/a2S2qp4UYoDQ">Civitas Global</a> · <a href="https://statementdog.com/news/16380">财报狗</a></div>
 </div>
 
-<div class="section" id="sec-quote">
-<h2 class="quote">👀 人物与观点</h2>
+<div class="vendor-block cat1">
+  <div class="vendor-name">Oracle Cloud（重磅 ⭐）</div>
+  <p>💰 <strong>2026 年募资 $450-500亿</strong>：股权+债券各半，专项扩建 OCI，已签约 OpenAI/AMD/Meta/NVIDIA/TikTok/xAI。</p>
+  <p>💰 <strong>密歇根 Saline Township $160亿园区融资落定</strong>：太平洋投资认购 $100亿债券（票息 7.5%/2045 到期）。</p>
+  <p>⚡ <strong>新墨西哥 Jupiter 园区改用 Bloom 燃料电池</strong>：2.45GW 装机（≈2-3 座核反应堆），替代燃气方案。</p>
+  <p>📊 <strong>RPO 积压订单 $5230亿</strong>：FY26 OCI 营收指引 $180亿→FY30 目标 $1440亿。</p>
+  <p>📊 <strong>FY26 CapEx ≈$500亿</strong>，是 2024 年的 7 倍。</p>
+  <div class="insight">💡 影响：<strong>Oracle 把全部未来押注在 OCI</strong>，超 $5000亿订单背书+燃料电池绕开电网瓶颈，成为 AWS/Azure/GCP 之外的第四极。</div>
+  <div class="source">来源：<a href="https://www.communicationstoday.co.in/oracle-plans-45-50b-fundraise-in-2026-to-expand-cloud-infra/">Communications Today</a> · <a href="https://new.qq.com/rain/a/20260430A058D800">腾讯新闻</a></div>
+</div>
 
-<div class="item">
-<h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-23/doc-inhyvxrs4628143.shtml" target="_blank">高盛研报"中国数据中心"：预测2025-28需求CAGR 20%，首次覆盖润泽科技予"买入"</a></h3>
-<p>核心观点：中国超大规模AI基建支出显著低于美国，追赶空间大；2025-28中国DC需求20% CAGR。首次覆盖润泽科技（目标价117元），看好总6GW容量储备，预计营收/EBITDA CAGR达40%/47%。中金同日上调万国数据目标价至$60。</p>
-<div class="insight">高盛+中金同日发布看多报告=国际顶级投行集中加注中国AI DC赛道。20% CAGR对应4年翻倍，润泽6GW容量储备被资本重新定价。</div>
-<div class="source">高盛/中金公司/新浪财经 5/23</div>
+</div>
+
+<!-- ========== 二、芯片与硬件供应商 ========== -->
+<div class="section">
+<h2 class="cat2">🔬 二、芯片与硬件供应商</h2>
+<div class="desc">决定数据中心算力密度与功率的核心供应链</div>
+
+<div class="vendor-block cat2">
+  <div class="vendor-name">NVIDIA（重磅 ⭐）</div>
+  <p>📊 <strong>FY27Q1 营收 $816亿（+85% YoY）</strong>，DC 业务 $752亿（+92%）。</p>
+  <p>💰 <strong>净利润 $583亿（+211%）</strong>，Q2 指引 $910亿。</p>
+  <p>🎤 黄仁勋：AI 基建年支出将达 <strong>$3-4万亿</strong>，5 年总投入 $15-20万亿。</p>
+  <p>🆕 DC 业务拆分 Hyperscale + ACIE，<strong>Vera Rubin 平台开拓 $2000亿新市场</strong>。</p>
+  <div class="insight">💡 影响：年 DC 业务 $3000亿=中国半导体全年产值，确认<strong>5 年+超级投资周期</strong>。</div>
+  <div class="source">来源：<a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027">英伟达官网</a></div>
+</div>
+
+<div class="vendor-block cat2">
+  <div class="vendor-name">AMD（重磅 ⭐）</div>
+  <p>📊 <strong>Q1 营收 $102.53亿（+38%）</strong>，数据中心业务 $58亿（+57%），<strong>首次反超英特尔</strong>。</p>
+  <p>🚀 苏姿丰将 2030 年服务器 CPU TAM 上调至 <strong>$1200亿</strong>（CAGR 35%+，原预测 18%）。</p>
+  <p>🤝 <strong>Meta 部署 6GW AMD Instinct GPU</strong>（继 OpenAI 6GW 之后第二笔超大订单）。</p>
+  <p>🆕 5/19 上海 AI 开发者日，将发布机架级系统 <strong>Helios</strong>（对标 NVL72）。</p>
+  <p>💰 美银/巴克莱/高盛上调目标价至 $450-500，市值一度超 $7400亿。</p>
+  <div class="insight">💡 影响：<strong>CPU 价值全面重估</strong>——AI 智能体场景 CPU 部署量超 GPU，AMD 双芯优势凸显，打破 Intel 在 DC 的垄断。</div>
+  <div class="source">来源：<a href="https://lifenews.com.tw/511407">民生电子报</a> · <a href="https://www.stcn.com/article/detail/3911147.html">证券时报</a></div>
+</div>
+
+<div class="vendor-block cat2">
+  <div class="vendor-name">Supermicro</div>
+  <p>🆕 <strong>NVIDIA HGX B300 / GB300 NVL72 系统出货</strong>：基于 DCBBS（数据中心积木方案）的 AI 工厂集群方案。</p>
+  <p>🆕 集群规模 4 节点（32 GPU）→ 32 节点（256 GPU），全部 L12 多机架级测试。</p>
+  <div class="insight">💡 影响：Supermicro 巩固<strong>新一代 GPU 上市最快交付商</strong>地位，AI 工厂"开箱即用"成为标配。</div>
+  <div class="source">来源：<a href="https://www.supermicro.com/es/pressreleases/supermicro-announces-new-ai-factory-cluster-solutions-based-nvidia-enterprise">Supermicro 官网</a></div>
+</div>
+
+</div>
+
+<!-- ========== 三、第三方数据中心运营商 ========== -->
+<div class="section">
+<h2 class="cat3">🏗️ 三、第三方数据中心运营商（Colo / REIT）</h2>
+<div class="desc">为云厂商及企业提供托管服务，建设规模直接反映行业景气</div>
+
+<div class="vendor-block cat3">
+  <div class="vendor-name">Equinix（重磅 ⭐）</div>
+  <p>🆕 <strong>Fabric Geo Zones 全球扩张</strong>（5/14）：覆盖 5 大洲、77 城，业内首个网络层级数据主权强制方案，6 月将上线欧盟。</p>
+  <p>📊 <strong>Q1 营收 $24亿（+8%）</strong>，调整后 EBITDA $12亿（+13%/利润率 51%）。</p>
+  <p>📊 <strong>美国 DC 建设支出 3 月年化 $500亿（+34% YoY）</strong>，自 2021 年初飙升 437%，超越办公楼建设。</p>
+  <div class="insight">💡 影响：<strong>主权 AI</strong>成为继多云、AI 之后第三大需求驱动；Equinix+DLR 双龙头继续从这场资本浪潮获利。</div>
+  <div class="source">来源：<a href="https://investor.equinix.com/news-events/press-releases/detail/1109/equinix-puts-enterprises-in-control-of-data-sovereignty">Equinix IR</a> · <a href="https://www.hstong.com/news/detail/26051419200122575">华盛通</a></div>
+</div>
+
+<div class="vendor-block cat3">
+  <div class="vendor-name">Digital Realty</div>
+  <p>📈 受益 AI DC 建设潮，Q1 与 Equinix 同步获机构上调评级，PlatformDIGITAL 亚太扩张持续。</p>
+  <div class="source">来源：<a href="https://www.hstong.com/news/detail/26051419200122575">华盛通</a></div>
+</div>
+
+<div class="vendor-block cat3">
+  <div class="vendor-name">Prime Data Centers（新晋玩家）</div>
+  <p>🏗️ <strong>凤凰城 PHX01 园区 240MW 动工</strong>：5 栋/$30亿，首批 3 栋（各 48MW）已被超大规模运营商<strong>全部预租</strong>。</p>
+  <p>⚡ 配套专用 250MW 变电站。</p>
+  <div class="insight">💡 影响：<strong>动工即预租清空</strong>验证 AI DC 供不应求，凤凰城超越达拉斯成新热点。</div>
+  <div class="source">来源：<a href="https://inforcapital.com/news/prime-data-centers-breaks-ground-on-three-out-of-five-buildings-at-its-240mw-campus-in-phoenix-arizona/">InforCapital</a></div>
+</div>
+
+<div class="vendor-block cat3">
+  <div class="vendor-name">国内 IDC 头部</div>
+  <p>📊 <strong>高盛首次覆盖润泽科技予"买入"</strong>：目标价 117 元，6GW 总容量储备，预测中国 DC 需求 2025-28 CAGR 20%。</p>
+  <p>📊 <strong>中金同日上调万国数据至 $60</strong>。</p>
+  <div class="insight">💡 影响：<strong>国际顶投集中加注中国 AI DC 赛道</strong>——高盛+中金联手，外资定价权发生切换。</div>
+  <div class="source">来源：<a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-23/doc-inhyvxrs4628143.shtml">高盛/新浪财经</a></div>
+</div>
+
+</div>
+
+<!-- ========== 四、电力/冷却/基础设施 ========== -->
+<div class="section">
+<h2 class="cat4">⚡ 四、电力 / 冷却 / 基础设施供应商</h2>
+<div class="desc">数据中心能耗与 PUE 优化的核心配套</div>
+
+<div class="vendor-block cat4">
+  <div class="vendor-name">Vertiv（重磅 ⭐）</div>
+  <p>📊 <strong>Q1 调整后净利润 +83%</strong>，订单积压 $150亿（翻倍），Americas 有机营收 +44%。</p>
+  <p>📊 调整后运营利润率扩张 430bp 至 20.8%，2026 营收增 30%、净利增 51%。</p>
+  <p>🤝 <strong>收购 Strategic Thermal Labs</strong>：补强冷板设计与服务器侧液冷验证能力。</p>
+  <p>🆕 <strong>CoolLoop RDHx 冷冻水背板空调</strong>：单柜 80kW，与 D2C 液冷协同。</p>
+  <p>💰 俄亥俄工厂 $5000万扩产液冷。</p>
+  <div class="insight">💡 影响：<strong>过去一年股价 +250%、PE 47×</strong>，AI 算力周期把传统工业企业重塑为高估值科技股。</div>
+  <div class="source">来源：<a href="https://finance.yahoo.com/markets/stocks/articles/data-center-demand-drove-vertivs-232500588.html">Yahoo Finance</a> · <a href="https://www.vertiv.com/zh-CN/about/news-and-insights/news-releases/2026/vertiv-technologies-launched-the-vertiv-coolloop-rdhx/">Vertiv 官网</a></div>
+</div>
+
+<div class="vendor-block cat4">
+  <div class="vendor-name">Schneider Electric（施耐德）</div>
+  <p>🆕 <strong>冷板式液冷 CDU 系统正式发布</strong>：覆盖温控/流控/压控/流体处理/隔离 5 大功能，机柜内/落地式两种型号。</p>
+  <p>🆕 <strong>Motivair 收购完成</strong>：旗下 MCDU-70（2.5MW CDU）成为业内最大容量 CDU。</p>
+  <p>🤝 <strong>与 NVIDIA 联合发布智算中心 99 号参考设计</strong>：3770kW AI 集群完整方案。</p>
+  <div class="insight">💡 影响：<strong>"风液兼容全栈制冷"</strong>成为施耐德核心战略，IDC 预测中国液冷服务器 2023-28 CAGR 45.8%（→$102亿）。</div>
+  <div class="source">来源：<a href="http://www.hansenfluid.com/dc/Schneider-lc-CDU.htm">汉深流体</a> · <a href="https://www.blackridgeresearch.com/blog/latest-list-top-largest-biggest-data-center-cooling-companies-world">Blackridge Research</a></div>
+</div>
+
+<div class="vendor-block cat4">
+  <div class="vendor-name">Daikin（大金）</div>
+  <p>🤝 <strong>11 月收购 Chilldyne</strong>：负压液冷系统专家，进入高密 AI DC 液冷市场。</p>
+  <div class="source">来源：<a href="https://www.blackridgeresearch.com/blog/latest-list-top-largest-biggest-data-center-cooling-companies-world">Blackridge Research</a></div>
+</div>
+
+<div class="vendor-block cat4">
+  <div class="vendor-name">液冷板块整体</div>
+  <p>📊 <strong>TrendForce：液冷渗透率 14%→33%→40%</strong>（2026），Rubin NVL72 / TPUv7 均 100% 全液冷。</p>
+  <p>📈 川润股份+77.8%，申菱环境+72%。</p>
+  <p>💰 <strong>美的投 10亿建液冷基地</strong>。</p>
+  <div class="insight">💡 影响：<strong>40% 渗透率=放量交付阶段</strong>，2026 年为液冷从可选变标配的分水岭。</div>
+  <div class="source">来源：<a href="https://finance.eastmoney.com/a/202605213745390545.html">证券日报/东方财富</a></div>
+</div>
+
+</div>
+
+<!-- ========== 五、新兴算力 / AI 基础设施 ========== -->
+<div class="section">
+<h2 class="cat5">🚀 五、新兴算力 / AI 基础设施厂商</h2>
+<div class="desc">AI 时代崛起的新玩家，代表行业演进方向</div>
+
+<div class="vendor-block cat5">
+  <div class="vendor-name">CoreWeave（重磅 ⭐）</div>
+  <p>📊 <strong>Q1 营收 $21亿（+112%）</strong>，订单积压 <strong>$994亿</strong>（环比+50%/同比 4×），单季度新增承诺超 $400亿。</p>
+  <p>⚡ <strong>有效电力突破 1GW</strong>（vs 去年 420MW），签约电力 3.5GW，2030 目标 8GW。</p>
+  <p>💰 <strong>2026 CapEx 上调至 $310-350亿</strong>，史上首笔 HPC 基础设施支撑的投资级贷款（A- 评级，<6%）。</p>
+  <p>🤝 4 月与 Meta 签订 <strong>$210亿合作协议</strong>，Anthropic 也签新约。</p>
+  <p>📊 <strong>50% 算力转向推理</strong>，A100/H100 全面售罄，价格环比上涨。</p>
+  <div class="insight">💡 影响：<strong>"AI 变现 = 推理"</strong>共识形成，AI 算力供需结构由训练驱动转向推理驱动，推动 GPU 老型号价格上涨。</div>
+  <div class="source">来源：<a href="https://new.qq.com/rain/a/20260508A022TL00">腾讯新闻</a> · <a href="https://www.datacenterdynamics.com/en/news/coreweave-surpasses-1gw-of-data-center-capacity-pushes-more-into-self-builds/">DCD</a></div>
+</div>
+
+<div class="vendor-block cat5">
+  <div class="vendor-name">Crusoe Energy（重磅 ⭐）</div>
+  <p>🏗️ <strong>怀俄明 Project Jade 园区</strong>：10GW AI 园区（初期 1.8GW，2032 全建成），659 英亩能源综合体+600 英亩 DC 园区。</p>
+  <p>💰 总投资 $500亿，配套 Tallgrass CO₂ 管网+碳捕集预留。</p>
+  <p>⚡ 闭环液冷"零空气"架构，PUE 目标 <1.10。</p>
+  <div class="insight">💡 影响：<strong>"DC + 自建发电厂"模式</strong>成新趋势——绕开电网瓶颈，单园区即媲美一座中型城市。</div>
+  <div class="source">来源：<a href="https://dcpulse.com/project/project-jade-cheyenne-10-gigawatt-ai-data-center-campus">DCPulse</a></div>
+</div>
+
+<div class="vendor-block cat5">
+  <div class="vendor-name">国内对标</div>
+  <p>📊 <strong>长江计算中标中国移动 19亿 ARM 服务器集采</strong>：4 个 ARM 标包全部中标，月内连中 24 亿运营商大单（19 亿 ARM + 5 亿 AI 超节点）。</p>
+  <p>📊 <strong>中国电信 174亿 Token 工厂集采</strong>：11 标包/60 个月，标包一 14.5 亿 6 家中标。</p>
+  <div class="insight">💡 影响：<strong>运营商完成"卖算力→卖 Token"转型</strong>，ARM 优先国产化路线确立，华为鲲鹏生态话语权增强。</div>
+  <div class="source">来源：<a href="https://www.cnstock.com/commonDetail/717441">上海证券报</a> · <a href="https://m.c114.com.cn/w117-1310205.html">C114</a></div>
+</div>
+
+</div>
+
+<!-- ========== 六、政策法规与电力供给 ========== -->
+<div class="section">
+<h2 class="cat6">📜 六、政策法规与电力供给</h2>
+<div class="desc">电力红线与社区抵制成为新瓶颈</div>
+
+<div class="vendor-block">
+  <div class="vendor-name">美国反 DC 运动升级</div>
+  <p>🚫 <strong>新泽西 Millville 全面禁建 1.4GW</strong>（市议会通过）。</p>
+  <p>🚫 <strong>达拉斯暂停审批</strong>，国会就 DC 用水问题首次召开听证会。</p>
+  <p>📊 <strong>ERCOT 预测 2032 年 DC 用电新增 111GW</strong>。</p>
+  <p>📊 <strong>全美 300+ 项 DC 限制法案</strong>。</p>
+  <div class="insight">💡 影响：<strong>反 DC 运动从 NIMBY 升级为联邦议题</strong>——电力、用水、社区抵制三重约束推高用地溢价。</div>
+  <div class="source">来源：<a href="https://www.21jingji.com/article/20260521/herald/85a9da5fd9b5eabd156c139c13a1f0b3.html">21经济</a></div>
+</div>
+
+<div class="vendor-block">
+  <div class="vendor-name">行业标志性事件</div>
+  <p>💰 <strong>NextEra $668亿收购 Dominion Energy</strong>——美国电力史最大并购。</p>
+  <p>📊 合并企业价值 <strong>$4200亿</strong>，Dominion 覆盖弗吉尼亚 DC 走廊，签约 51GW 产能。</p>
+  <p>📊 客户含<strong>所有超大规模 + Equinix/CoreWeave</strong>。</p>
+  <div class="insight">💡 影响：<strong>电力即算力瓶颈从判断变为资本行动</strong>，电力战略绑定成新竞争壁垒。</div>
+  <div class="source">来源：<a href="https://www.stcn.com/article/detail/3915148.html">第一财经</a></div>
+</div>
+
+</div>
+
+<!-- ========== 核心结论 ========== -->
+<div class="section">
+<div class="summary-box">
+<h3>📌 本期 6 大核心结论</h3>
+<ol>
+<li><strong>电力即算力</strong>：NextEra $668亿并购验证电力资源成为 AI 算力终极瓶颈；Oracle/Crusoe 等开始自建发电厂</li>
+<li><strong>龙头业绩封顶预期</strong>：NVIDIA Q1 $816亿 + 黄仁勋 $3-4万亿/年 AI 基建预判 = 5 年超级周期；AMD 数据中心首次反超 Intel</li>
+<li><strong>主权云全面铺开</strong>：AWS $500亿政府专区/Equinix Geo Zones 主权方案/Microsoft 印度 $175亿 = 国家算力主权成第三大需求驱动</li>
+<li><strong>液冷分水岭</strong>：渗透率 40% 标志液冷从可选变标配，Rubin/TPUv7 全面 100% 液冷</li>
+<li><strong>推理驱动算力新周期</strong>：CoreWeave 50% 算力转推理、A100/H100 全售罄涨价；中国电信 174亿 Token 工厂确认运营商转型</li>
+<li><strong>中国 DC 国际背书</strong>：高盛首次覆盖润泽予"买入"+ 中金上调万国数据 = 国际顶投集中加注，外资定价权切换</li>
+</ol>
 </div>
 </div>
 
 <div class="footer">
-<p>IDC 行业情报日报 · Ximen AI 编队自动生成 · 仅供内部参考</p>
+📖 完整驾驶舱：<a href="https://liuyaoforwork-cell.github.io/idc-daily-public/">liuyaoforwork-cell.github.io/idc-daily-public</a><br>
+IDC 行业情报日报 · 第 38 期 · 2026-05-24（增补版 · 国际大厂深度监控）<br>
+监控覆盖：6 大类 21+ 家国际大厂 · 时间窗口 24h · 22 条情报 · CapEx 总规模 $2470 亿+
 </div>
 </div>
 </body>
